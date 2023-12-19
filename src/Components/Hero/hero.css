@@ -405,8 +405,13 @@
   .heroMainSecBtn{
     width: 100%;
   }
+
+  .heroMainH{
+    display: flex;
+    flex-wrap: wrap;
+  }
   
   .heroMainH h1{
-    font-size: 0.9em;
+    font-size: 1.3em;
   }
 }

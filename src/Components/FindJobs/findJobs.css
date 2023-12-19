@@ -100,6 +100,10 @@
       justify-content: center;
     }
 
+    .findJobsContainer{
+        height: 20vh;
+    }
+
     .findJobsSubHeader p{
         font-size: 0.8em;
         display: flex;
@@ -112,6 +116,6 @@
     }
     
     .findJobsSearch{
-        height: 1.3em;
+        height: 0.9em;
     }
   }

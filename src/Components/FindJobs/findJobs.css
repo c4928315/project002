@@ -100,8 +100,13 @@
       justify-content: center;
     }
 
+    .findJobsHeader{
+        margin-bottom: 2em;
+    }
+
     .findJobsContainer{
         height: fit-content;
+        padding: 2em;
     }
 
     .findJobsSubHeader p{
@@ -111,6 +116,7 @@
         flex-wrap: wrap;
         width: 90%;
       margin: 0 auto;
+      text-align: center;
         justify-content: center;
         line-height: 1.5em;
     }
@@ -127,11 +133,11 @@
         background-color: lightgray;
     }
 
-    .findJobsSearchBtn button{
+    .findJobsSearchBtn button,  .findJobsSearchBtn{
         height: 3em;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
   }

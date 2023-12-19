@@ -101,7 +101,7 @@
     }
 
     .findJobsContainer{
-        height: 20vh;
+        height: fit-content;
     }
 
     .findJobsSubHeader p{
@@ -116,6 +116,14 @@
     }
     
     .findJobsSearch{
-        height: 0.9em;
+        height: fit-content ;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin: 3em auto;
+    }
+
+    .findJobsSearchArea{
+        background-color: lightgray;
     }
   }

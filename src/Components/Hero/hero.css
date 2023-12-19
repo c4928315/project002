@@ -404,8 +404,13 @@
 
   .heroMainBtn{
     width: fit-content;
+
   }
   
+  .heroMainBtn button{
+    font-size: 0.8em;
+  }
+
   .heroMainSecBtn{
     width: 100%;
   }
@@ -413,6 +418,10 @@
   .heroMainH, .heroMainP{
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .heroMainP{
+    width: 80%;
   }
 
   .heroMainP p{

@@ -101,7 +101,7 @@
   }
 
   .findJobsHeader {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
   }
 
   .findJobsContainer {
@@ -140,5 +140,6 @@
     align-items: center;
     justify-content: center;
     font-size: 0.8em;
+    width: fit-content;
   }
 }

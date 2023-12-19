@@ -1,0 +1,73 @@
+.innerFooterItems{
+    display: flex;
+    gap: 10px;
+
+}
+
+.footerItem{
+    width: 25%;
+    padding: 10px;
+}
+
+.footerHeader{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
+}
+
+.companyText{
+    font-size: 14px;
+    width: fit-content;
+}
+
+.footerLinks{
+    line-height: 25px;
+}
+
+.links{
+    font-size: 14px;
+    margin: 0;
+}
+
+.iconLinkFooter{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer{
+    background-color: var(--light-blue);
+    color: var(--secondary-text);
+    padding: 25px;
+}
+
+.footerSocialIcons{
+    padding: 1px;
+    border: 1px solid var(--secondary-text);
+    height: 27px;
+    width: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.innerFooterBottomRight{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.innerFooterBottomLeft p{
+    margin: 0;
+    font-size: 15px;
+}
+
+.innerFooterBottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}

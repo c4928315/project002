@@ -1,0 +1,208 @@
+.jobResults{
+    width: 100%;
+    height: 100%;
+}
+
+.jobResultsTopNavTitle{
+    font-weight: 100;
+    font-size: 28px;
+}
+
+.jobResultsTopNav p, .jobResultsTopNav a{
+    margin: 0;
+    font-size: 14px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: black;
+}
+
+.jobResultsTopNavHome{
+    color: var(--secondary-text) !important;
+    cursor: pointer;
+}
+
+.jobResultsTopNav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.jobResultsTop{
+    background-color: var(--light-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 25vh;
+}
+
+.jobResultsBottom{
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    gap: 50px;
+    padding: 50px 30px;
+    position: relative;
+}
+
+.jobResultsBottomLeft{
+    width: 30%;
+  height: fit-content;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15%;
+}
+
+
+
+.jobResultsBottomInputContainer{
+    margin-bottom: 30px;
+}
+
+.jobResultsBottomInputContainer label{
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.jobResultsBottomInputContainer input, .jobResultsBottomInputContainer select{
+    width: 100%;
+    border: 1px solid var(--secondary-text-thin);
+    border-radius: 1.3vh !important;
+    height: 50px !important;
+    padding-left: 3%;
+    font-size: 15px !important;
+    color: var(--light-gray);
+}
+
+.jobResultsBottomInputContainer input::placeholder{
+    color: black !important;
+    font-size: 15px !important;
+    color: var(--light-gray) !important;
+}
+
+.jobResultsBottomRight{
+    width: 70%;
+    height: 100%;
+}
+
+.jobResultsBottomLeft button{
+    width: 100%;
+    border-radius: 1.3vh !important;
+    color: white;
+    border: none;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 100;
+    background-color: var(--blue);
+    margin-top: 20px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jobResultsBottomRight .openingCardContainer{
+    width: 100%;
+}
+
+.pagination{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pageBtn{
+    border-radius: 50%;
+    padding: 5px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: white;
+    background-color: var(--light-blue);
+}
+
+.jobRangeContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.jobRangeDropdown{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.jobRangeDropdown .dropdown button{
+    background-color: var(--light-blue) !important;
+    color: var(--secondary-text) !important;
+    border: none !important;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.jobRangeDropdown .dropdown button:focus{
+    border: 1px solid var(--light-blue) !important;
+}
+.jobRangeDropdown .dropdown-menu{
+   padding: 20px !important;
+   color: var(--secondary-text);
+   line-height: 30px !important;
+   border: 1px solid var(--light-blue);
+   margin-top: 1% !important;
+}
+
+.jobRangeDropdown .dropdown-menu li{
+   font-weight: 100;
+   cursor: pointer;
+   transition: color 0.3s ease-in-out;
+ }
+
+
+ .jobRangeDropdown .dropdown-menu li:hover{
+    color: black !important;
+  }
+
+  .jobRange{
+    font-weight: 100;
+    font-size: 15px;
+    color: var(--secondary-text);
+  }
+  
+
+  @media screen and (min-width: 320px) and (max-width: 736px) {
+    .jobResultsBottom{
+        flex-direction: column;
+    }
+
+    .jobResultsBottomLeft{
+        width: 100%;
+        background-color: white;
+        top: 0%;
+        padding-top: 15%;
+        z-index: 1;
+    }
+
+    .jobResultsBottomRight{
+        width: 100%;
+        position: relative;
+    }
+
+    .jobRangeContainer{
+        width: 100%;
+        justify-content: space-between;
+        position: sticky;
+        top: 42.5%;
+        background-color: white;
+        z-index: 2;
+        padding: 3% 0;
+    }
+  }

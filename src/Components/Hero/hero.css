@@ -1,0 +1,404 @@
+.heroContainer {
+  display: flex;
+  width: 100%;
+  padding: 40px;
+  padding-top: 60px;
+  position: relative;
+}
+
+.heroLeft {
+  width: 50%;
+  z-index: 30;
+}
+
+.heroRight {
+  width: 50%;
+  height: 78vh;
+  z-index: 30;
+  position: relative;
+}
+
+.heroMainH h1 {
+  font-size: 35px;
+  letter-spacing: 0.003;
+  font-weight: 600;
+  width: 450px;
+}
+
+.connectionsHero {
+  color: var(--blue);
+}
+
+.heroMainP {
+  margin-top: 20px;
+  width: 400px;
+}
+
+.heroMainP p {
+  margin: 0;
+  font-size: 15px;
+  color: black;
+}
+
+.heroMainBtn {
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  width: 27%;
+  color: white;
+  padding: 8px 20px;
+  justify-content: space-between;
+  margin: 40px 0;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.heroMainBtn:hover {
+  background-color: var(--deep-blue);
+}
+
+.heroMainBtn button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  width: fit-content;
+  padding: 0;
+  text-transform: capitalize;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.heroMainSecBtn {
+  width: 70%;
+  height: fit-content;
+  padding: 30px;
+  background-color: var(--light-blue);
+  border-radius: 6px;
+  margin-top: 30px;
+}
+
+.heroGlobe {
+  margin-bottom: 20px;
+  height: 24px;
+  width: 24px;
+  padding: 3px;
+  background-color: var(--light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.heroTalk p {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+.heroTalk h6 {
+  font-size: 12px;
+  color: var(--secondary-text);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.heroTalkBtnContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.heroTalkBtnContainer a {
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 3px 6px;
+  background-color: var(--light-blue);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.blobImg {
+  position: absolute;
+  left: 5%;
+  top: 0%;
+  width: 100%;
+  display: flex;
+}
+
+.heroImgContainer {
+  height: 12em;
+  width: 20em;
+  border-radius: 30vh;
+  background: url("https://images.pexels.com/photos/7552568/pexels-photo-7552568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  left: 5%;
+  top: 4.5%;
+}
+
+.heroImgContainer6 span {
+  background-color: white;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.heroImgContainer6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12em;
+  height: 12em;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M952.5 647Q905 794 780 885t-280 91q-155 0-280-91T47.5 647Q0 500 47.5 353T220 115q125-91 280-91t280 91q125 91 172.5 238t0 294Z%22%2F%3E%3C%2FclipPath%3E%3Cpattern id=%22b%22 patternUnits=%22userSpaceOnUse%22 width=%2232.5%22 height=%2232.5%22 viewBox=%220 0 100 100%22 fill=%22%23d6f7b5%22 patternTransform=%22rotate(45 0 0)%22%3E%3Cpath d=%22M0 0v100%22 stroke=%22%23d6f7b5%22 stroke-width=%2220%22%2F%3E%3C%2Fpattern%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M952.5 647Q905 794 780 885t-280 91q-155 0-280-91T47.5 647Q0 500 47.5 353T220 115q125-91 280-91t280 91q125 91 172.5 238t0 294Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.magicpattern {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M952.5 647Q905 794 780 885t-280 91q-155 0-280-91T47.5 647Q0 500 47.5 353T220 115q125-91 280-91t280 91q125 91 172.5 238t0 294Z%22%2F%3E%3C%2FclipPath%3E%3Cpattern id=%22b%22 patternUnits=%22userSpaceOnUse%22 width=%2232.5%22 height=%2232.5%22 viewBox=%220 0 100 100%22 fill=%22%23d6f7b5%22 patternTransform=%22rotate(45 0 0)%22%3E%3Cpath d=%22M0 0v100%22 stroke=%22%23d6f7b5%22 stroke-width=%2220%22%2F%3E%3C%2Fpattern%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M952.5 647Q905 794 780 885t-280 91q-155 0-280-91T47.5 647Q0 500 47.5 353T220 115q125-91 280-91t280 91q125 91 172.5 238t0 294Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.heroImgContainer1 {
+  height: 10em;
+  width: 18em;
+  border-radius: 30vh;
+  background: url("https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+}
+
+.heroImgContainer5 {
+  height: 9.7em !important;
+  width: 8em;
+  background-color: orange;
+  border-radius: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blobContainer1 {
+  width: 30em;
+  height: 10em;
+  position: absolute;
+  display: flex;
+  gap: 1px;
+  right: 13%;
+  bottom: 1%;
+  top: 34%;
+}
+
+.heroImgContainer2 {
+  height: 13em;
+  width: 13em;
+  border-radius: 50%;
+  background: url("https://i.postimg.cc/fTbv67zw/pexels-photo-4890733-removebg-preview.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  position: absolute;
+  left: 7%;
+  bottom: 1.5%;
+  border: 1px solid var(--light-blue);
+}
+
+.heroImgContainer3 {
+  height: 12em;
+  width: 8em;
+  border-radius: 30vh;
+  background: url("https://media.istockphoto.com/id/1061262324/vector/feminism-womens-platform-website-female-community-laptop-screen-digital-project-for-girls.jpg?s=612x612&w=0&k=20&c=nZSoFSd-9LaeS6UyYVyFhwqUflgZTyFE2Zw7XlWnv0g=");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+}
+
+.heroImgContainer4 {
+  height: 12em;
+  width: 8em;
+  border-radius: 30vh;
+  background: url("https://media.istockphoto.com/id/1178965039/vector/gold-crown-vector-icon-isolated-king-queen-hat-golden-crown-emoji-emoticon-illustration.jpg?s=612x612&w=0&k=20&c=MCvDhiK67cKg1k8PH1ML587RGeBOjz51s-KO0XaYsVw=");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  border: 1px solid orange;
+}
+
+.blobContainer {
+  width: 20em;
+  height: 12em;
+  position: absolute;
+  display: flex;
+  gap: 1px;
+  right: 5%;
+  bottom: 3%;
+}
+
+.heroImgContainer5 img {
+  width: 4.5em;
+}
+
+.blob1 {
+  z-index: 1;
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M865 665Q763 830 576 908t-314-77Q135 676 130.5 498T278 256.5Q430 193 618.5 154T887 307.5Q967 500 865 665Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23e5e8fb%22 d=%22M865 665Q763 830 576 908t-314-77Q135 676 130.5 498T278 256.5Q430 193 618.5 154T887 307.5Q967 500 865 665Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+  top: 0%;
+}
+
+
+
+.grid-container {
+  width: 50%;
+  height: 85vh;
+  z-index: 30;
+  display: grid;
+  grid-template-areas:
+      "grid-item1 grid-item1 grid-item2"
+      "grid-item3 grid-item4 grid-item4"
+      "grid-item5 grid-item6 grid-item7";
+  gap: 3px; /* Gap between grid items */
+  grid-template-rows: 170px  170px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-item1 {
+  grid-area: grid-item1;
+  border-radius: 30vh;
+  background: url("https://images.pexels.com/photos/7552568/pexels-photo-7552568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  border: none !important;
+}
+
+.grid-item2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: grid-item2;
+  border: none !important;
+  border-radius: 20vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M952.5 647Q905 794 780 885t-280 91q-155 0-280-91T47.5 647Q0 500 47.5 353T220 115q125-91 280-91t280 91q125 91 172.5 238t0 294Z%22%2F%3E%3C%2FclipPath%3E%3Cpattern id=%22b%22 patternUnits=%22userSpaceOnUse%22 width=%2232.5%22 height=%2232.5%22 viewBox=%220 0 100 100%22 fill=%22%23d6f7b5%22 patternTransform=%22rotate(45 0 0)%22%3E%3Cpath d=%22M0 0v100%22 stroke=%22%23d6f7b5%22 stroke-width=%2220%22%2F%3E%3C%2Fpattern%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22url(%23b)%22 d=%22M952.5 647Q905 794 780 885t-280 91q-155 0-280-91T47.5 647Q0 500 47.5 353T220 115q125-91 280-91t280 91q125 91 172.5 238t0 294Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.grid-item2 span {
+  background-color: white;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.grid-item3 {
+  grid-area: grid-item3;
+  border-top-left-radius: 20vh;
+  border-top-right-radius: 20vh;
+  border-bottom-left-radius: 20vh;
+  border-bottom-right-radius: 20vh;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+}
+
+.grid-item3 img {
+  width: 4.5em;
+}
+
+.grid-item4 {
+  grid-area: grid-item4;
+  border-radius: 30vh;
+  background: url("https://images.pexels.com/photos/4491881/pexels-photo-4491881.jpeg?auto=compress&cs=tinysrgb&w=800");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  border: none !important;
+}
+
+.grid-item5 {
+  grid-area: grid-item5;
+  border-radius: 50vh;
+  background: url("https://i.postimg.cc/fTbv67zw/pexels-photo-4890733-removebg-preview.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  border: 1px solid var(--light-blue) !important;
+}
+
+.grid-item6 {
+  grid-area: grid-item6;
+  border-top-left-radius: 12vh;
+  border-top-right-radius: 12vh;
+  border-bottom-left-radius: 12vh;
+  border-bottom-right-radius: 12vh;
+  background: url("https://media.istockphoto.com/id/1061262324/vector/feminism-womens-platform-website-female-community-laptop-screen-digital-project-for-girls.jpg?s=612x612&w=0&k=20&c=nZSoFSd-9LaeS6UyYVyFhwqUflgZTyFE2Zw7XlWnv0g=");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  border: none !important;
+}
+
+.grid-item7 {
+  grid-area: grid-item7;
+  border-top-left-radius: 30vh;
+  border-top-right-radius: 30vh;
+  border-bottom-left-radius: 30vh;
+  border-bottom-right-radius: 30vh;
+  background: url("https://media.istockphoto.com/id/1178965039/vector/gold-crown-vector-icon-isolated-king-queen-hat-golden-crown-emoji-emoticon-illustration.jpg?s=612x612&w=0&k=20&c=MCvDhiK67cKg1k8PH1ML587RGeBOjz51s-KO0XaYsVw=");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  border: 1px solid orange !important;
+}
+
+
+/* Style for grid items */
+.grid-item {
+  border: 1px solid #ddd; /* Border for visual separation */
+  padding: 20px; /* Padding inside each grid item */
+  text-align: center; /* Center text */
+}
+
+/* Assign areas to specific grid items */
+
+
+@media screen and (min-width: 320px) and (max-width: 736px) {
+  .grid-container{
+      display: none;
+  }
+
+  .heroLeft{
+    width: 100%;
+  }
+
+  .heroMainBtn{
+    width: fit-content;
+  }
+}

@@ -1,0 +1,80 @@
+.openingCardContainer{
+    height: 220px;
+    width: 400px;
+    border-radius: 6px;
+    box-shadow: rgba(3, 75, 174, 0.09) 0px 6px 24px 0px, rgba(3, 75, 174, 0.09) 0px 0px 0px 1px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.companyLogo{
+    height: 45px;
+    width: 45px;
+    border-radius: 6px;
+}
+
+.openingCardTitle{
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    width: 264px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.openingCardTitle:hover{
+    color: var(--blue);
+}
+
+.leftOpeningCardIcon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 1%;
+    color: var(--light-gray);
+    font-weight: 500;
+}
+
+.openingCardCompany p, .leftOpeningCardTitle p, .leftOpeningCardSalary p, .leftOpeningCardLocation p{
+    margin: 0;
+    width: 100%;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.jobDuration button{
+    background-color: var(--light-blue);
+    color: var(--blue);
+    border: 1px solid var(--light-blue);
+    outline: none;
+    border-radius: 6px;
+    font-weight: 100;
+    text-transform: capitalize;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color border-color 0.3s ease-in-out;
+}
+
+.jobDuration button:hover{
+    background-color: white;
+    border: 1px solid var(--blue);
+}
+
+.jobDuration{
+    position: absolute;
+    bottom: 8%;
+    right: 5%;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 736px) {
+    .openingCardContainer{
+        width: 100%;
+    }
+  }

@@ -1,0 +1,77 @@
+.postFormInputContainer{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    line-height: 50px;
+    width: 100%;
+}
+
+.postFormInput{
+    border: 1px solid var(--secondary-text-thin) !important;
+    height: 40px !important;
+    border-radius: 4px !important;
+    padding-left: 10px !important;
+    width: 100% !important;
+}
+
+.postFormInputDate{
+    border: 1px solid var(--secondary-text-thin) !important;
+    height: 100% !important;
+    border-radius: 4px !important;
+    padding-left: 10px !important;
+    width: 100% !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    color: var(--secondary-text-thin-post) !important;
+    font-weight: 400 !important;
+}
+
+.react-datepicker-wrapper{
+    height: 40px !important;
+}
+
+.react-datepicker__input-container{
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-bottom: -5% !important;
+   
+}
+
+.react-datepicker__calendar-icon{
+    color: red !important;
+}
+
+.postJob{
+    padding: 20px;
+    width: 100vw;
+}
+
+.postForm{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.postFormInputContainer label{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.postFormBtn{
+    margin-top: 6%;
+}
+
+.postFormBtn button{
+    background-color: var(--blue);
+    color: white;
+    padding: 1.5% 10%;
+    border-radius: 6px;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.postFormBtn button:hover{
+    background-color: var(--deep-blue);
+}

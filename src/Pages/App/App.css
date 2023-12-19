@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    font-family: 'Arimo', sans-serif;
+}
+
+
+:root {
+    --light-blue: rgba(3, 75, 174, 0.15);
+    --light-light-blue: rgba(167, 187, 215, 0.3);
+    --light-gray: #767676;
+    --light-light-gray: rgba(118, 118, 118, 0.2);
+    --blue: #034BAE;
+    --boxShadow-blue: rgba(3, 75, 174, 0.4);
+    --deep-blue: #021d93;
+    --secondary-text: #515151;
+    --secondary-text-thin: rgba(81, 81, 81, 0.2);
+    --secondary-text-thin-post: rgba(81, 81, 81, 0.5);
+    --twitter-bg: #bc91e8;
+    --linkedin-bg: #0077b5;
+    --pinterest-bg: #d93025;
+    --loginLeft-bg: #f1f1f1;
+}

@@ -1,0 +1,29 @@
+.openingsTabs{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+
+.openingsTabsInner{
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 320px) and (max-width: 736px) {
+    .openingsTabsInner{
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+  }

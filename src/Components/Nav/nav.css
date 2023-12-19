@@ -1,0 +1,151 @@
+.navContainer{
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: #add8e6;
+    z-index: 500;
+}
+
+.mainNavItem {
+  display: inline-block !important;
+  font-size: 16px !important;
+  font-weight: 200 !important;
+  padding: 12px 0 !important;
+  
+}
+
+.navbar-brand{
+    width: 200px !important;
+}
+
+.mainNavCollapse{
+    position:  relative !important;
+}
+
+.navbar{
+   height: fit-content !important;
+   background-color: white !important;
+   
+}
+
+.notifications{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+}
+
+.mainNavCollapseItems{
+    display: flex ;
+    gap: 15px ;
+}
+
+.mainNavCollapseItems a{
+    color: black !important;
+}
+
+.newJobSignContainer, .findJobContainer{
+    position: relative !important;
+}
+
+.newJobSign{
+    color: white;
+    background-color: #7ad03a;
+    position: absolute;
+    clip-path: polygon(0% 12%, 100% 12%, 100% 60%, 60% 60%, 56% 80%, 78% 60%, 0% 60%);
+    padding: 5px;
+    top: -10%;
+    right: 10%;
+    
+}
+
+.newJobSign p{
+    font-size: 11px;
+}
+
+.nav-item-dropdown{
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    left: 10%;
+    top: 110%;
+    border-top: 2.1px solid #1573f6;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 0px;
+    overflow: hidden;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.findJobContainer:hover .nav-item-dropdown {
+    opacity: 1;
+    height: fit-content;
+  }
+
+.nav-item-dropdown ul{
+    list-style: none;
+    padding: 20px 0;
+    line-height: 30px;
+}
+
+.nav-item-dropdown ul li{
+    color: #767676;
+    font-size: 16px;
+    font-weight: 300;
+    transition: background-color 0.3s ease-in-out;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.nav-item-dropdown ul li:hover{
+    background-color: rgba(3, 75, 174, 0.15);
+}
+
+.pointer{
+    clip-path: polygon(50% 60%, 0% 100%, 100% 100%);
+    background-color: #1573f6;
+    color: #1573f6;
+    position: absolute;
+    padding: 10px;
+    top: 79%;
+    left: 30%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.findJobContainer:hover .pointer {
+    opacity: 1;
+  }
+
+
+  @media screen and (min-width: 320px) and (max-width: 736px) {
+    .mainNavContainer .show{
+        display: flex !important;
+        justify-content: left !important;
+    }
+    
+    .mainNavCollapseItems .mainNavItem a{
+        display: flex !important;
+        justify-content: left !important;
+        align-items: left !important;
+
+        width: 100%;
+    }
+
+    .mainNavCollapseItems{
+        width: 100%;
+        padding-left: 5% !important;
+    }
+
+    .newJobSign{
+        right: 88%;
+    }
+
+    .notifications{
+        right: 2%;
+        top: 5%;
+    }
+  }

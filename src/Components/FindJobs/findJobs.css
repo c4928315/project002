@@ -110,4 +110,8 @@
         justify-content: center;
         line-height: 1.5em;
     }
+    
+    .findJobsSearch{
+        height: 3.7em;
+    }
   }

@@ -126,4 +126,12 @@
     .findJobsSearchArea{
         background-color: lightgray;
     }
+
+    .findJobsSearchBtn button{
+        height: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9em;
+    }
   }

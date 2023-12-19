@@ -405,4 +405,8 @@
   .heroMainSecBtn{
     width: 100%;
   }
+  
+  .heroMainH h1{
+    font-size: 0.9em;
+  }
 }

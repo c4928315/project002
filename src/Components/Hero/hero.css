@@ -393,6 +393,10 @@
   .grid-container{
       display: none;
   }
+  
+  .heroContainer{
+    padding: 5% 3%;
+  }
 
   .heroLeft{
     width: 100%;
@@ -409,6 +413,10 @@
   .heroMainH, .heroMainP{
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .heroMainP p{
+    font-size: 0.7em;
   }
   
   .heroMainH h1{

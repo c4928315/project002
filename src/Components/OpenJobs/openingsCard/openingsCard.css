@@ -77,4 +77,16 @@
     .openingCardContainer{
         width: 100%;
     }
+    
+    .openingCardTitle{
+        font-size: 1em;
+    }
+
+    .leftOpeningCard{
+        font-size: 0.6em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 50%;
+    }
   }

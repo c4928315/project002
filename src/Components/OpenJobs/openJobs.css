@@ -93,4 +93,13 @@
     .openPositionsSubheader p{
         text-align: center;
     }
+
+    .openingsTabs{
+        padding-top: 0em;
+    }
+
+    .openPositionsTopContentContainer{
+        margin-bottom: 0;
+        height: 22%;
+    }
   }

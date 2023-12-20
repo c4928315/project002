@@ -11,8 +11,8 @@
 }  
 
 .testimonialImage{
-    width: 60px;
-    height: 60px;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
     background-position: center;
     background-size: cover;
@@ -138,7 +138,7 @@
     }
 
     .topDecor p{
-        font-size: 0.9em;
+        font-size: 0.99em;
         margin: 0;
         margin-bottom: 0 !important;
         width: 100%;
@@ -155,5 +155,18 @@
 
     .testimonaialCarousel{
         height: 40vh;
+    }
+    
+    .testimonialImage{
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .userName{
+        font-size: 1em;
+    }
+
+    .occupation{
+        font-size: 0.9em;
     }
   }

@@ -87,6 +87,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 50%;
+        width: 100%;
+        
     }
   }

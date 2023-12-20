@@ -104,4 +104,9 @@
         margin-bottom: 0;
         height: 22%;
     }
+
+    .nav-tabs-openJobs .nav-link{
+        font-weight: 400;
+        font-size: 0.8em;
+    }
   }

@@ -91,10 +91,10 @@
     }
 
     .leftOpeningCardIcon span p {
-        font-size: 1.4em;
+        font-size: 1.3em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 100%;
+        width: 96%;
     }
   }

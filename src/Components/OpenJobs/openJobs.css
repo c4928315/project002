@@ -81,4 +81,16 @@
         width: 90%;
         margin: 0 auto;
     }
+
+    .openPositionsHeader h2{
+        font-size: 1.3em;
+    }
+
+    .openPositionsSubheader{
+        width: 100%;
+    }
+
+    .openPositionsSubheader p{
+        text-align: center;
+    }
   }

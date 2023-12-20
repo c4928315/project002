@@ -79,7 +79,7 @@
     }
     
     .openingCardTitle{
-        font-size: 1.6em;
+        font-size: 1em;
     }
 
     .leftOpeningCard{
@@ -90,7 +90,7 @@
     }
 
     .leftOpeningCardIcon span{
-        font-size: 1em;
+        font-size: 0.6em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

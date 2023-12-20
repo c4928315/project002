@@ -111,7 +111,7 @@
 
 
 .testimonaialCarousel .carousel-indicators{
-    margin-bottom: 40px !important;
+    margin-bottom: 3.5em !important;
 }
 
 .testimonyItem{
@@ -155,7 +155,7 @@
     }
 
     .testimonaialCarousel{
-        height: 40vh;
+        height: 35vh;
     }
     
     .testimonialImage{
@@ -170,4 +170,40 @@
     .occupation{
         font-size: 0.7em;
     }
+
+    .testimonaialCarousel .carousel-indicators{
+        margin-bottom: 1.2em !important;
+    }
+
+    .testimonyItem{
+        height: fit-content !important;
+    }
+
+    .newsLetterHeader h1{
+        font-size: 1em;
+        font-weight: 600;
+        align-items: center;
+    }
+
+    .newsLetterSubHeader p{
+        font-size: 0.8em;
+        line-height: 1.2em;
+    }
+    
+    .newsLetterInner{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .subscribeNewsLetterBtn button{
+        width: 14em !important;
+        height: 2.3em !important;
+    }
+    
+    .subscribeNewsLetterArea input, .subscribeNewsLetter{
+        height: 2em !important;
+    }
+
+
   }

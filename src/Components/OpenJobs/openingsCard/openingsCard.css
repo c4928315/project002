@@ -79,21 +79,14 @@
     }
     
     .openingCardTitle{
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .leftOpeningCard{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 50%;
-    }
-
-    .leftOpeningCardIcon span{
         font-size: 0.6em;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 100%;
+        width: 50%;
     }
   }

@@ -134,11 +134,11 @@
     }
 
     .userTestimony{
-        font-size: 0.9em;
+        font-size: 0.6em;
     }
 
     .topDecor p{
-        font-size: 1.2em;
+        font-size: 0.9em;
         margin: 0;
         margin-bottom: 0 !important;
         width: 100%;
@@ -154,6 +154,6 @@
     }
 
     .testimonaialCarousel{
-        height: 30vh;
+        height: 40vh;
     }
   }

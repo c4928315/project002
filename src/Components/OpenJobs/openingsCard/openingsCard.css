@@ -88,6 +88,13 @@
         overflow: hidden;
         text-overflow: ellipsis;
         width: 100%;
-        
+    }
+
+    .leftOpeningCardIcon span p {
+        font-size: 0.6em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
     }
   }

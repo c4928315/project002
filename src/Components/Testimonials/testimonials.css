@@ -138,10 +138,11 @@
     }
 
     .topDecor p{
-        font-size: 0.99em;
+        font-size: 1.3em;
         margin: 0;
         margin-bottom: 0 !important;
         width: 100%;
+        font-weight: 600;
     }
 
     .topDecor{

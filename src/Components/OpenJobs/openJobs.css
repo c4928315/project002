@@ -84,6 +84,7 @@
 
     .openPositionsHeader h2{
         font-size: 1.3em;
+        font-weight: 500;
     }
 
     .openPositionsSubheader{
@@ -92,6 +93,7 @@
 
     .openPositionsSubheader p{
         text-align: center;
+        font-size: 0.8em;
     }
 
     .openingsTabs{

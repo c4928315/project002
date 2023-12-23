@@ -44,9 +44,11 @@
 }
 
 .subscribeNewsLetterBtn button{
-    width: 100%;
+    width: fit-content;
     border: none;
     height: 45px;
+    padding-left: 1em;
+    padding-right: 1em;
     display: flex;
     align-items: center;
     justify-content: center;

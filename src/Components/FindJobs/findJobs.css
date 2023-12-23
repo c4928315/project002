@@ -8,10 +8,13 @@
 }
 
 .findJobsHeader h1 {
+  color: #202124;
+  font-size: 29px;
+  font-weight: 400;
 }
 
 .findJobsSubHeader {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -82,6 +85,7 @@
   color: var(--light-gray);
   letter-spacing: 0.025em;
   font-weight: 200;
+  text-align: center;
 }
 
 .findJobsInner {
@@ -109,8 +113,11 @@
     padding: 2em;
   }
 
-  .findJobsSubHeader{
+  .findJobsSubHeader {
     width: 100%;
+    width: 100%;
+  display: flex;
+  align-items: center;
   }
 
   .findJobsSubHeader p {
@@ -150,8 +157,8 @@
     font-size: 0.8em;
     width: fit-content;
   }
-  
-  .findJobsSearchBtn{
+
+  .findJobsSearchBtn {
     width: 5em;
   }
 }

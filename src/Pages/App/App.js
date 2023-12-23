@@ -13,6 +13,8 @@ import "./App.css";
 import useFetch from "../../Hooks/useFetch";
 import JobResults from "../../Components/JobSearchResults/JobResults";
 import PostJob from "../../Components/Forms/PostJob/postJob";
+import AddCompany from "../../Components/Admin/Forms/AddCompany/addCompany";
+import EditCompany from "../../Components/Admin/Forms/EditCompany/editCompany";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -32,8 +34,8 @@ function App() {
 
   const location = useLocation();
 
-  const excludeNav = ["/login"]
-  const excludeFooter = ["/login", "/jobs/results"]
+  const excludeNav = ["/login", "/AdminArea"]
+  const excludeFooter = ["/login", "/jobs/results", "/AdminArea"]
 
   const isExcludeNav = excludeNav.includes(location.pathname)
   const isExcludeFooter = excludeFooter.includes(location.pathname)
@@ -51,6 +53,8 @@ function App() {
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/AdminArea" element={<PostJob />} />
           <Route path="/jobs/results" element={<JobResults />} />
+          <Route path="/addCompany" element={<AddCompany />} />
+          <Route path="/editCompany/:id" element={<EditCompany />} />
 
         </Route>
       </Routes>

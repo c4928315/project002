@@ -1,0 +1,19 @@
+.postFormInputContainer .allFormLabels{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.allFormInputs{
+    height: 2em !important;
+    font-size: 0.9em;
+    color: var(--secondary-text);
+}
+
+.editContainer .postForm .mainHeaderEdit{
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 2em 0;
+    text-decoration: underline;
+}

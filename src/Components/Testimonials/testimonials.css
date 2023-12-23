@@ -115,7 +115,7 @@
 }
 
 .testimonyItem{
-    height:550px !important; 
+    height:fit-content !important; 
 }
 
 .newUserTestimonyFlex{

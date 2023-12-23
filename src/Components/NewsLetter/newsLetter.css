@@ -7,9 +7,9 @@
 }
 
 .newsLetterHeader h1{
-    font-size: 36px;
-    letter-spacing: 0.025px;
-    width: 100%;
+    color: #202124;
+    font-size: 1.78em;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -93,4 +93,6 @@
 
 .newsLetterInner{
     line-height: 50px;
+    width: 75%;
+    margin: 0 auto;
 }

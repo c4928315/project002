@@ -79,7 +79,7 @@ function JobDetail() {
         </div>
       </div>
       <div className="jobDetailsBottom">
-        <div className="jobDetailsBottom">
+        <div className="">
           <div className="jobDetailsBottomCard">
             <h4 className="jobDetailsBottomCardMainTitle">Job Overview</h4>
             <div className="jobDetailsBottomCardText">

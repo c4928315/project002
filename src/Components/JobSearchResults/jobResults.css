@@ -239,4 +239,8 @@
     .jobRangeDropdown{
         gap: 10%;
     }
+
+    .jobResultsBottomInputContainer input, .jobResultsBottomInputContainer select{
+        border: none !important;;
+    }
   }

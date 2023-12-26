@@ -51,31 +51,39 @@ function JobResults() {
           <div className="jobResultsBottomInputContainer">
             <label>Search by Keywords</label>
             <br />
+            <div className="formInputResultsContainer">
             <input
               type="text"
               className="jobResultsBottomInput"
               placeholder="Job Title, Company"
             />
+            </div>
           </div>
 
           <div className="jobResultsBottomInputContainer">
             <label>Category</label>
-            <select class="form-select" aria-label="Default select example">
+            <div className="formInputResultsContainer">
+              <select class="form-select" aria-label="Default select example">
               <option selected>Select</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
+            </div>
+            
           </div>
 
           <div className="jobResultsBottomInputContainer">
             <label>Job Type</label>
-            <select class="form-select" aria-label="Default select example">
+            <div className="formInputResultsContainer">
+              <select class="form-select" aria-label="Default select example">
               <option selected>Select</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
+            </div>
+            
           </div>
 
           <button>Find Job</button>

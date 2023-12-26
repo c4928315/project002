@@ -243,4 +243,9 @@
     .jobResultsBottomInputContainer input, .jobResultsBottomInputContainer select{
         border: none !important;
     }
+
+    .formInputResultsContainer{
+        border: 1px solid var(--secondary-text-thin);
+        border-radius: 1.3vh !important;
+    }
   }

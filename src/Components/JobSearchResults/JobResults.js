@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import customIcons from "../../Icons/customIcons";
 import OpeningsCard from "../OpenJobs/openingsCard/openingsCard";
+import ScrollToTopButton from "../scrollToTop";
 import "./jobResults.css";
 
 function JobResults() {
@@ -143,6 +144,9 @@ function JobResults() {
               )
             )}
           </div>
+          <div className="scrollToTop">
+        <ScrollToTopButton/>
+      </div>
         </div>
       </div>
     </div>

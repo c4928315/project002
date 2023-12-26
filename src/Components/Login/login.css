@@ -281,14 +281,25 @@
 @media screen and (min-width: 320px) and (max-width: 736px) {
   .loginContainer {
     flex-direction: column !important;
-    height: 100%;
+    height: 100vh;
     padding: 3%;
+  }
+
+  .loginBrand h4{
+    margin-bottom: 1em;
   }
 
   .loginLeft {
     width: 100%;
-    gap: 10%;
+    gap: 0%;
     height: 100%;
+    padding: 2% 0;
+  }
+  
+  .loginUsersInnerIcon{
+    font-size: 0em;
+    height: 30px;
+    width: 30px;
   }
 
   .loginRight {
@@ -300,5 +311,42 @@
     margin-top: 3%;
     height: 10%;
   }
+
+  .loginHeader h1{
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  .loginP p{
+    width: 100%;
+  }
+
+  .loginLeftPosition{
+    width: 90%;
+    padding-top: 10%;
+    margin: 0 auto;
+  }
+
+  .loginForm form{
+    width: 100%;
+  }
+
+  .loginUsersInnerText p{
+   display: none;
+  }
+
+  .loginUsersInnerText h5{
+    font-size: 0.7em;
+    font-weight: 500;
+   }
+
+   .loginUserImg{
+    height: 2.5em;
+    width: 2.5em;
+   }
+
+   .loginP p{
+    font-size: 0.8em;
+   }
 }
 /* LOGIN QUEARY */

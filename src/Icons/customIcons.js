@@ -15,7 +15,7 @@ import { CiGlobe } from "react-icons/ci";
 import { LuTimerReset } from "react-icons/lu";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { FcGoogle } from "react-icons/fc";
-import { GoArrowUpRight, GoKebabHorizontal } from "react-icons/go";
+import { GoArrowUpRight, GoMoveToTop, GoKebabHorizontal } from "react-icons/go";
 import { CiEdit } from "react-icons/ci";
 import { AiOutlineDelete } from "react-icons/ai";
 
@@ -54,6 +54,7 @@ const customIcons = {
   kebab: GoKebabHorizontal,
   edit: CiEdit,
   delete: AiOutlineDelete,
+  scrollTop: GoMoveToTop,
 }
 
 export default customIcons

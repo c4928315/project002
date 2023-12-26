@@ -176,6 +176,13 @@
     font-size: 15px;
     color: var(--secondary-text);
   }
+
+  .scrollToTop{
+    position: fixed;
+    right: 5%;
+    bottom: 2.5%;
+    z-index: 100;
+  }
   
 
   @media screen and (min-width: 320px) and (max-width: 736px) {
@@ -191,18 +198,41 @@
         z-index: 1;
     }
 
+    .jobRangeDropdown .dropdown-menu li{
+        font-size: 0.7em;
+    }
+
     .jobResultsBottomRight{
         width: 100%;
         position: relative;
+        height: 100%;
+    }
+
+    .jobDuration button{
+        padding: 0.3em;
     }
 
     .jobRangeContainer{
         width: 100%;
         justify-content: space-between;
         position: sticky;
-        top: 42.5%;
+        top: 0%;
         background-color: white;
         z-index: 2;
         padding: 3% 0;
+    }
+
+    .jobRangeDropdown .dropdown button{
+        width: 10em;
+        height: 3em;
+        font-size: 0.6em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1%;
+    }
+
+    .jobRange{
+        font-size: 0.6em;
     }
   }

@@ -239,7 +239,7 @@ function JobDetail() {
             <div className="jobDetailsLinksBtns">
             <button className="btnFB">
               <span><customIcons.facebook size={20}/></span>
-              <span className="jobDetailsLinksBtnsText">facebook</span>
+              <span>facebook</span>
             </button>
             <button className="btnTwitter">
               <span><customIcons.x/></span>

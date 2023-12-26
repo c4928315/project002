@@ -14,6 +14,7 @@
     font-weight: lighter;
     text-decoration: none;
     color: black;
+    text-transform: capitalize;
 }
 
 .jobResultsTopNavHome{
@@ -247,5 +248,17 @@
     .formInputResultsContainer{
         border: 1px solid var(--secondary-text-thin);
         border-radius: 1.3vh !important;
+    }
+
+    .jobResultsTopNavTitle{
+        font-size: 1.2em;
+    }
+
+    .jobResultsTopNav p, .jobResultsTopNav a{
+        font-size: 0.7em;
+    }
+
+    .jobResultsTopNav{
+        gap: 0.3%;
     }
   }

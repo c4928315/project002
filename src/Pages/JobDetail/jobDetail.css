@@ -69,6 +69,7 @@
 
 .jobDetailIconContainer{
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .jobDetailIcon{
@@ -247,4 +248,89 @@
         display: none;
     }
 
+    .iconText{
+        font-size: 0.7em;
+        height: fit-content;
+    }
+
+    .jobDetailIcon{
+        align-items: baseline;
+    }
+    .jobDetailIcon span svg {
+        width: 1em;
+    }
+
+    .jobDetailIconContainer{
+        gap: 2%;
+    }
+
+    .jobDetailTitle h3{
+        font-size: 1.2em;
+    }
+    
+    .detailsImgLogo img{
+        width: 4.4em;
+    }
+
+    .detailsApplyBtn button{
+        padding: 2% 5%;
+    }
+    
+    .jobDetailsBottom{
+        width: 100%;
+    }
+
+    .jobDetailsBottomCard{
+        width: 100%; 
+        margin: 3% auto;
+    }
+
+    .jobDetailsBottomCardText{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .jobDetailsBottomCardTextContent .cardTextContentIcon svg{
+        width: 1.2em;
+    }
+
+    .cardTextContentTitle h4{
+        font-weight: 500;
+        font-size: 1em;
+    }
+
+    .cardTextContentTitle p{
+        font-size: 0.9em;
+    }
+
+    .jobDetailsBottom{
+        width: 90%; 
+        margin: 5% auto;
+    }
+
+    .jobDetailsBottomOthersH h1{
+        font-size: 1.3em;
+    }
+
+    .jobDetailsP{
+        font-size: 0.95em;
+    }
+
+    .jobDetailsLinksBtns button{
+        width: 100%;
+        font-size: 0.5em;
+    }
+
+    .jobDetailsLinksBtns button span:nth-child(1){
+        font-size: 0.7em;
+    }
+
+    .jobDetailsLinksBtns button span svg{
+        width: 2.2em;
+        padding: 0 1%;
+    }
+
+    .jobDetailsLinksBtns{
+        gap: 2%;
+    }
   }

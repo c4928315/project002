@@ -1,5 +1,5 @@
 import { FaRegBell } from "react-icons/fa6";
-import { FaHome, FaPhone, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
+import { FaHome, FaPhone, FaInstagram, FaLinkedinIn, FaPinterestP, FaCaretDown } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { BsCalendar4Event, BsTwitterX } from "react-icons/bs";
 import { TfiHome, TfiEmail } from "react-icons/tfi";
@@ -55,6 +55,7 @@ const customIcons = {
   edit: CiEdit,
   delete: AiOutlineDelete,
   scrollTop: GoMoveToTop,
+  dropDown: FaCaretDown,
 }
 
 export default customIcons

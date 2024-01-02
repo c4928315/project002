@@ -52,7 +52,7 @@ function Footer() {
           <div className={open2 ? "footerItemOpen" : "footerItem"}>
             <div className="footerGoDown" onClick={handleOpen2}>
               <h3 className="footerHeader">Products</h3>
-              <customIcons.dropDown className="footerGoDownIcon" />
+              <customIcons.dropDown className={ "footerGoDownIcon"} />
             </div>
 
             <div className="footerLinks">

@@ -1,64 +1,40 @@
 import React, { useState, useEffect } from "react";
-import './editCompany.css'
+import "./editCompany.css";
 
-function EditCompany({companyData, close}) {
+function EditCompany({ companyData, close }) {
+  const [initialCompanyValues, setInitialCompanyValues] = useState({
+    id: 0,
+    name: companyData.name,
+    description: companyData.description,
+    phoneNumber: companyData.phoneNumber,
+    headQuarters: companyData.headQuarters,
+    email: companyData.email,
+    location: companyData.location,
+    createdBy: companyData.createdBy,
+    modifiedBy: companyData.modifiedBy,
+  });
 
-    const [initialCompanyValues, setInitialCompanyValues] = useState({
-        id: 0,
-        name: companyData.name,
-        description: companyData.description,
-        phoneNumber: companyData.phoneNumber,
-        headQuarters: companyData.headQuarters,
-        email: companyData.email,
-        location: companyData.location,
-        createdBy: companyData.createdBy,
-        modifiedBy: companyData.modifiedBy,
-      })
+  const [company, setCompany] = useState(initialCompanyValues);
 
-      
-      const [company, setCompany] = useState(initialCompanyValues);
-
-
-  
-  
-
-  // Fetch company data based on the id
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch(
-//           `https://efmsapi-staging.azurewebsites.net/api/Companies/getAllCompanies?id=${companyData.id}`
-//         );
-//         if (response.ok) {
-//           const data = await response.json();
-//           setCompany(data);
-//         } else {
-//           console.error("Failed to fetch company data:", response.statusText);
-//         }
-//       } catch (error) {
-//         console.error("Error fetching company data:", error.message);
-//       }
-//     };
-
-//     fetchData();
-//   }, [companyData.id]);
-
-
-const handleInputChange = (e) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setCompany((prevCompany) => ({
       ...prevCompany,
       [name]: value,
     }));
   };
-  
 
   const handleUpdateCompany = async () => {
-    if (!company.name || !company.headQuarters || !company.email || !company.phoneNumber) {
-        console.error("Please fill in all required fields");
-        return;
-      }
-      
+    if (
+      !company.name ||
+      !company.headQuarters ||
+      !company.email ||
+      !company.phoneNumber
+    ) {
+      console.error("Please fill in all required fields");
+      return;
+    }
+
     try {
       const response = await fetch(
         `https://efmsapi-staging.azurewebsites.net/api/Companies/updateCompany?id=${companyData.id}`,
@@ -82,12 +58,12 @@ const handleInputChange = (e) => {
     }
   };
 
-  console.log(company.name)
+  console.log(company.name);
 
   return (
     <div className="editContainer">
       <form className="postForm">
-      <h2 className="mainHeaderEdit">Edit Company {companyData.name}</h2>
+        <h2 className="mainHeaderEdit">Edit Company {companyData.name}</h2>
         <div className="postFormInputContainer">
           <label className="allFormLabels">Company Name</label>
           <input
@@ -102,76 +78,69 @@ const handleInputChange = (e) => {
         <div className="postFormInputContainer">
           <label className="allFormLabels">Company Headquaters</label>
           <input
-          onChange={handleInputChange}
+            onChange={handleInputChange}
             type="text"
             className="postFormInput allFormInputs"
             placeholder="Input Value"
             name="headQuarters"
             value={company.headQuarters}
-            
           />
         </div>
         <div className="postFormInputContainer">
           <label className="allFormLabels">Company Contact Email</label>
           <input
-          onChange={handleInputChange}
+            onChange={handleInputChange}
             type="email"
             className="postFormInput allFormInputs"
             placeholder="Input Value"
             name="email"
             value={company.email}
-            
           />
         </div>
         <div className="postFormInputContainer">
           <label className="allFormLabels">Company Contact Phone</label>
           <input
-          onChange={handleInputChange}
+            onChange={handleInputChange}
             type="text"
             className="postFormInput allFormInputs"
             placeholder="Input Value"
             name="phoneNumber"
             value={company.phoneNumber}
-            
           />
         </div>
         <div className="postFormInputContainer">
           <label className="allFormLabels">Company Description</label>
           <input
-          onChange={handleInputChange}
+            onChange={handleInputChange}
             type="text"
             className="postFormInput allFormInputs"
             placeholder="Input Value"
             name="description"
             value={company.description}
-            
           />
         </div>
         <div className="postFormInputContainer">
           <label className="allFormLabels">Location</label>
           <input
-          onChange={handleInputChange}
+            onChange={handleInputChange}
             type="text"
             className="postFormInput allFormInputs"
             placeholder="Input Value"
             name="location"
             value={company.location}
-           
           />
         </div>
-    <div className="allFormBtnContainers">
-        <button type="button" onClick={handleUpdateCompany}>
-          Update Company
-        </button>
-        <button type="button" onClick={close}>
-          Cancel
-        </button>
-    </div>
-        
+        <div className="allFormBtnContainers">
+          <button type="button" onClick={handleUpdateCompany}>
+            Update Company
+          </button>
+          <button type="button" onClick={close}>
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   );
 }
 
 export default EditCompany;
-

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import useFetch from "../../../Hooks/useFetch";
 import DisplayComp from "../../Admin/Companies/DisplayCompany/displayComp";
 import JobCategory from "../../Admin/JobCategory/jobCategory";
+import DisplayJobs from "../../Admin/Jobs/jobs";
 import "./postJob.css";
 
 function PostJob() {
@@ -100,7 +101,7 @@ function PostJob() {
             aria-labelledby="nav-disabled-tab"
             tabindex="0"
           >
-            <DisplayComp />
+            <DisplayJobs />
           </div>
         </div>
       </main>

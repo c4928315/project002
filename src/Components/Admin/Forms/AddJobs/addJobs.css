@@ -1,0 +1,50 @@
+.postFormInputContainer .postFormInputTextarea{
+    height: 25% !important;
+    color: black;
+}
+
+.input-group-array{
+    display: flex;
+    align-items: baseline;
+    gap: 5%;
+    width: 100%;
+}
+
+.input-group-block{
+    width: 50%;
+}
+
+
+.postFormInputContainer50 select{
+    width: 47.5%;
+}
+
+.sectionH3{
+    margin-top: 2.5%;
+    font-size: 2em;
+}
+
+.sectionContainer{
+    border: 2px solid var(--secondary-text);
+    border-radius: 0.6em;
+    padding: 2.5% 5% 5% 5%;
+    margin-top: 2.5%;
+}
+
+.addCompanyBTN{
+    border-radius: 0.3em;
+    padding: 0.5%;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 1%;
+}
+.postForm hr{
+    margin: 4% 0;
+}
+
+.btnContainerSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

@@ -57,6 +57,7 @@ function AddCompany({close}) {
     console.log(companyDropdown);
   return (
    <div className="postForm addCompanyLabel">
+    <h3 className="sectionH3">Add Companies</h3>
         <div className="postFormInputContainer">
           <label>Company Name</label>
           <input

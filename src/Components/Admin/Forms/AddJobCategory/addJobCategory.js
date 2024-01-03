@@ -50,6 +50,7 @@ function AddJobCategory({close}) {
   
   return (
    <div className="postForm addCompanyLabel">
+    <h3 className="sectionH3">Add Job Categories</h3>
         <div className="postFormInputContainer">
           <label>Category Name</label>
           <input

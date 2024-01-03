@@ -8,6 +8,7 @@
     align-items: baseline;
     gap: 5%;
     width: 100%;
+    margin-bottom: 1.5em;
 }
 
 .input-group-block{
@@ -16,7 +17,7 @@
 
 
 .postFormInputContainer50 select{
-    width: 47.5%;
+    width: 50%;
 }
 
 .sectionH3{
@@ -25,7 +26,7 @@
 }
 
 .sectionContainer{
-    border: 2px solid var(--secondary-text);
+    border: 2px solid rgba(211, 211, 211, 1) !important;
     border-radius: 0.6em;
     padding: 2.5% 5% 5% 5%;
     margin-top: 2.5%;
@@ -47,4 +48,52 @@
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+.postFormInputContainer select{
+    background-color: rgba(211, 211, 211, 0.7) !important;
+    border: none !important;
+}
+
+.newSelectInput1{
+    width: 50%;
+}
+
+.newSelectInput1 select{
+    width: 100%;
+}
+
+.datepicker{
+    width: 50% !important;
+    height: fit-content !important;
+    border-radius: 1% !important;
+}
+
+
+
+.react-datepicker__input-container .inputDatePicker{
+    width: 100%;
+    border: none;
+    background-color: rgba(211, 211, 211, 0.7);
+    padding: 0 1% !important;
+    height: 2em !important;
+}
+
+.postFormInputContainer50{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    line-height: 50px;
+    width: 50% !important;
+}
+
+.postFormInputContainer50 select{
+    width: 100% !important;
+    background-color: rgba(211, 211, 211, 0.7);
+}
+
+.allLabelsInForm{
+    font-size: 0.91em;
+    font-weight: 600;
+    font-size: 18px;
 }

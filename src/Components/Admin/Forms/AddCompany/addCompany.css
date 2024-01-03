@@ -8,10 +8,12 @@
 
 .postFormInput{
     border: 1px solid var(--secondary-text-thin) !important;
-    height: 40px !important;
+    height: 2%!important;
     border-radius: 4px !important;
     padding-left: 10px !important;
     width: 100% !important;
+    background-color: rgba(211, 211, 211, 0.7) !important;
+    border: none !important;
 }
 
 .postFormInputDate{

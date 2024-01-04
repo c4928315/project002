@@ -50,7 +50,7 @@
     justify-content: center;
 }
 
-.postFormInputContainer select{
+.postFormInputContainer select, .postFormInputContainer input{
     background-color: rgba(211, 211, 211, 0.7) !important;
     border: none !important;
 }

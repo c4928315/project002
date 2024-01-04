@@ -6,19 +6,14 @@ import useFetch from "../../../../Hooks/useFetch";
 import "./addJobs.css";
 
 function AddJobs({ close }) {
-  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   const [formData, setFormData] = useState({
-    error: {
-      errorMessage: "string",
-      errorCode: "string",
-      errorTitle: "string",
-    },
     jobs: {
       endDate: "",
       jobName: "",
       jobDescription: "",
       companyId: 0,
-      language: "",
+      jobUrl: "",
       jobCategoriesId: 0,
     },
     createdBy: "rtyui",
@@ -28,12 +23,7 @@ function AddJobs({ close }) {
         sectionName: "",
         sectionDescription: "",
         jobTypesId: 0,
-        jobsId: 0,
-        dateCreated: "",
-        dateModified: "",
-        modifiedBy: "",
-        isActive: true,
-        isDeleted: true,
+        modifiedBy: ""
       },
     ],
   });
@@ -46,6 +36,10 @@ function AddJobs({ close }) {
     "https://efmsapi-staging.azurewebsites.net/api/JobsCategory/getJobsCategoriesDropDown"
   );
 
+  const { data: jobTypes } = useFetch(
+    "https://efmsapi-staging.azurewebsites.net/api/JobTypes/getJobTypesDropDown"
+  );
+
   const addSection = () => {
     setFormData((prevData) => ({
       ...prevData,
@@ -56,11 +50,7 @@ function AddJobs({ close }) {
           sectionName: "",
           sectionDescription: "",
           jobTypesId: 0,
-          dateCreated: "",
-          dateModified: "",
-          modifiedBy: "",
-          isActive: true,
-          isDeleted: true,
+          modifiedBy: ""
         },
       ],
     }));
@@ -72,7 +62,7 @@ function AddJobs({ close }) {
       name === "jobName" ||
       name === "jobDescription" ||
       name === "companyId" ||
-      name === "language" ||
+      name === "jobUrl" ||
       name === "jobCategoriesId"
     ) {
       // Update the jobs object
@@ -80,7 +70,7 @@ function AddJobs({ close }) {
         ...prevData,
         jobs: {
           ...prevData.jobs,
-          [name]: value,
+          [name]: name === "companyId" || name === "jobCategoriesId" ? parseInt(value, 10) : value,
         },
       }));
     } else {
@@ -91,20 +81,12 @@ function AddJobs({ close }) {
           index === sectionIndex
             ? {
                 id: section.id,
-                sectionName:
-                  name === "sectionName" ? value : section.sectionName,
-                sectionDescription:
-                  name === "sectionDescription"
-                    ? value
-                    : section.sectionDescription,
-                jobTypesId: name === "jobTypesId" ? value : section.jobTypesId,
+                sectionName: name === "sectionName" ? value : section.sectionName,
+                sectionDescription: name === "sectionDescription" ? value : section.sectionDescription,
+                jobTypesId: name === "jobTypesId" ? parseInt(value, 10) : section.jobTypesId,
                 jobsId: section.jobsId,
-                dateCreated: section.dateCreated,
-                dateModified: section.dateModified,
                 createdBy: section.createdBy,
-                modifiedBy: section.modifiedBy,
-                isActive: section.isActive,
-                isDeleted: section.isDeleted,
+                modifiedBy: section.modifiedBy
               }
             : section
         ),
@@ -114,6 +96,9 @@ function AddJobs({ close }) {
 
   const submitForm = async () => {
     try {
+      const formattedEndDate = endDate.toISOString();
+      console.log("Success:", JSON.stringify(formData));
+
       const response = await fetch(
         "https://efmsapi-staging.azurewebsites.net/api/Jobs/addJobs",
         {
@@ -121,9 +106,17 @@ function AddJobs({ close }) {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            ...formData,
+            jobs: {
+              ...formData.jobs,
+              endDate: formattedEndDate,
+            },
+          }),
         }
       );
+
+
 
       if (!response.ok) {
         // Handle the error here
@@ -133,7 +126,8 @@ function AddJobs({ close }) {
 
       // Handle the successful response here
       const data = await response.json();
-      console.log("Success:", data);
+      console.log("Success:", JSON.stringify(data));
+      
 
       // Optionally, you can perform actions based on the response, e.g., close the form
       close();
@@ -142,7 +136,6 @@ function AddJobs({ close }) {
     }
   };
 
-  console.log(companyDropdown);
   return (
     <div className="postForm addCompanyLabel">
       <h3 className="sectionH3">Add Jobs</h3>
@@ -188,20 +181,13 @@ function AddJobs({ close }) {
           </select>
         </div>
         <div className="postFormInputContainer">
-          <label>Language</label>
-          <select
-            className="form-select"
-            aria-label="Default select example"
-            name="language"
+          <label>Job Url</label>
+          <input
+            className="postFormInput"
+            name="jobUrl"
+            placeholder="Input Url"
             onChange={(e) => handleInputChange(e, 0, true)} // Passing true to indicate it's a job field
-          >
-            <option value="" selected disabled>
-              Open this select menu
-            </option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+          />
         </div>
       </div>
       <div class="input-group-array">
@@ -225,11 +211,11 @@ function AddJobs({ close }) {
         </div>
 
         <div className="datepicker postFormInputContainer50">
-        <label className="allLabelsInForm">Date Created</label>
+        <label className="allLabelsInForm">End Date</label>
           <DatePicker
             className="inputDatePicker"
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            selected={endDate}
+            onChange={(date) => setEndDate(date)}
           />
         </div>
       </div>
@@ -259,13 +245,22 @@ function AddJobs({ close }) {
               </div>
             </div>
             <label>Section Type</label>
-            <input
+            <select
               type="text"
               className="postFormInput"
               placeholder="Input Value"
               name="jobTypesId"
               onChange={(e) => handleInputChange(e, index)}
-            />
+            >
+               <option value="" selected disabled>
+              Select
+            </option>
+            {jobTypes.map((item, i) => (
+              <option key={i} value={item.value}>
+                {item.label}
+              </option>
+            ))}
+            </select>
           </div>
         </div>
       ))}

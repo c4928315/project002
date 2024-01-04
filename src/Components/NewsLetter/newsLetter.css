@@ -36,6 +36,7 @@
 
 .subscribeNewsLetterBtn{
     width: 20%;
+    height: 100%;
     margin: 0px;
     border: none;
     display: flex;
@@ -46,7 +47,7 @@
 .subscribeNewsLetterBtn button{
     width: fit-content;
     border: none;
-    height: 45px;
+    height: 85%;
     padding-left: 1em;
     padding-right: 1em;
     display: flex;
@@ -70,6 +71,7 @@
     border: none;
     display: flex !important;
     align-items: center !important;
+    
 }
 
 .subscribeNewsLetterArea input{

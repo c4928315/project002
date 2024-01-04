@@ -4,6 +4,7 @@ import "./addCompany.css"
 
 function AddCompany({close}) {
     const [startDate, setStartDate] = useState(new Date());
+    const [AttachedFile, setAttachedFile] = useState(null);
 
     const [formData, setFormData] = useState({
       name: "",
@@ -12,6 +13,7 @@ function AddCompany({close}) {
       phoneNumber: "",
       description: "",
       location: "",
+      imageUrl: null,
     });
   
     const handleInputChange = (e) => {
@@ -21,6 +23,25 @@ function AddCompany({close}) {
         [name]: value,
       }));
     };
+
+    const handleImageChange = (e) => {
+      const selectedFile = e.target.files[0]; // Only consider the first selected file
+  
+      if (selectedFile) {
+        if (selectedFile.size > 2 * 1024 * 1024) {
+          alert(`File "${selectedFile.name}" exceeds the 2MB size limit.`);
+        } else {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            const base64Data = event.target.result.split(',')[1]; // Extract base64 data
+            setAttachedFile(base64Data); // Set AttachedFile with the base64 string
+          };
+          reader.readAsDataURL(selectedFile);
+        }
+      }
+    };
+    
+    
   
     const handlePostJob = async () => {
       try {
@@ -35,6 +56,7 @@ function AddCompany({close}) {
               ...formData,
               createdBy: "string",
               modifiedBy: "string",
+              imageUrl: AttachedFile
             }),
           }
         );
@@ -124,6 +146,16 @@ function AddCompany({close}) {
             onChange={handleInputChange}
           />
         </div>
+        <div className="postFormInputContainer">
+          <label>Image Url</label>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="postFormInput"
+            placeholder="Input Image URL"
+          />
+        </div>
 
         <div className="allFormBtnContainers">
           <button  onClick={handlePostJob}>Add Company</button>
@@ -134,3 +166,4 @@ function AddCompany({close}) {
 }
 
 export default AddCompany
+

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ScrollToTopButton from "../../Components/scrollToTop";
 import customIcons from "../../Icons/customIcons";
 import "./jobDetail.css";
 
@@ -256,6 +257,9 @@ function JobDetail() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="scrollToTop">
+        <ScrollToTopButton/>
       </div>
     </div>
   );

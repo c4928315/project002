@@ -160,7 +160,7 @@
   }
 
   .findJobsSearchArea {
-    background-color: lightgray;
+    background-color: white;
   }
 
   .findJobsSearchArea::placeholder {

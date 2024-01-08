@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./hero.css";
 import customIcons from "../../Icons/customIcons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function Hero() {
+function Hero({data}) {
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredJobs, setFilteredJobs] = useState([]);
+  const navigate = useNavigate();
+
+  const handleSearch = async () => {
+    const filteredResults = data.filter(
+      (job) =>
+        job.jobTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        job.company.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    await setFilteredJobs(filteredResults);
+
+    // The state has been updated, now navigate and store in localStorage
+    navigate(`/jobs/results?search=${encodeURIComponent(searchTerm)}`);
+  };
+
+  useEffect(() => {
+    // Use the effect to store filteredJobs in localStorage
+    localStorage.setItem("filteredJobs", JSON.stringify(filteredJobs));
+  }, [filteredJobs]);
+
+  console.log(filteredJobs)
+
   return (
     <div className="heroContainer">
       {/* <div className="blob1">
@@ -31,7 +56,7 @@ function Hero() {
           <span>
             <customIcons.getStarted size={18} />
           </span>
-          <button className="getStartedBtn">get started</button>
+          <button onClick={() => navigate("/allJobs/results?search=allJobs")} className="getStartedBtn">get started</button>
         </div>
 
         <div className="heroMainSecBtn">
@@ -41,7 +66,7 @@ function Hero() {
 
           <div className="heroTalk">
             <p>
-              Take a click of faith and land your dream job anywhere anytime
+            Seize new opportunities and find your ideal remote job anytime, anywhere
             </p>
             <h6>
               Seamless connections, soaring careers. Elevate yours with comapany

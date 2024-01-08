@@ -10,7 +10,7 @@ function NewsLetter() {
         </div>
         <div className="newsLetterSubHeader">
           <p>
-          Receive curated, inclusive remote job listings worldwide in your inbox. Unsubscribe anytime. No spam, guaranteed.
+          Get curated, remote jobs listings hiring worldwide in your inbox as well as updates in the remote world trends. Unsubscribe anytime. No spam, guaranteed.
           </p>
         </div>
         <div className="subscribeNewsLetter">

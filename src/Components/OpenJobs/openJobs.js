@@ -14,7 +14,7 @@ function OpenJobs({data}) {
 
           <div className="openPositionsSubheader">
             <p>
-              Access the latest hand-screened inclusive remote opportunities
+            Explore the most recent, carefully curated remote opportunities hiring worldwide!
             </p>
           </div>
         </div>

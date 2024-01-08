@@ -1,5 +1,5 @@
 import { FaRegBell } from "react-icons/fa6";
-import { FaHome, FaPhone, FaInstagram, FaLinkedinIn, FaPinterestP, FaCaretDown } from "react-icons/fa";
+import { FaHome, FaPhone, FaInstagram, FaLinkedinIn, FaPinterestP, FaCaretDown, FaTiktok } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { BsCalendar4Event, BsTwitterX } from "react-icons/bs";
 import { TfiHome, TfiEmail } from "react-icons/tfi";
@@ -18,6 +18,7 @@ import { FcGoogle } from "react-icons/fc";
 import { GoArrowUpRight, GoMoveToTop, GoKebabHorizontal } from "react-icons/go";
 import { CiEdit } from "react-icons/ci";
 import { AiOutlineDelete } from "react-icons/ai";
+import { ImYoutube2 } from "react-icons/im";
 
 
 
@@ -56,6 +57,8 @@ const customIcons = {
   delete: AiOutlineDelete,
   scrollTop: GoMoveToTop,
   dropDown: FaCaretDown,
+  tiktok: FaTiktok,
+  youtube: ImYoutube2,
 }
 
 export default customIcons

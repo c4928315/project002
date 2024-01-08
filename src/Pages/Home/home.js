@@ -15,7 +15,7 @@ function Home({data}) {
   console.log(auth)
   return (
     <div>
-        <Hero/>
+        <Hero data={data}/>
         <FindJobs data={data}/>
         <OpenJobs data={data}/>
         <Testimonials/>

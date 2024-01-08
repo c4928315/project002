@@ -44,7 +44,8 @@
 
 .footerSocialIcons{
     padding: 1px;
-    border: 1px solid var(--secondary-text);
+    border: 1px solid var(--blue);
+    color: var(--blue);
     height: 27px;
     width: 27px;
     display: flex;

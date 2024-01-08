@@ -1,5 +1,8 @@
 .findJobsContainer {
-  background-color: var(--light-blue);
+  background: linear-gradient(rgb(196, 149, 133, 0.6), rgb(196, 149, 133, 0.6)) ,url("https://media.licdn.com/dms/image/D4D12AQElIbIZsNR3Ug/article-cover_image-shrink_600_2000/0/1674548116811?e=2147483647&v=beta&t=ek6NowLk02DqpxMFcwXWATmPWQQ97C0fvbBiv4zQ9Cw");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 50vh;
   display: flex;
   align-items: center;
@@ -8,9 +11,10 @@
 }
 
 .findJobsHeader h1 {
-  color: #202124;
+  color: white;
   font-size: 29px;
-  font-weight: 400;
+  font-weight: 500;
+  margin: 0;
 }
 
 .findJobsSubHeader {
@@ -25,6 +29,7 @@
   border-radius: 12px;
   display: flex;
   padding-right: 10px;
+  height: 3.5em !important;
 }
 
 .findJobsSearchIcon {
@@ -33,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--light-gray);
+  color: var(--blue);
   border: none;
 }
 .findJobsSearchBtn {
@@ -47,23 +52,24 @@
 
 .findJobsSearchBtn button {
   width: 8em;
-  border: none;
+  border: 1px solid var(--blue);
   padding-left: 0.4em;
   padding-right: 0.4em;
-  height: 85%;
+  height: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 6px;
   font-size: 15px;
   font-weight: 400;
-  background-color: var(--blue);
-  color: white;
-  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
+  color: var(--blue);
+  transition: all 0.3s ease-in-out;
 }
 
 .findJobsSearchBtn button:hover {
-  background-color: var(--deep-blue);
+  background-color: var(--dark-blue);
+  color: white;
 }
 
 .findJobsSearchArea {
@@ -75,6 +81,15 @@
 .findJobsSearchArea input {
   width: 100%;
   border: none;
+  height: 100%;
+  color: var(--blue);
+}
+
+.findJobsSearchArea input::placeholder{
+  color: var(--blue) !important;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.95em;
 }
 
 .findJobsSearchArea input:focus {
@@ -84,10 +99,11 @@
 }
 
 .findJobsSubHeader p {
-  color: var(--light-gray);
+  color: white;
   letter-spacing: 0.025em;
-  font-weight: 200;
+  font-weight: 300;
   text-align: center;
+  line-height: 1.8em;
 }
 
 .findJobsInner {

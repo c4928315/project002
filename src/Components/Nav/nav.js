@@ -8,7 +8,14 @@ function Nav() {
     <div className="navContainer">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid mainNavContainer">
-          <Link to="/" className="navbar-brand">BRAND</Link>
+          <Link to="/" className="navbar-brand">
+            {/* <img src="https://i.postimg.cc/Z5bsQDrp/Logo-Design-removebg-preview.png" alt="logo" /> */}
+            <div className="logoCircle"></div>
+            <div className="logoBox">
+              <h3>B</h3>
+            </div>
+            <h5>BEYOND SAVANNAH CONSULTING LIMITED</h5>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -54,7 +61,7 @@ function Nav() {
                     <ul>
                       <li>CV Template</li>
                       <li>Blog / Newsletter</li>
-                      <li>Level Up Your Career</li>
+                      <li>Our Services</li>
                     </ul>
                   </div>
                 </div>

@@ -9,8 +9,12 @@ function JobDetail() {
 
   const [data, setData] = useState({});
 
+  const storedJobString = localStorage.getItem('clickedJob');
+
+  const storedJob = JSON.parse(storedJobString);
+
   useEffect(() => {
-    const apiUrl = `https://intra-deco.onrender.com/openPositions/${id}`;
+    const apiUrl = `https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsSections?jobId=${id}`;
 
     fetch(apiUrl)
       .then((response) => {
@@ -30,7 +34,22 @@ function JobDetail() {
       });
   }, [id, jobTitle]);
 
-  console.log(data);
+  function formatDateString(inputDateString) {
+    const inputDate = new Date(inputDateString);
+    
+    // Options for formatting the output date
+    const options = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    };
+
+    // Format the date using Intl.DateTimeFormat
+    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(inputDate);
+
+    return formattedDate;
+}
+
 
   return (
     <div className="jobDetail">
@@ -49,30 +68,30 @@ function JobDetail() {
               <span>
                 <customIcons.home size={18} />
               </span>
-              <span className="iconText">{data.company}</span>
+              <span className="iconText">{storedJob.companyName}</span>
             </div>
             <div className="jobDetailIcon">
               <span>
                 <customIcons.case size={18} />
               </span>
-              <span className="iconText">{data.jobTitle}</span>
+              <span className="iconText">{storedJob.jobName}</span>
             </div>
             <div className="jobDetailIcon">
               <span>
                 <customIcons.location size={18} />
               </span>
-              <span className="iconText">{data.location}</span>
+              <span className="iconText">{storedJob.location}</span>
             </div>
             <div className="jobDetailIcon">
               <span>
                 <customIcons.time size={18} />
               </span>
-              <span className="iconText">{data.datePosted}</span>
+              <span className="iconText">{formatDateString(storedJob.endDate)}</span>
             </div>
           </div>
 
           <div className="detailsJobDuration">
-            <span>full time</span>
+            <span>{storedJob.jobCategory}</span>
           </div>
           <div className="detailsApplyBtn">
             <button>Apply Now</button>
@@ -90,7 +109,7 @@ function JobDetail() {
                 </span>
                 <span className="cardTextContentTitle">
                   <h4>Date Posted</h4>
-                  <p>{data.datePosted}</p>
+                  <p>{formatDateString(storedJob.dateCreated)}</p>
                 </span>
               </div>
               <div className="jobDetailsBottomCardTextContent">
@@ -99,7 +118,7 @@ function JobDetail() {
                 </span>
                 <span className="cardTextContentTitle">
                   <h4>Location</h4>
-                  <p>{data.location}</p>
+                  <p>{storedJob.location}</p>
                 </span>
               </div>
               <div className="jobDetailsBottomCardTextContent">
@@ -108,7 +127,7 @@ function JobDetail() {
                 </span>
                 <span className="cardTextContentTitle">
                   <h4>Expiration Date</h4>
-                  <p>{data.expirationDate}</p>
+                  <p>{formatDateString(storedJob.endDate)}</p>
                 </span>
               </div>
             </div>
@@ -117,39 +136,7 @@ function JobDetail() {
           <div className="jobDetailsBottomDescription">
             <h4 className="jobDetailsBottomCardMainTitle">Job Description</h4>
             <div className="jobDetailsBottomDescriptionPcontainer">
-              <div className="jobDetailsBottomDescriptionP">
-                <p className="jobDetailsP">
-                  The financial industry is growing at a record pace, but our
-                  data providers are still stuck in the past — with cumbersome
-                  onboarding processes, complicated APIs, slow infrastructure,
-                  and expensive licensing costs.
-                </p>
-              </div>
-              <div className="jobDetailsBottomDescriptionP">
-                <p className="jobDetailsP">
-                  Databento is the next-generation market data provider — with
-                  the radical idea that you should only pay for the data that
-                  you use. We power the world’s largest finance and fintech
-                  institutions and lower the barrier of entry for small
-                  startups.
-                </p>
-              </div>
-              <div className="jobDetailsBottomDescriptionP">
-                <p className="jobDetailsP">
-                  Since starting in 2019, we’ve raised over $27.8M in funding
-                  and have over 2,000 companies signed up pre-launch. Our team
-                  consists of former data users from firms like Two Sigma,
-                  Belvedere, Pico, Bloomberg, Pinterest, and Google.
-                </p>
-              </div>
-              <div className="jobDetailsBottomDescriptionP">
-                <p className="jobDetailsP">
-                  We offer health, dental, disability, and life insurance
-                  benefits, as well as 401(k) matching and visa sponsorships. We
-                  accommodate 100% remote work, with teammates living around the
-                  globe and paid in their local currency.
-                </p>
-              </div>
+              {storedJob.jobDescription}
             </div>
           </div>
 

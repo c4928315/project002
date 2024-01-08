@@ -15,12 +15,13 @@ import JobResults from "../../Components/JobSearchResults/JobResults";
 import PostJob from "../../Components/Forms/PostJob/postJob";
 import AddCompany from "../../Components/Admin/Forms/AddCompany/addCompany";
 import EditCompany from "../../Components/Admin/Forms/EditCompany/editCompany";
+import AllJobResults from "../../Components/allJobs";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const { data: recent } = useFetch(
-    "https://intra-deco.onrender.com/openPositions"
+    "https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCategory?jobCategoryId=0"
   );
 
   const handleLogin = () => {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/AdminArea" element={<PostJob />} />
           <Route path="/jobs/results" element={<JobResults />} />
+          <Route path="/allJobs/results" element={<AllJobResults data={recent}/>} />
           <Route path="/addCompany" element={<AddCompany />} />
           <Route path="/editCompany/:id" element={<EditCompany />} />
 

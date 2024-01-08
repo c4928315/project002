@@ -12,8 +12,8 @@ function FindJobs({data}) {
   const handleSearch = async () => {
     const filteredResults = data.filter(
       (job) =>
-        job.jobTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        job.company.toLowerCase().includes(searchTerm.toLowerCase())
+        job?.jobName?.toLowerCase().includes(searchTerm?.toLowerCase()) ||
+        job?.companyName?.toLowerCase().includes(searchTerm?.toLowerCase())
     );
 
     await setFilteredJobs(filteredResults);
@@ -64,3 +64,4 @@ function FindJobs({data}) {
 }
 
 export default FindJobs;
+

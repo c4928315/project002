@@ -13,7 +13,7 @@ function DisplayJobs() {
   const [selectedCompany, setSelectedCompany] = useState(null);
 
   const { data: allCompanies } = useFetch(
-    "https://efmsapi-staging.azurewebsites.net/api/Companies/getAllCompanies"
+    "https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCategory?jobCategoryId=0"
   );
 
   const closeForm = () => {
@@ -63,7 +63,7 @@ function DisplayJobs() {
       <div className="companiesInner">
         <div className="companiesTop">
           <Link onClick={closeForm}>New Company</Link>
-          <h1>Companies</h1>
+          <h1>Jobs</h1>
         </div>
 
         <div class="tbl-header">
@@ -86,7 +86,7 @@ function DisplayJobs() {
               {allCompanies.map((item, i) => {
                 return (
                   <tr key={i}>
-                    <td>{item.name}</td>
+                    <td>{item.jobName}</td>
                     <td>{item.headQuarters}</td>
                     <td>{item.email}</td>
                     <td>{item.phoneNumber}</td>

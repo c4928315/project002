@@ -61,9 +61,11 @@ a {
 	text-align: center;
 	letter-spacing: .3px;
 	padding: 20px 0px;
+	width: 100%;
 	background: black;
     color: white;
 }
+
 
 .sidebar .nav-tabs {
 	width: 100%;
@@ -82,6 +84,10 @@ a {
 	text-align: left;
 	transition: all .4s ease;
     color: black;
+}
+
+.logoLink{
+	padding: 0;
 }
 
 .sidebar .nav-tabs a:hover,

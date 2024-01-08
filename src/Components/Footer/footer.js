@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./footer.css";
 import customIcons from "../../Icons/customIcons";
+import { Link } from "react-router-dom";
 
 function Footer() {
 
@@ -56,10 +57,11 @@ function Footer() {
             </div>
 
             <div className="footerLinks">
-              <p className="links">Link One</p>
-              <p className="links">Link Two</p>
-              <p className="links">Link Three</p>
-              <p className="links">Link Four</p>
+              <p className="links">CV Revamp</p>
+              <p className="links">Student's Package CV Revamp</p>
+              <p className="links">Linkedin Optimisation</p>
+              <p className="links">Coaching Session</p>
+              <p className="links">Interview Prep</p>
             </div>
           </div>
           <div className={open3 ? "footerItemOpen" : "footerItem"}>
@@ -115,18 +117,18 @@ function Footer() {
             <p>&copy; 2023 Your Company. All rights reserved.</p>
           </div>
           <div className="innerFooterBottomRight">
-            <div className="footerSocialIcons">
-              <customIcons.facebook />
-            </div>
-            <div className="footerSocialIcons">
-              <customIcons.twitter />
-            </div>
-            <div className="footerSocialIcons">
-              <customIcons.google />
-            </div>
-            <div className="footerSocialIcons">
+            <Link to="https://www.tiktok.com/@beyond.the.savannah" target="blank" className="footerSocialIcons">
+              <customIcons.tiktok />
+            </Link>
+             <Link to="https://www.linkedin.com/in/otienolorraine/?originalSubdomain=ke" target="blank" className="footerSocialIcons">
+              <customIcons.linkedin />
+            </Link>
+             <Link to="https://www.instagram.com/lorraineotieno/?hl=en" target="blank" className="footerSocialIcons">
               <customIcons.instagram />
-            </div>
+            </Link>
+             <Link to="https://www.youtube.com/@beyondthesavannah" target="blank" className="footerSocialIcons">
+              <customIcons.youtube />
+            </Link>
           </div>
         </div>
       </div>

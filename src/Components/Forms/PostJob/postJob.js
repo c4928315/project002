@@ -12,12 +12,12 @@ function PostJob() {
   return (
     <div className="postJob">
       <input type="checkbox" name="MenuToggle" id="MenuToggle" />
-      <aside class="sidebar">
-        <nav class="nav nav-tabs" id="nav-tab" role="tablist">
-          <div class="logo">Brand</div>
-          <div class="nav_items">
+      <aside className="sidebar">
+        <nav className="nav nav-tabs" id="nav-tab" role="tablist">
+        <Link className="logoLink" to="/"><div className="logo">Brand</div></Link>
+          <div className="nav_items">
             <Link
-              class="active"
+              className="active"
               id="nav-home-tab"
               data-bs-toggle="tab"
               data-bs-target="#nav-home"
@@ -60,15 +60,15 @@ function PostJob() {
           </div>
         </nav>
       </aside>
-      <main class="right">
-        <label for="MenuToggle" class="toggle__icon">
-          <span class="line line1"></span>
-          <span class="line line3"></span>
-          <span class="line line2"></span>
+      <main className="right">
+        <label for="MenuToggle" className="toggle__icon">
+          <span className="line line1"></span>
+          <span className="line line3"></span>
+          <span className="line line2"></span>
         </label>
-        <div class="tab-content" id="nav-tabContent">
+        <div className="tab-content" id="nav-tabContent">
           <div
-            class="tab-pane fade show active"
+            className="tab-pane fade show active"
             id="nav-home"
             role="tabpanel"
             aria-labelledby="nav-home-tab"
@@ -77,7 +77,7 @@ function PostJob() {
             <DisplayComp />
           </div>
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="nav-profile"
             role="tabpanel"
             aria-labelledby="nav-profile-tab"
@@ -86,7 +86,7 @@ function PostJob() {
             <JobCategory />
           </div>
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="nav-contact"
             role="tabpanel"
             aria-labelledby="nav-contact-tab"
@@ -95,7 +95,7 @@ function PostJob() {
             2
           </div>
           <div
-            class="tab-pane fade"
+            className="tab-pane fade"
             id="nav-disabled"
             role="tabpanel"
             aria-labelledby="nav-disabled-tab"

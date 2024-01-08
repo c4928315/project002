@@ -48,23 +48,21 @@ function Testimonials() {
               </div>
             </div>
             <p className="userTestimony">
-              What is the Science Space? The Science Space is a forum dedicated
-              to sharing, exchanging, and exploring knowledge under the umbrella
-              of science.
+              Good morning Lorraine, i hope you well. Following you numerous posts on the remote jobs i have luckily been shortlisted by clipboard health on the workforce manager position.
             </p>
             <div className="newUserTestimonyFlex">
               <div className="">
                 <div className="testimonialImage">
                     <img
-                  src="https://images.pexels.com/photos/6000065/pexels-photo-6000065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1703980800&semt=ais"
                   alt="user"
                   className="testimonialImage"
                 />
                 </div>
               </div>
               <div className="nameAndPosition">
-                <p className="userName">fatma fizal</p>
-                <p className="occupation">Rare Candidate | Ex JP Morgan Technology Intern</p>
+                <p className="userName">Annonymous</p>
+                <p className="occupation">N/A</p>
               </div>
             </div>
           </div>
@@ -77,23 +75,21 @@ function Testimonials() {
               </div>
             </div>
             <p className="userTestimony">
-              What is the Science Space? The Science Space is a forum dedicated
-              to sharing, exchanging, and exploring knowledge under the umbrella
-              of science.
+              Good morning girl, it went well, it was more of a discussion of the wbd document i wrote am waiting for feedback. 👏🏾 😌
             </p>
             <div className="newUserTestimonyFlex">
               <div className="">
                 <div className="testimonialImage">
                     <img
-                  src="https://images.pexels.com/photos/6000065/pexels-photo-6000065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1703980800&semt=ais"
                   alt="user"
                   className="testimonialImage"
                 />
                 </div>
               </div>
               <div className="nameAndPosition">
-                <p className="userName">fatma fizal</p>
-                <p className="occupation">UI/UX designer</p>
+                <p className="userName">Annonymous</p>
+                <p className="occupation">N/A</p>
               </div>
             </div>
           </div>
@@ -106,23 +102,21 @@ function Testimonials() {
               </div>
             </div>
             <p className="userTestimony">
-              What is the Science Space? The Science Space is a forum dedicated
-              to sharing, exchanging, and exploring knowledge under the umbrella
-              of science.
+              Hey there Lorraine, Sooo... I've gotten an invitation to my first interview at Superside.  (Good news, yea?)
             </p>
             <div className="newUserTestimonyFlex">
               <div className="">
                 <div className="testimonialImage">
                     <img
-                  src="https://images.pexels.com/photos/6000065/pexels-photo-6000065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1703980800&semt=ais"
                   alt="user"
                   className="testimonialImage"
                 />
                 </div>
               </div>
               <div className="nameAndPosition">
-                <p className="userName">fatma fizal</p>
-                <p className="occupation">Data Analyst</p>
+                <p className="userName">Annonymous</p>
+                <p className="occupation">N/A</p>
               </div>
             </div>
           </div>

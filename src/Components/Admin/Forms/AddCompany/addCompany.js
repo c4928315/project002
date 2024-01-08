@@ -56,7 +56,8 @@ function AddCompany({close}) {
               ...formData,
               createdBy: "string",
               modifiedBy: "string",
-              imageUrl: AttachedFile
+              attachment: AttachedFile,
+              attachmentName: AttachedFile ? getFileName() : null,
             }),
           }
         );
@@ -70,6 +71,11 @@ function AddCompany({close}) {
       } catch (error) {
         console.error("Error posting job:", error.message);
       }
+    };
+
+    const getFileName = () => {
+      const selectedFile = document.querySelector('input[type="file"]').files[0];
+      return selectedFile ? selectedFile.name : null;
     };
   
     const { data: companyDropdown } = useFetch(
@@ -166,4 +172,6 @@ function AddCompany({close}) {
 }
 
 export default AddCompany
+
+
 

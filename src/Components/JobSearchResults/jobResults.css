@@ -4,7 +4,7 @@
 }
 
 .jobResultsTopNavTitle{
-    font-weight: 100;
+    font-weight: 400;
     font-size: 28px;
 }
 
@@ -95,7 +95,7 @@
     border: none;
     height: 45px;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 500;
     background-color: var(--blue);
     margin-top: 20px;
     padding: 20px 0;
@@ -141,9 +141,9 @@
 }
 
 .jobRangeDropdown .dropdown button{
-    background-color: var(--light-blue) !important;
-    color: var(--secondary-text) !important;
-    border: none !important;
+    background-color: transparent !important;
+    color: var(--blue) !important;
+    border: 1px solid var(--blue) !important;
     width: 160px;
     display: flex;
     align-items: center;

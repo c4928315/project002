@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 *{
-    font-family: 'Arimo', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
 }
 
 
 :root {
-    --light-blue: rgba(3, 75, 174, 0.15);
-    --light-light-blue: rgba(167, 187, 215, 0.3);
+    --light-blue: rgb(226, 219, 211);
+    --light-light-blue: rgba(226, 219, 211, 0.6);
     --light-gray: #767676;
     --light-light-gray: rgba(118, 118, 118, 0.2);
-    --blue: #034BAE;
+    --blue: #c49585;
+    --light-blue-shadow: rgba(196, 149, 133, 0.6);
+    --dark-blue: rgb(157, 115, 103);
     --boxShadow-blue: rgba(3, 75, 174, 0.4);
     --deep-blue: #021d93;
     --secondary-text: #515151;
@@ -27,7 +30,7 @@
     height: 2em;
     width: 2em;
     border-radius: 50%;
-    background-color: var(--secondary-text);
+    background-color: var(--blue);
     color: white;
     display: flex;
     justify-content: center;

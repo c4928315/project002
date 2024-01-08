@@ -4,9 +4,61 @@
     right: 0;
     left: 0;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    background-color: #add8e6;
+    background-color: #e2dbd3;
     z-index: 500;
 }
+
+.navbar-brand{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: fit-content;
+    width: 2em !important;
+    gap: 0.4em;
+}
+
+.logoBox{
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    height: 2em;
+    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4%;
+    
+}
+
+.logoBox h3{
+    font-family: serif;
+    margin: 0;
+    font-size: 1em;
+}
+
+.logoCircle{
+    background-color: var(--light-blue);
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+}
+
+.navbar-brand h5{
+    z-index: 2;
+    position: relative;
+    color: var(--blue);
+    font-size: 0.4em;
+    font-weight: 400;
+    font-family: serif;
+}
+
+/* .navbar-brand img{
+    height: 3.4em;
+    width: fit-content;
+} */
 
 .mainNavItem {
   display: inline-block !important;
@@ -22,11 +74,12 @@
 
 .mainNavCollapse{
     position:  relative !important;
+    flex-grow: 0.7 !important;
 }
 
 .navbar{
    height: fit-content !important;
-   background-color: white !important;
+   background-color: #e2dbd3!important;
    
 }
 
@@ -34,6 +87,7 @@
     position: absolute;
     right: 20px;
     top: 30%;
+    color: var(--dark-blue);
 }
 
 .mainNavCollapseItems{
@@ -42,7 +96,8 @@
 }
 
 .mainNavCollapseItems a{
-    color: black !important;
+    color: var(--dark-blue) !important;
+    font-weight: 400;
 }
 
 .newJobSignContainer, .findJobContainer{
@@ -51,7 +106,7 @@
 
 .newJobSign{
     color: white;
-    background-color: #7ad03a;
+    background-color: var(--blue);
     position: absolute;
     clip-path: polygon(0% 12%, 100% 12%, 100% 60%, 60% 60%, 56% 80%, 78% 60%, 0% 60%);
     padding: 5px;
@@ -69,13 +124,13 @@
     width: 200px;
     background-color: white;
     left: 10%;
-    top: 110%;
-    border-top: 2.1px solid #1573f6;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    top: 125%;
+    border-top: 2.1px solid var(--dark-blue);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     height: 0px;
     overflow: hidden;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-radius: 6px;
     opacity: 0;
     transition: opacity 0.3s ease, height 0.3s ease;
 }
@@ -92,8 +147,8 @@
 }
 
 .nav-item-dropdown ul li{
-    color: #767676;
-    font-size: 16px;
+    color: var(--blue);
+    font-size: 1em;
     font-weight: 300;
     transition: background-color 0.3s ease-in-out;
     padding: 0 20px;
@@ -106,11 +161,11 @@
 
 .pointer{
     clip-path: polygon(50% 60%, 0% 100%, 100% 100%);
-    background-color: #1573f6;
-    color: #1573f6;
+    background-color: var(--dark-blue);
+    color: var(--dark-blue);
     position: absolute;
     padding: 10px;
-    top: 79%;
+    top: 95%;
     left: 30%;
     opacity: 0;
     transition: opacity 0.3s ease;

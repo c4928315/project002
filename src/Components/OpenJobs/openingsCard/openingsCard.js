@@ -7,6 +7,15 @@ function OpeningsCard({ data }) {
 
     const navigate = useNavigate();
 
+    console.log(data)
+
+    const handleTitleClick = () => {
+      // Store the clicked data in local storage
+      localStorage.setItem('clickedJob', JSON.stringify(data));
+
+      // Navigate to the job details page
+      navigate(`/jobs/${data.jobsId}/${encodeURIComponent(data.jobTitle)}`);
+  };
 
 
   const duration = () => {
@@ -24,14 +33,14 @@ function OpeningsCard({ data }) {
 
   return (
     <div className="openingCardContainer">
-      <img src={data.companyLogo} alt="" className="companyLogo" />
+      <img src="https://inclusivelyremote.com/wp-content/uploads/2023/10/IMG_9297-150x150.png" alt="" className="companyLogo" />
       <div className="leftOpeningCard">
-        <h2 className="openingCardTitle" onClick={() => navigate(`/jobs/${data.id}/${encodeURIComponent(data.jobTitle)}`)}>{data.jobTitle}</h2>
+        <h2 className="openingCardTitle" onClick={handleTitleClick}>{data.jobName}</h2>
         <div className="leftOpeningCardIcon">
           <span>
             <customIcons.home size={17} style={{color: "#767676"}}/>
           </span>
-          <span className="openingCardCompany"><p>{data.company}</p></span>
+          <span className="openingCardCompany"><p>{data.companyName}</p></span>
         </div>
         <div className="leftOpeningCardIcon openingCardCompany">
           <span>
@@ -55,7 +64,7 @@ function OpeningsCard({ data }) {
         </div>
       </div>
       <div className="jobDuration">
-        <button onClick={() => navigate("/login")}>full time</button>
+        <button onClick={() => navigate("/login")}>{data.jobCategory}</button>
       </div>
     </div>
   );

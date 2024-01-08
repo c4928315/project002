@@ -40,10 +40,11 @@
 }
 
 .topDecor{
-    margin-bottom: 30px;
-    color: #202124;
-    font-size: 29px;
-    font-weight: 400;
+    margin-bottom: 0px;
+    color:  var(--dark-blue);
+    font-size: 1.8em;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .topDecor p{
@@ -52,10 +53,10 @@
 
 .userTestimony{
     margin-bottom: 30px;
-    color: var(--light-gray);
+    color: var(--blue);
     letter-spacing: 0.03em;
-    font-size: 1.1em;
-    font-weight: 100 !important;
+    font-size: 1.02em;
+    font-weight: 400 !important;
 }
 
 .testimonyContent{

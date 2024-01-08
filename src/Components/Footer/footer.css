@@ -118,7 +118,7 @@
 
     .footerItemOpen{
         height: fit-content;
-        border: 1px solid var(--secondary-text);
+        border: 1px solid var(--blue);
         padding: 3%;
         border-radius: 0.4em;
         overflow: hidden;

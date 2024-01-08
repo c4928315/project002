@@ -207,7 +207,7 @@
 
   .jobRange{
     font-weight: 400;
-    font-size: 0.95em;
+    font-size: 60%;
     font-style: italic;
     color: var(--blue);
   }
@@ -258,7 +258,7 @@
     }
 
     .jobRangeDropdown .dropdown button{
-        width: 10em;
+        width: 9em;
         height: 3em;
         font-size: 0.6em;
         display: flex;
@@ -297,5 +297,9 @@
 
     .jobResultsTopNav{
         gap: 0.3%;
+    }
+
+    .jobResultsTopNav p, .jobResultsTopNav a{
+        font-size: 65%;
     }
   }

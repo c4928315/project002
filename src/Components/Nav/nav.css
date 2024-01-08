@@ -203,4 +203,29 @@
         right: 2%;
         top: 5%;
     }
+
+    .logoBox{
+        height: 1.3em;
+    width: 1.3em; 
+    border: 1px solid var(--blue);
+    }
+
+    .logoBox h3{
+        font-size: 0.8em;
+    }
+
+    .navbar-brand h5{
+        font-size: 0.2em;
+    }
+
+    .navbar-brand{
+        width: fit-content !important;
+    }
+
+    .logoCircle{
+        width: 1em;
+        height: 1em;
+        bottom: 30%;
+        left: 23%;
+    }
   }

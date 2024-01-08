@@ -110,7 +110,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 99%;
+        width: 100%;
     }
     .nav-tabs-openJobs .nav-link {
         height: fit-content !important;

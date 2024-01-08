@@ -6,15 +6,21 @@
 .jobResultsTopNavTitle{
     font-weight: 400;
     font-size: 28px;
+    color: var(--dark-blue);
 }
 
 .jobResultsTopNav p, .jobResultsTopNav a{
     margin: 0;
-    font-size: 14px;
+    font-size: 0.8em;
     font-weight: lighter;
     text-decoration: none;
-    color: black;
+    color: var(--blue) !important;
     text-transform: capitalize;
+    font-weight: 400;
+}
+
+.jobResultsTopNav p{
+    color: var(--dark-blue) !important;
 }
 
 .jobResultsTopNavHome{
@@ -27,6 +33,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
+    color: var(--blue);
 }
 
 .jobResultsTop{
@@ -53,6 +60,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 15%;
+  
 }
 
 
@@ -65,23 +73,46 @@
     margin-bottom: 10px;
     font-size: 19px;
     font-weight: 500;
+    color: var(--dark-blue);
 }
 
 .jobResultsBottomInputContainer input, .jobResultsBottomInputContainer select{
-    width: 100%;
-    border: 1px solid var(--secondary-text-thin);
+    width: 90%;
+    border: none;
     border-radius: 1.3vh !important;
     height: 50px !important;
     padding-left: 3%;
     font-size: 15px !important;
     color: var(--light-gray);
+    font-style: italic !important;
 }
+
+.jobResultsBottomInputContainer .formInputResultsContainer input:focus, .jobResultsBottomInputContainer .formInputResultsContainer select:focus{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;;
+}
+
+.jobResultsIcon{
+    width: 10%;
+    color: var(--dark-blue);
+}
+
 
 .jobResultsBottomInputContainer input::placeholder{
     color: black !important;
     font-size: 15px !important;
     color: var(--light-gray) !important;
+    color: var(--blue) !important;
 }
+
+.jobResultsBottomInputContainer select{
+    color: black !important;
+    font-size: 15px !important;
+    color: var(--light-gray) !important;
+    color: var(--blue) !important;
+}
+
 
 .jobResultsBottomRight{
     width: 70%;
@@ -124,7 +155,7 @@
     justify-content: center;
     border: none;
     color: white;
-    background-color: var(--light-blue);
+    background-color: var(--blue);
 }
 
 .jobRangeContainer{
@@ -155,14 +186,16 @@
 }
 .jobRangeDropdown .dropdown-menu{
    padding: 20px !important;
-   color: var(--secondary-text);
    line-height: 30px !important;
    border: 1px solid var(--light-blue);
    margin-top: 1% !important;
+   background-color: var(--light-light-blue);
 }
 
 .jobRangeDropdown .dropdown-menu li{
-   font-weight: 100;
+   font-weight: 300;
+   font-size: 0.9em;
+   color: var(--dark-blue);
    cursor: pointer;
    transition: color 0.3s ease-in-out;
  }
@@ -173,9 +206,10 @@
   }
 
   .jobRange{
-    font-weight: 100;
-    font-size: 15px;
-    color: var(--secondary-text);
+    font-weight: 400;
+    font-size: 0.95em;
+    font-style: italic;
+    color: var(--blue);
   }
 
   .scrollToTop{
@@ -233,9 +267,6 @@
         padding: 1%;
     }
 
-    .jobRange{
-        font-size: 0.6em;
-    }
 
     .jobRangeDropdown{
         gap: 10%;
@@ -246,17 +277,23 @@
     }
 
     .formInputResultsContainer{
-        border: 1px solid var(--secondary-text-thin);
+        border: none;
         border-radius: 1.3vh !important;
+        display: flex !important;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .formInputResultsContainer select {
+        width: 90% !important;
     }
 
     .jobResultsTopNavTitle{
         font-size: 1.2em;
     }
 
-    .jobResultsTopNav p, .jobResultsTopNav a{
-        font-size: 0.7em;
-    }
+
 
     .jobResultsTopNav{
         gap: 0.3%;

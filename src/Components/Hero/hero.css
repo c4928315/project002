@@ -418,7 +418,13 @@
   .heroMainSecBtn{
     width: 100%;
     background-color: white;
-    border: 3px solid var(--light-blue);
+    border: 2px solid var(--blue);
+  }
+
+  .heroTalkBtnContainer a{
+    background-color: transparent;
+    border: 1px solid var(--blue);
+    color: var(--dark-blue);
   }
 
   .heroMainH, .heroMainP{

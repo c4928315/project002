@@ -7,7 +7,7 @@ import { RxSlash } from "react-icons/rx";
 import { TbScanEye } from "react-icons/tb";
 import { SlBriefcase, SlLocationPin } from "react-icons/sl";
 import { GiTakeMyMoney, GiSandsOfTime } from "react-icons/gi";
-import { MdLocalPrintshop, MdOutlineWidgets } from "react-icons/md";
+import { MdLocalPrintshop, MdOutlineWidgets, MdOutlineCategory } from "react-icons/md";
 import { GrFacebookOption, GrTwitter } from "react-icons/gr";
 import { AiOutlineGoogle } from "react-icons/ai";
 import { PiSpotifyLogoDuotone } from "react-icons/pi";
@@ -59,6 +59,7 @@ const customIcons = {
   dropDown: FaCaretDown,
   tiktok: FaTiktok,
   youtube: ImYoutube2,
+  category: MdOutlineCategory,
 }
 
 export default customIcons

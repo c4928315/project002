@@ -7,10 +7,11 @@
 }
 
 .newsLetterHeader h1{
-    color: #202124;
+    color: var(--dark-blue);
     font-size: 1.78em;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
+    margin: 0;
 }
 
 .newsLetterSubHeader {
@@ -19,7 +20,7 @@
     text-align: center;
     line-height: 25px;
     font-size: 15px;
-    margin-top: 20px;
+    margin-top: 0.5em;
 }
 
 .subscribeNewsLetter{
@@ -62,7 +63,7 @@
 }
 
 .subscribeNewsLetterBtn button:hover{
-    background-color: var(--deep-blue);
+    background-color: var(--dark-blue);
 }
 
 .subscribeNewsLetterArea{
@@ -81,6 +82,17 @@
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     padding-left: 10px !important;
+    color: var(--blue);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.subscribeNewsLetterArea input::placeholder{
+    color: var(--blue);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 01.1em;
 }
 
 .subscribeNewsLetterArea input:focus{
@@ -90,13 +102,12 @@
 }
 
 .newsLetterSubHeader p{
-    color: var(--light-gray);
+    color: var(--blue);
     letter-spacing: 0.025em;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .newsLetterInner{
-    line-height: 50px;
     width: 75%;
     margin: 0 auto;
 }

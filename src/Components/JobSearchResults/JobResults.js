@@ -51,40 +51,40 @@ function JobResults() {
           <div className="jobResultsBottomInputContainer">
             <label>Search by Keywords</label>
             <br />
-            <div className="formInputResultsContainer">
-            <input
-              type="text"
-              className="jobResultsBottomInput"
-              placeholder="Job Title, Company"
-            />
+            <div className="formInputResultsContainer" style={{display:"flex", width: "100%", alignItems: "center", border: "1px solid rgb(226, 219, 211)", borderRadius: "1.3vh",  paddingLeft: "1em"}}>
+              <customIcons.search size={22} className="jobResultsIcon"/>
+              <input
+                type="text"
+                className="jobResultsBottomInput"
+                placeholder="Job Title, Company"
+              />
             </div>
           </div>
 
           <div className="jobResultsBottomInputContainer">
             <label>Category</label>
-            <div className="formInputResultsContainer">
-              <select class="form-select" aria-label="Default select example">
-              <option selected>Select</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+            <div className="formInputResultsContainer" style={{display:"flex", width: "100%", alignItems: "center", border: "1px solid rgb(226, 219, 211)", borderRadius: "1.3vh",  paddingLeft: "1em"}}>
+                <customIcons.category size={22} className="jobResultsIcon"/>
+                <select class="form-select" aria-label="Default select example" style={{ width: "90%", border: "none"}}>
+                  <option selected>Select</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
             </div>
-            
           </div>
 
-          <div className="jobResultsBottomInputContainer">
+          {/* <div className="jobResultsBottomInputContainer">
             <label>Job Type</label>
             <div className="formInputResultsContainer">
               <select class="form-select" aria-label="Default select example">
-              <option selected>Select</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+                <option selected>Select</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
             </div>
-            
-          </div>
+          </div> */}
 
           <button>Find Job</button>
         </div>
@@ -118,9 +118,7 @@ function JobResults() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  {
-                    `${jobsPerPage} Per Page`
-                  }
+                  {`${jobsPerPage} Per Page`}
                 </button>
                 <ul class="dropdown-menu">
                   <li onClick={() => setJobsPerPage(5)}>5 Per Page</li>
@@ -129,7 +127,9 @@ function JobResults() {
                   <li onClick={() => setJobsPerPage(20)}>20 Per Page</li>
                   <li onClick={() => setJobsPerPage(25)}>25 Per Page</li>
                   <li onClick={() => setJobsPerPage(30)}>30 Per Page</li>
-                  <li onClick={() => setJobsPerPage(filteredJobs.length)}>All</li>
+                  <li onClick={() => setJobsPerPage(filteredJobs.length)}>
+                    All
+                  </li>
                 </ul>
               </div>
             </div>
@@ -153,8 +153,8 @@ function JobResults() {
             )}
           </div>
           <div className="scrollToTop">
-        <ScrollToTopButton/>
-      </div>
+            <ScrollToTopButton />
+          </div>
         </div>
       </div>
     </div>

@@ -33,7 +33,7 @@ function OpeningsCard({ data }) {
 
   return (
     <div className="openingCardContainer">
-      <img src="https://inclusivelyremote.com/wp-content/uploads/2023/10/IMG_9297-150x150.png" alt="" className="companyLogo" />
+      <img src={data.imageUrl} alt="" className="companyLogo" />
       <div className="leftOpeningCard">
         <h2 className="openingCardTitle" onClick={handleTitleClick}>{data.jobName}</h2>
         <div className="leftOpeningCardIcon">
@@ -59,7 +59,8 @@ function OpeningsCard({ data }) {
             <customIcons.money size={17} style={{color: "#767676"}}/>
           </span>
           <span className="leftOpeningCardSalary">
-            <p>Ksh {data.salaryRangeStart} - Ksh {data.salaryRangeEnd} / {duration()}</p>
+            {/* <p>Ksh {data.salaryRangeStart} - Ksh {data.salaryRangeEnd} / {duration()}</p> */}
+            <p>Ksh {data.salary}</p>
           </span>
         </div>
       </div>

@@ -73,11 +73,12 @@ function Nav() {
                 <Link className="nav-link">Remote Worker’s Spotlight</Link>
               </li>
               <li className="nav-item mainNavItem newJobSignContainer">
-                <Link to="/AdminArea" className="nav-link">Post Job</Link>
+                <Link to="" className="nav-link">Post Job</Link>
                 <div className="newJobSign">
                   <p>New</p>
                 </div>
               </li>
+              <Link to="/AdminArea">.</Link>
             </ul>
             <div className="notifications">
               <customIcons.bell size={24}/>

@@ -47,9 +47,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route element={<RequireAuth/>}>
-            <Route path="/jobs/:id/:jobTitle" element={<JobDetail />} />
+            {/* <Route path="/jobs/:id/:jobTitle" element={<JobDetail />} /> */}
           </Route>
           <Route path="/" element={<Home data={recent}/>} />
+          <Route path="/jobs/:id/:jobTitle" element={<JobDetail />} />
           
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           <Route path="/AdminArea" element={<PostJob />} />

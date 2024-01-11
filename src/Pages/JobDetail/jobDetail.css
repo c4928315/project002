@@ -12,6 +12,7 @@
 
 .detailsImgLogo img{
     width: 90px;
+    border-radius: 5%;
 }
 
 .jobDetailTitle{
@@ -64,7 +65,7 @@
 }
 
 .detailsApplyBtn button:hover{
-    background-color: var(--deep-blue);
+    background-color: var(--dark-blue);
 }
 
 .jobDetailIconContainer{
@@ -79,12 +80,14 @@
     height: fit-content;
     font-size: 16px;
     gap: 8px;
+    color: var(--dark-blue);
 }
 
 .iconText{
     padding: 0;
     margin: 0;
     height: 18px;
+    color: var(--blue);
 }
 
 .jobDetailsBottom{

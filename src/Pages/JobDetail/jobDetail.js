@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ScrollToTopButton from "../../Components/scrollToTop";
 import customIcons from "../../Icons/customIcons";
 import "./jobDetail.css";
@@ -7,9 +7,9 @@ import "./jobDetail.css";
 function JobDetail() {
   const { id, jobTitle } = useParams();
 
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
 
-  const storedJobString = localStorage.getItem('clickedJob');
+  const storedJobString = localStorage.getItem("clickedJob");
 
   const storedJob = JSON.parse(storedJobString);
 
@@ -36,31 +36,40 @@ function JobDetail() {
 
   function formatDateString(inputDateString) {
     const inputDate = new Date(inputDateString);
-    
+
     // Options for formatting the output date
-    const options = { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     };
 
     // Format the date using Intl.DateTimeFormat
-    const formattedDate = new Intl.DateTimeFormat('en-US', options).format(inputDate);
+    const formattedDate = new Intl.DateTimeFormat("en-US", options).format(
+      inputDate
+    );
 
     return formattedDate;
-}
+  }
 
+  const interpretMarkers = (content) => {
+    return content
+      .replace(/p>/g, "<p>")
+      .replace(/ul>/g, "<ul>")
+      .replace(/b>/g, "<b>")
+      .replace(/li>/g, "<li>");
+  };
 
   return (
     <div className="jobDetail">
       <div className="jobDetailTop">
         <div className="jobDetailLogo">
           <div className="detailsImgLogo">
-            <img src={data.companyLogo} alt={data.company} />
+            <img src={storedJob.imageUrl} alt={storedJob.company} />
           </div>
 
           <div className="jobDetailTitle">
-            <h3>{data.jobTitle}</h3>
+            <h3>{storedJob.jobTitle}</h3>
           </div>
 
           <div className="jobDetailIconContainer">
@@ -86,7 +95,9 @@ function JobDetail() {
               <span>
                 <customIcons.time size={18} />
               </span>
-              <span className="iconText">{formatDateString(storedJob.endDate)}</span>
+              <span className="iconText">
+                {formatDateString(storedJob.endDate)}
+              </span>
             </div>
           </div>
 
@@ -94,7 +105,9 @@ function JobDetail() {
             <span>{storedJob.jobCategory}</span>
           </div>
           <div className="detailsApplyBtn">
-            <button>Apply Now</button>
+            <Link to={storedJob.jobUrl} target="_blank">
+              <button>Apply Now</button>
+            </Link>
           </div>
         </div>
       </div>
@@ -140,21 +153,25 @@ function JobDetail() {
             </div>
           </div>
 
-          <div className="jobDetailsBottomOthers">
-            <div className="jobDetailsBottomOthersH">
-              <h1>Responsibilities</h1>
-            </div>
-            <div className="jobDetailsBottomOthersp">
-              <p className="jobDetailsP">
-                You’ll be helping us ideate and execute on SEO, SEM, and related
-                campaigns. You’ll also get the opportunity to interact with our
-                current and prospective users, as well as across the engineering
-                and product teams at Databento.
-              </p>
-            </div>
-          </div>
+          {data.map((item, i) => {
+            return (
+              <div className="jobDetailsBottomOthers" key={i}>
+                <div className="jobDetailsBottomOthersH">
+                  <h1>{item.sectionName}</h1>
+                </div>
+                <div className="jobDetailsBottomOthersp">
+                  <div
+                    className="jobDetailsP"
+                    dangerouslySetInnerHTML={{
+                      __html: interpretMarkers(item.sectionDescription),
+                    }}
+                  />
+                </div>
+              </div>
+            );
+          })}
 
-          <div className="jobDetailsBottomOthers">
+          {/* <div className="jobDetailsBottomOthers">
             <div className="jobDetailsBottomOthersH">
               <h1>Desired Qualifications</h1>
             </div>
@@ -220,33 +237,49 @@ function JobDetail() {
               Our recruiting data suggests that underrepresented applicants often downplay their skills. Even if your experience doesn’t exactly match the qualifications listed, we still want to hear from you. Please apply!
               </p>
             </div>
-          </div>
+          </div> */}
 
           <div className="jobDetailsLinks">
             <p>share this link</p>
             <div className="jobDetailsLinksBtns">
-            <button className="btnFB">
-              <span><customIcons.facebook size={20}/></span>
-              <span>facebook</span>
-            </button>
-            <button className="btnTwitter">
-              <span><customIcons.x/></span>
-              <span>twitter</span>
-            </button>
-            <button className="btnLinkIn">
-              <span><customIcons.linkedin/></span>
-              <span>linkedin</span>
-            </button>
-            <button className="btnPin">
-              <span><customIcons.pintrest/></span>
-              <span>pinterest</span>
-            </button>
+              <Link to="https://www.instagram.com/lorraineotieno/?hl=en" target="_blank">
+                <button className="btnFB">
+                  <span>
+                    <customIcons.instagram size={20} />
+                  </span>
+                  <span>instagram</span>
+                </button>
+              </Link>
+              <Link to="https://www.tiktok.com/@beyond.the.savannah" target="_blank">
+                <button className="btnTwitter">
+                  <span>
+                    <customIcons.tiktok />
+                  </span>
+                  <span>tiktok</span>
+                </button>
+              </Link>
+              <Link to="https://www.linkedin.com/in/otienolorraine/?originalSubdomain=ke" target="_blank">
+                <button className="btnLinkIn">
+                  <span>
+                    <customIcons.linkedin />
+                  </span>
+                  <span>linkedin</span>
+                </button>
+              </Link>
+              <Link to="https://www.youtube.com/@beyondthesavannah" target="_blank">
+                <button className="btnPin">
+                  <span>
+                    <customIcons.youtube />
+                  </span>
+                  <span>youtube</span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
       <div className="scrollToTop">
-        <ScrollToTopButton/>
+        <ScrollToTopButton />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 {
   "name": "job-finder",
+  "homepage": "https://beyondthesavannah.co.ke",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

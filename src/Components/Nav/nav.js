@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import customIcons from "../../Icons/customIcons";
-import "./nav.css"
+import "./nav.css";
 
 function Nav() {
   return (
@@ -43,9 +43,15 @@ function Nav() {
                   <div className="pointer"></div>
                   <div className="nav-item-dropdown">
                     <ul>
-                      <li>Job Category</li>
-                      <li>Job Region</li>
-                      <li>Job Type</li>
+                      <li>
+                        <Link to="/openJobs">All Jobs</Link>
+                      </li>
+                      <li>
+                        <Link to="">Job Category</Link>
+                      </li>
+                      <li>
+                        <Link to="">Job Type</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -59,9 +65,15 @@ function Nav() {
                   <div className="pointer"></div>
                   <div className="nav-item-dropdown">
                     <ul>
-                      <li>CV Template</li>
-                      <li>Blog / Newsletter</li>
-                      <li>Our Services</li>
+                      <li>
+                        <Link>CV Template</Link>
+                      </li>
+                      <li>
+                        <Link to="">Blog / Newsletter</Link>
+                      </li>
+                      <li>
+                        <Link to="">Our Services</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -73,7 +85,9 @@ function Nav() {
                 <Link className="nav-link">Remote Worker’s Spotlight</Link>
               </li>
               <li className="nav-item mainNavItem newJobSignContainer">
-                <Link to="" className="nav-link">Post Job</Link>
+                <Link to="" className="nav-link">
+                  Post Job
+                </Link>
                 <div className="newJobSign">
                   <p>New</p>
                 </div>
@@ -81,7 +95,7 @@ function Nav() {
               <Link to="/AdminArea">.</Link>
             </ul>
             <div className="notifications">
-              <customIcons.bell size={24}/>
+              <customIcons.bell size={24} />
             </div>
           </div>
         </div>

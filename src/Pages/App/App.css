@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     font-family: 'Source Sans 3', sans-serif;
@@ -8,10 +9,14 @@
 
 :root {
     --light-blue: rgb(226, 219, 211);
+    --jungle-green: rgb(28, 54, 58);
+    --light-jungle-green: rgb(44, 85, 92);
     --light-light-blue: rgba(226, 219, 211, 0.6);
+    --light2-light-blue: rgba(226, 219, 211);
+    --light2-light-blue: rgba(226, 219, 211, 0.1);
     --light-gray: #767676;
     --light-light-gray: rgba(118, 118, 118, 0.2);
-    --blue: #c49585;
+    --blue: rgb(44, 85, 92);
     --light-blue-shadow: rgba(196, 149, 133, 0.6);
     --dark-blue: rgb(157, 115, 103);
     --boxShadow-blue: rgba(3, 75, 174, 0.4);

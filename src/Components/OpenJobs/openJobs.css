@@ -2,6 +2,7 @@
   height: fit-content;
   width: 100%;
   background-color: white;
+  margin-bottom: 4em;
 }
 
 .openPositionsTopContentContainer {
@@ -11,15 +12,20 @@
   justify-content: center;
   height: 20vh;
   padding: 120px 0 60px 0;
+  background-color: var(--light-jungle-green);
+  margin-bottom: 3.5em;
 }
 
 .openPositionsHeader h2 {
-  color: var(--dark-blue);
-  font-size: 29px;
+  color: white;
+  font-size: 2em;
   font-weight: 500;
   text-transform: uppercase;
   margin: 0;
+  font-family: 'Trirong', serif;
 }
+
+
 
 .openPositionsHeader{
     display: flex;
@@ -28,9 +34,10 @@
 }
 
 .openPositionsSubheader p{
-    color: var(--blue);
+    color: #b48e41;
     letter-spacing: 0.025em;
     font-weight: 300;
+    font-family: sans-serif;
 }
 
 .nav-tabs-openJobs-container{
@@ -49,8 +56,8 @@
 
 .nav-tabs-openJobs .nav-link{
     background-color: transparent !important;
-    border: 1px solid var(--blue);
-    color: var(--blue);
+    border: 1px solid #b48e41;
+    color: #b48e41;
     border-radius: 14px !important;
     font-weight: 600;
     transition: color background-color 0.3s ease-in-out;
@@ -60,12 +67,12 @@
 }
 
 .nav-tabs-openJobs .nav-link:hover{
-    background-color: var(--blue) !important;
+    background-color: #b48e41 !important;
     color: white !important;
 }
 
 .nav-tabs-openJobs .active{
-    background-color: var(--blue) !important;
+    background-color: #b48e41 !important;
     color: white !important;
 }
 
@@ -79,7 +86,7 @@
 
 .seeAllOpenings a{
     font-weight: 500;
-    color: var(--blue);
+    color: var(--jungle-green);
     text-decoration: underline;
     font-style: italic;
     text-decoration: underline;
@@ -87,9 +94,7 @@
     transition: color 0.3s ease-in-out;
 }
 
-.seeAllOpenings a:hover{
-    color: var(--dark-blue);
-}
+
 
 
 @media screen and (min-width: 320px) and (max-width: 736px) {

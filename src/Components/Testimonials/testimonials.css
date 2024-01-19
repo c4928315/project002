@@ -1,8 +1,10 @@
 .testimonaialCarousel{
-    background-color: var(--light-blue);
-    height:450px;
+    background-color: white;
+    height: 80vh;
     width: 100%;
     margin-top: 80px;
+    position: relative;
+    padding: 0 3em;
 }
 
 
@@ -41,39 +43,40 @@
 
 .topDecor{
     margin-bottom: 0px;
-    color:  var(--dark-blue);
+    color:  #b48e41;
     font-size: 1.8em;
     font-weight: 500;
     text-transform: uppercase;
 }
 
-.topDecor p{
-    
-}
+
 
 .userTestimony{
     margin-bottom: 30px;
-    color: var(--blue);
+    color: var(--jungle-green);
     letter-spacing: 0.03em;
-    font-size: 1.02em;
+    font-size: 2em;
+    font-family: 'Trirong', serif;
     font-weight: 400 !important;
 }
 
 .testimonyContent{
-    padding: 100px;
-    padding-top: 90px;
+   
 }
 
 .userName{
     text-transform: capitalize;
-    font-size: 14px;
-    font-weight: 700;
+    font-weight: 100;
     letter-spacing: 0.04em;
-    color: var(--secondary-text);
+    color: black;
+    align-items: center;
     margin: 0;
-    width: 100%;
+    width: fit-content;
     display: flex;
     justify-content: left;
+    font-family: sans-serif;
+   font-style: italic;
+   font-size: 1em; 
 }
 .occupation{
     letter-spacing: 0.04em;
@@ -85,6 +88,10 @@
 
 .nameAndPosition{
     height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    color: black;
 }
 
 .btnDiasabled{
@@ -99,12 +106,12 @@
 }
 
 .carousel-indicators [data-bs-target] {
-    background-color: var(--light-gray) !important;
+    background-color: var(--jungle-green) !important;
 }
 
 .testimonyActive .active{
     border-radius: 50% !important;
-    background-color: black !important;
+    background-color: #b48e41 !important;
     padding: 0 !important;
     width: 12px !important;
     height: 12px !important;
@@ -113,6 +120,8 @@
 
 .testimonaialCarousel .carousel-indicators{
     margin-bottom: 3.5em !important;
+    position: absolute;
+    left: -90%;
 }
 
 .testimonyItem{
@@ -126,6 +135,28 @@
     width: 100%;
     height: fit-content;
     justify-content: center;
+}
+
+.testimonyDiv1, .testimonyDiv2{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+
+}
+
+.testimonyDiv1{
+    margin-bottom: 2em;
+}
+
+.testimonyDiv2{
+    margin-top: 2em;
+}
+
+.testimonyDivInner{
+    height: 5em;
+    width: 2px;
+    background-color: #b48e41;
 }
 
 @media screen and (min-width: 320px) and (max-width: 736px) {

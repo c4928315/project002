@@ -1,16 +1,213 @@
 .findJobsContainer {
-  background: linear-gradient(rgb(196, 149, 133, 0.6), rgb(196, 149, 133, 0.6)) ,url("https://media.licdn.com/dms/image/D4D12AQElIbIZsNR3Ug/article-cover_image-shrink_600_2000/0/1674548116811?e=2147483647&v=beta&t=ek6NowLk02DqpxMFcwXWATmPWQQ97C0fvbBiv4zQ9Cw");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  padding-top: 5em;
+}
+
+.findJobsInner{
   width: 100%;
 }
 
-.findJobsHeader h1 {
+.topH1{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topH1Innder h1{
+  font-family: 'Trirong', serif;
+  font-size: 2.1em;
+  font-weight: 500;
+}
+
+.topH1Innder p{
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 0.89em;
+  background-color: rgb(180, 142, 65, 0.4);
+  width: fit-content;
+  padding: 1% 4%;
+  border-radius: 1em;
+}
+
+/* Import Google Fonts CSS directly in your HTML file */
+/* Add this line to the <head> section of your HTML file */
+/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap"> */
+
+/* Rest of the CSS code */
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: white;
+}
+
+section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  align-items: center;
+  height: fit-content;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  width: 90%;
+  margin: 10px 0;
+  transition: ease all 2.3s;
+  perspective: 1200px;
+  border-radius: 12px;
+}
+
+.card:hover .cover {
+  transform: rotateX(0deg) rotateY(-180deg);
+}
+
+.card:hover .cover:before {
+  transform: translateZ(30px);
+}
+
+.card:hover .cover:after {
+  background-color: black;
+}
+
+.card:hover h1 {
+  transform: translateZ(100px);
+}
+
+.card:hover .price {
+  transform: translateZ(60px);
+}
+
+.card:hover a {
+  transform: translateZ(-60px) rotatey(-180deg);
+}
+
+.cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+
+.cover:before {
+  content: '';
+  position: absolute;
+  border-radius: 12px;
+  border: 3px solid #b48e41;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  transition: ease all 2.3s;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+}
+
+.cover:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  transition: ease all 1.3s;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.cover.item-a {
+  background-image: url('https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+
+.cover.item-b {
+  background-image: url('https://images.pexels.com/photos/19579976/pexels-photo-19579976/free-photo-of-smiling-student-in-graduate-gown-shows-her-blue-mortarboard-with-a-tassel.jpeg?auto=compress&cs=tinysrgb&w=1200&lazy=load');
+}
+
+.cover.item-c {
+  background-image: url('https://images.pexels.com/photos/16450745/pexels-photo-16450745/free-photo-of-linkedin-page-on-cellphone-screen.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+.cover.item-d {
+  background-image: url('https://images.pexels.com/photos/3727511/pexels-photo-3727511.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+.cover.item-e {
+  background-image: url('https://images.pexels.com/photos/5699475/pexels-photo-5699475.jpeg?auto=compress&cs=tinysrgb&w=800');
+}
+
+.cover h1 {
+  font-weight: 400;
+  position: absolute;
+  bottom: 55px;
+  left: 50px;
+  color: rgb(255, 255, 255, 0.9);
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 3;
+  font-size: 1.5em;
+  transform: translateZ(0px);
+}
+
+.price {
+  font-weight: 300;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 4;
+  font-size: 1.5em;
+  transform: translateZ(0px);
+}
+
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--jungle-green);
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  transform: translateZ(-1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 0.9em;
+  flex-direction: column;
+}
+
+.card-back a {
+  transform-style: preserve-3d;
+  transition: ease transform 2.3s, ease background 0.5s;
+  transform: translateZ(-1px) rotatey(-180deg);
+  background: transparent;
+  border: 1px solid #b48e41;
+  font-weight: 300;
+  font-size: 1em;
+  color: #b48e41;
+  padding: 10px 32px;
+  border-radius: 12px;
+  outline: none;
+  text-decoration: none;
+}
+
+.card-back a:hover {
+  background-color: #b48e41;
+  color: var(--jungle-green);
+}
+
+/* .findJobsHeader h1 {
   color: white;
   font-size: 29px;
   font-weight: 500;
@@ -178,4 +375,4 @@
   .findJobsSearchBtn {
     width: 5em;
   }
-}
+} */

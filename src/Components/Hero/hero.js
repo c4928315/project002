@@ -3,8 +3,7 @@ import "./hero.css";
 import customIcons from "../../Icons/customIcons";
 import { Link, useNavigate } from "react-router-dom";
 
-function Hero({data}) {
-
+function Hero({ data }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredJobs, setFilteredJobs] = useState([]);
   const navigate = useNavigate();
@@ -27,107 +26,68 @@ function Hero({data}) {
     localStorage.setItem("filteredJobs", JSON.stringify(filteredJobs));
   }, [filteredJobs]);
 
-  console.log(filteredJobs)
+  console.log(filteredJobs);
 
   return (
-    <div className="heroContainer">
-      {/* <div className="blob1">
-
-        </div> */}
-      <div className="heroLeft">
-        <div className="heroMainH">
-          <h1>
-            Empowering Your Career Journey Through Seamless{" "}
-            <span className="connectionsHeroContainer">
-              <customIcons.connection size={35} className="connectionsHero" />
-            </span>{" "}
-            Connections.
-          </h1>
-        </div>
-
-        <div className="heroMainP">
-          <p>
-            Seamless connections, soaring careers. Elevate yours with comapany
-            name!
-          </p>
-        </div>
-
-        <div className="heroMainBtn">
-          <span>
-            <customIcons.getStarted size={18} />
-          </span>
-          <button onClick={() => navigate("/allJobs/results?search=allJobs")} className="getStartedBtn">get started</button>
-        </div>
-
-        <div className="heroMainSecBtn">
-          <div className="heroGlobe">
-            <customIcons.globe size={20} />
-          </div>
-
-          <div className="heroTalk">
+    <div className="heroHolder">
+      <div className="heroContainer">
+        <div className="heroLeft">
+          <div className="heroMainP">
             <p>
-            Seize new opportunities and find your ideal remote job anytime, anywhere
-            </p>
-            <h6>
               Seamless connections, soaring careers. Elevate yours with comapany
               name!
-            </h6>
+            </p>
+          </div>
+          <div className="heroMainH">
+            <h1>
+              Empowering Your Career Journey Through Seamless{" "}
+              <span className="connectionsHeroContainer">
+                <customIcons.connection size={35} className="connectionsHero" />
+              </span>{" "}
+              Connections.
+            </h1>
           </div>
 
-          <div className="heroTalkBtnContainer">
-            <Link>Remote</Link>
-            <Link>Hybrid</Link>
-            <Link>On Site</Link>
-          </div>
-        </div>
-      </div>
-      {/* <div className="heroRight">
-        <div className="blobImg">
-          <div className="heroImgContainer"></div>
-          <div className="heroImgContainer6">
+          <div className="heroMainBtn">
+            <button
+              onClick={() => navigate("/allJobs/results?search=allJobs")}
+              className="getStartedBtn"
+            >
+              try out our services
+            </button>
             <span>
-              <customIcons.scan size={25} style={{ color: "#7ad03a" }} />
+              <customIcons.rightArrow size={18} />
             </span>
           </div>
-        </div>
 
-        <div className="blobContainer1">
-          <div className="heroImgContainer5">
-            <img
-              src="https://i.postimg.cc/0Q8jCWNY/pencil-png-664.png"
-              alt="pencil"
-            />
+          <div className="heroMainSecBtn">
+            <div className="heroGlobe">
+              <customIcons.globe size={20} />
+            </div>
+
+            <div className="heroTalk">
+              <p>
+                Seize new opportunities and find your ideal remote job anytime,
+                anywhere
+              </p>
+              <h6>
+                Seamless connections, soaring careers. Elevate yours with
+                comapany name!
+              </h6>
+            </div>
+
+            <div className="heroTalkBtnContainer">
+              <Link>Remote</Link>
+              <Link>Hybrid</Link>
+              <Link>On Site</Link>
+            </div>
           </div>
-          <div className="heroImgContainer1"></div>
         </div>
-
-        <div className="heroImgContainer2"></div>
-
         
 
-        <div className="blobContainer">
-          <div className="heroImgContainer3"></div>
-          <div className="heroImgContainer4"></div>
+        <div className="grid-container">
+          <img src="https://i.postimg.cc/V6JsZmXH/DSC-0811-copyk-removebg-preview.png" alt="heroImg" className="img-responsive" />
         </div>
-      </div> */}
-
-      <div className="grid-container">
-        <div className="grid-item grid-item1"></div>
-        <div className="grid-item grid-item2">
-          <span>
-            <customIcons.scan size={25} style={{ color: "#7ad03a" }} />
-          </span>
-        </div>
-        <div className="grid-item grid-item3">
-          <img
-            src="https://i.postimg.cc/0Q8jCWNY/pencil-png-664.png"
-            alt="pencil"
-          />
-        </div>
-        <div className="grid-item grid-item4"></div>
-        <div className="grid-item grid-item5"></div>
-        <div className="grid-item grid-item6"></div>
-        <div className="grid-item grid-item7"></div>
       </div>
     </div>
   );

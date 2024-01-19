@@ -13,13 +13,14 @@
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: #b48e41;
+    font-family: 'Trirong', serif;
 }
 
 .companyText{
     font-size: 0.8em;
     width: fit-content;
-    color: var(--blue);
+    color: #dfc3b4;
 }
 
 .footerLinks{
@@ -29,7 +30,7 @@
 .links{
     font-size: 0.8em;
     margin: 0;
-    color: var(--blue);
+    color: #dfc3b4;
 }
 
 .iconLinkFooter{
@@ -39,19 +40,19 @@
 }
 
 .iconLinkFooter span{
-    color: var(--dark-blue);
+    color: #dfc3b4;
 }
 
 .footer{
-    background-color: var(--light-blue);
-    color: var(--secondary-text);
+    background-color: var(--jungle-green);
+    color: #b48e41;
     padding: 25px;
 }
 
 .footerSocialIcons{
     padding: 1px;
-    border: 1px solid var(--blue);
-    color: var(--blue);
+    border: 1px solid #dfc3b4;
+    color: #dfc3b4;
     height: 27px;
     width: 27px;
     display: flex;
@@ -70,7 +71,7 @@
 .innerFooterBottomLeft p{
     margin: 0;
     font-size: 15px;
-    color: var(--dark-blue);
+    color: #dfc3b4;
 }
 
 .innerFooterBottom{

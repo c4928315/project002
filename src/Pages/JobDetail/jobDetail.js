@@ -85,12 +85,12 @@ function JobDetail() {
               </span>
               <span className="iconText">{storedJob.jobName}</span>
             </div>
-            <div className="jobDetailIcon">
+            {/* <div className="jobDetailIcon">
               <span>
                 <customIcons.location size={18} />
               </span>
               <span className="iconText">{storedJob.location}</span>
-            </div>
+            </div> */}
             <div className="jobDetailIcon">
               <span>
                 <customIcons.time size={18} />
@@ -146,12 +146,12 @@ function JobDetail() {
             </div>
           </div>
 
-          <div className="jobDetailsBottomDescription">
+          {/* <div className="jobDetailsBottomDescription">
             <h4 className="jobDetailsBottomCardMainTitle">Job Description</h4>
             <div className="jobDetailsBottomDescriptionPcontainer">
               {storedJob.jobDescription}
             </div>
-          </div>
+          </div> */}
 
           {data.map((item, i) => {
             return (

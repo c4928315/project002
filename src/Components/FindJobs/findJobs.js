@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import customIcons from "../../Icons/customIcons";
 import "./findJobs.css";
 
-
-function FindJobs({data}) {
+function FindJobs({ data }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredJobs, setFilteredJobs] = useState([]);
   const navigate = useNavigate();
@@ -27,14 +26,103 @@ function FindJobs({data}) {
     localStorage.setItem("filteredJobs", JSON.stringify(filteredJobs));
   }, [filteredJobs]);
 
-  console.log(filteredJobs)
-
-
+  console.log(filteredJobs);
 
   return (
     <div className="findJobsContainer">
       <div className="findJobsInner">
-        <div className="findJobsHeader">
+        <div className="topH1">
+          <div className="topH1Innder">
+            <p>services</p>
+            <h1>How we can help you</h1>
+          </div>
+        </div>
+        <section>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="cover item-a">
+                  <h1>
+                  CV 
+                    <br />
+                    Revamp
+                  </h1>
+                  <span class="price">$79</span>
+                  <div class="card-back">
+                    <Link to="">View</Link>
+                    <Link to="">services</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="cover item-b">
+                  <h1>
+                  Student's Package 
+                    <br />
+                    CV Revamp
+                  </h1>
+                  <span class="price">$35</span>
+                  <div class="card-back">
+                    <Link to="">View</Link>
+                    <Link to="">services</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="cover item-c">
+                  <h1>
+                  Linkedin
+                    <br />
+                    Optimisation
+                  </h1>
+                  <span class="price">$155</span>
+                  <div class="card-back">
+                    <Link to="">View</Link>
+                    <Link to="">services</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="cover item-d">
+                  <h1>
+                  Coaching 
+                    <br />
+                    Session
+                  </h1>
+                  <span class="price">$155</span>
+                  <div class="card-back">
+                    <Link to="">View</Link>
+                    <Link to="">services</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <div class="card">
+                <div class="cover item-e">
+                  <h1>
+                  Interview 
+                    <br />
+                    Prep
+                  </h1>
+                  <span class="price">$155</span>
+                  <div class="card-back">
+                    <Link to="">View</Link>
+                    <Link to="">services</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* <div className="findJobsHeader">
           <h1>Job Opportunities for Anyone Anywhere</h1>
         </div>
         <div className="findJobsSubHeader">
@@ -57,11 +145,10 @@ function FindJobs({data}) {
               Find Jobs
             </button>
           </span>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 }
 
 export default FindJobs;
-

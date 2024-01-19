@@ -4,7 +4,7 @@
     right: 0;
     left: 0;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    background-color: #e2dbd3;
+    background-color: var(--light-light-blue);
     z-index: 500;
 }
 
@@ -19,8 +19,8 @@
 }
 
 .logoBox{
-    border: 2px solid var(--blue);
-    color: var(--blue);
+    border: 2px solid var(--jungle-green);
+    color: var(--jungle-green);
     height: 2em;
     width: 2em;
     display: flex;
@@ -37,7 +37,7 @@
 }
 
 .logoCircle{
-    background-color: var(--light-blue);
+    background-color: var(--light2-light-blue);
     height: 2em;
     width: 2em;
     border-radius: 50%;
@@ -49,7 +49,7 @@
 .navbar-brand h5{
     z-index: 2;
     position: relative;
-    color: var(--blue);
+    color: var(--jungle-green);
     font-size: 0.4em;
     font-weight: 400;
     font-family: serif;
@@ -79,7 +79,7 @@
 
 .navbar{
    height: fit-content !important;
-   background-color: #e2dbd3!important;
+  
    
 }
 
@@ -87,7 +87,7 @@
     position: absolute;
     right: 20px;
     top: 30%;
-    color: var(--dark-blue);
+    color: var(--jungle-green);
 }
 
 .mainNavCollapseItems{
@@ -96,7 +96,7 @@
 }
 
 .mainNavCollapseItems a{
-    color: var(--dark-blue) !important;
+    color: var(--jungle-green) !important;
     font-weight: 400;
 }
 
@@ -106,7 +106,7 @@
 
 .newJobSign{
     color: white;
-    background-color: var(--blue);
+    background-color: var(--jungle-green);
     position: absolute;
     clip-path: polygon(0% 12%, 100% 12%, 100% 60%, 60% 60%, 56% 80%, 78% 60%, 0% 60%);
     padding: 5px;
@@ -125,8 +125,8 @@
     background-color: white;
     left: 10%;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    top: 125%;
-    border-top: 2.1px solid var(--dark-blue);
+    top: 120%;
+    border-top: 3px solid var(--jungle-green);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     height: 0px;
     overflow: hidden;
@@ -146,9 +146,10 @@
     line-height: 30px;
 }
 
-.nav-item-dropdown ul li{
-    color: var(--blue);
-    font-size: 1em;
+.nav-item-dropdown ul li a{
+    color: var(--jungle-green);
+    font-size: 0.9em;
+    text-transform: capitalize;
     font-weight: 300;
     transition: background-color 0.3s ease-in-out;
     padding: 0 20px;
@@ -161,11 +162,11 @@
 
 .pointer{
     clip-path: polygon(50% 60%, 0% 100%, 100% 100%);
-    background-color: var(--dark-blue);
-    color: var(--dark-blue);
+    background-color: var(--jungle-green);
+    color: var(--jungle-green);
     position: absolute;
     padding: 10px;
-    top: 95%;
+    top: 90%;
     left: 30%;
     opacity: 0;
     transition: opacity 0.3s ease;

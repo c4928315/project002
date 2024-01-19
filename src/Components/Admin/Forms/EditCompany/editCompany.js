@@ -13,6 +13,7 @@ function EditCompany({ companyData, close }) {
     createdBy: companyData.createdBy,
     modifiedBy: companyData.modifiedBy,
   });
+  
 
   const [company, setCompany] = useState(initialCompanyValues);
 

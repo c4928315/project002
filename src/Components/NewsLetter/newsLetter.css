@@ -1,13 +1,23 @@
 .newsLetterContainer{
-    background-color: white;
+    background-color: #fff4ee;
     height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    margin-bottom: 5em;
+}
+
+.newsLetterDesign{
+    position: absolute;
+    height: 80%;
+    width: 90%;
+    border: 7px solid var(--jungle-green);
 }
 
 .newsLetterHeader h1{
-    color: var(--dark-blue);
+    color: var(--jungle-green);
+    font-family: 'Trirong', serif;
     font-size: 1.78em;
     font-weight: 500;
     text-align: center;
@@ -25,8 +35,8 @@
 
 .subscribeNewsLetter{
     width: 100%;
-    background-color: white;
-    box-shadow: var(--light-blue-shadow) 0px 4px 8px -2px, var(--light-light-blue) 0px 0px 0px 1px;
+    background-color: transparent;
+    box-shadow: var(--jungle-green) 0px 4px 8px -2px, var(--jungle-green) 0px 0px 0px 1px;
     border-radius: 6px;
     border-bottom-left-radius: 6px;
     display: flex;
@@ -57,7 +67,7 @@
     border-radius: 6px;
     font-size: 15px;
     font-weight: 400;
-    background-color: var(--blue);
+    background-color: var(--jungle-green);
     color: white;
     transition: background-color 0.3s ease-in-out;
 }
@@ -86,10 +96,11 @@
     font-weight: 300;
     font-style: italic;
     font-size: 0.9em;
+    background-color: transparent !important;
 }
 
 .subscribeNewsLetterArea input::placeholder{
-    color: var(--blue);
+    color: var(--jungle-green);
     font-weight: 300;
     font-style: italic;
     font-size: 01.1em;
@@ -102,7 +113,8 @@
 }
 
 .newsLetterSubHeader p{
-    color: var(--blue);
+    color: black;
+    font-family: sans-serif;
     letter-spacing: 0.025em;
     font-weight: 300;
 }
@@ -110,4 +122,5 @@
 .newsLetterInner{
     width: 75%;
     margin: 0 auto;
+    z-index: 4;
 }

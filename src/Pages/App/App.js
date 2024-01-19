@@ -16,6 +16,7 @@ import PostJob from "../../Components/Forms/PostJob/postJob";
 import AddCompany from "../../Components/Admin/Forms/AddCompany/addCompany";
 import EditCompany from "../../Components/Admin/Forms/EditCompany/editCompany";
 import AllJobResults from "../../Components/allJobs";
+import OpenJobs from "../../Components/OpenJobs/openJobs";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -23,6 +24,11 @@ function App() {
   const { data: recent } = useFetch(
     "https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCategory?jobCategoryId=0"
   );
+
+  const idsToExclude = [ 30, 31, 32, 33, 34, 35, 36, 38 ];
+
+  const filteredData = recent.filter(item => !idsToExclude.includes(item.jobsId));
+
 
   const handleLogin = () => {
     setIsAuthenticated(true);
@@ -49,15 +55,16 @@ function App() {
           <Route element={<RequireAuth/>}>
           <Route path="/AdminArea" element={<PostJob />} />
           </Route>
-          <Route path="/" element={<Home data={recent}/>} />
+          <Route path="/" element={<Home data={filteredData}/>} />
           <Route path="/jobs/:id/:jobTitle" element={<JobDetail />} />
           
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           
           <Route path="/jobs/results" element={<JobResults />} />
-          <Route path="/allJobs/results" element={<AllJobResults data={recent}/>} />
+          <Route path="/allJobs/results" element={<AllJobResults data={filteredData}/>} />
           <Route path="/addCompany" element={<AddCompany />} />
           <Route path="/editCompany/:id" element={<EditCompany />} />
+          <Route path="/openJobs" element={<OpenJobs data={filteredData}/>} />
 
         </Route>
       </Routes>

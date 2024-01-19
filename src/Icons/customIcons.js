@@ -4,7 +4,7 @@ import { IoSearch } from "react-icons/io5";
 import { BsCalendar4Event, BsTwitterX } from "react-icons/bs";
 import { TfiHome, TfiEmail } from "react-icons/tfi";
 import { RxSlash } from "react-icons/rx";
-import { TbScanEye } from "react-icons/tb";
+import { TbScanEye, TbTilde } from "react-icons/tb";
 import { SlBriefcase, SlLocationPin } from "react-icons/sl";
 import { GiTakeMyMoney, GiSandsOfTime } from "react-icons/gi";
 import { MdLocalPrintshop, MdOutlineWidgets, MdOutlineCategory } from "react-icons/md";
@@ -19,6 +19,8 @@ import { GoArrowUpRight, GoMoveToTop, GoKebabHorizontal } from "react-icons/go";
 import { CiEdit } from "react-icons/ci";
 import { AiOutlineDelete } from "react-icons/ai";
 import { ImYoutube2 } from "react-icons/im";
+import { HiArrowLongRight } from "react-icons/hi2";
+import { BiSolidQuoteRight } from "react-icons/bi";
 
 
 
@@ -60,6 +62,9 @@ const customIcons = {
   tiktok: FaTiktok,
   youtube: ImYoutube2,
   category: MdOutlineCategory,
+  rightArrow: HiArrowLongRight,
+  quote: BiSolidQuoteRight,
+  waves: TbTilde,
 }
 
 export default customIcons

@@ -1,11 +1,12 @@
 .jobDetail{
     height: fit-content;
     width: 100vw;
+    background-color: white;
 }
 
 .jobDetailTop{
     width: 100%;
-    background-color: var(--light-light-blue);
+    background-color: var(--light-jungle-green);
     padding: 60px 0;
     height: 60%;
 }
@@ -43,19 +44,18 @@
     font-size: 14px;
     height: fit-content;
     border-radius: 12px;
-    color: var(--blue);
-    background-color: var(--light-light-blue);
+    color: #b48e41;
+    background-color: transparent;
+    border: 1px solid #b48e41;
     text-transform: capitalize;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
-.detailsJobDuration span:hover{
-    border: 1px solid var(--blue);
-}
+
 
 .detailsApplyBtn button{
-    background-color: var(--blue);
+    background-color: #b48e41;
     color: white;
     border-radius: 6px;
     padding: 10px 50px;
@@ -64,9 +64,7 @@
     transition: background 0.3s ease-in-out;
 }
 
-.detailsApplyBtn button:hover{
-    background-color: var(--dark-blue);
-}
+
 
 .jobDetailIconContainer{
     gap: 15px;
@@ -80,14 +78,15 @@
     height: fit-content;
     font-size: 16px;
     gap: 8px;
-    color: var(--dark-blue);
+    color: black;
 }
 
 .iconText{
     padding: 0;
     margin: 0;
     height: 18px;
-    color: var(--blue);
+    font-weight: 300;
+    color: #b48e41;
 }
 
 .jobDetailsBottom{
@@ -107,20 +106,21 @@
 }
 
 .jobDetailsBottomCard{
-    border: 1px solid var(--blue);
+    box-shadow: var(--light2-jungle-green) 0px 2px 8px 0px;
+    border: 0.7px solid var(--light-jungle-green);
     border-radius: 6px;
     padding: 35px 30px;
 }
 
 .cardTextContentTitle h4{
     font-size: 17px;
-    color: var(--blue);
+    color: var(--jungle-green);
     margin: 0;
     font-weight: 500;
 }
 
 .cardTextContentIcon{
-    color: var(--blue);
+    color: var(--light-jungle-green);
 }
 
 
@@ -128,12 +128,12 @@
     font-size: 1.2em;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--dark-blue);
+    color: var(--jungle-green);
 }
 
 .cardTextContentTitle p{
     font-size: 16px;
-    color: var(--dark-blue);
+    color: black;
     margin: 0;
     font-weight: 300;
     margin-top: 4px;
@@ -144,7 +144,7 @@
 }
 
 .jobDetailsP, .jobDetailsBottomDescriptionPcontainer{
-    color: var(--blue);
+    color: black;
     font-size: 0.99em;
     letter-spacing: 0.025em;
     font-weight: 300;
@@ -161,7 +161,7 @@
 .jobDetailsBottomOthersH h1{
     font-size: 1.2em;
     font-weight: 600;
-    color: var(--dark-blue);
+    color: var(--jungle-green);
 }
 
 .jobDetailsBottomOthers{
@@ -322,6 +322,10 @@
 
     .jobDetailsP{
         font-size: 0.95em;
+    }
+
+    .jobDetailsBottomOthersp b{
+        color: red !important;
     }
 
     .jobDetailsLinksBtns button{

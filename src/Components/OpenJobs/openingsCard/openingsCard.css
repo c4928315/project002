@@ -7,9 +7,9 @@
     gap: 20px;
     position: relative;
     margin-bottom: 20px;
-    background-color: rgb(226, 219, 211, 0.1);
+    background-color: white;
     border: 0.2px solid var(--light-blue);
-    box-shadow: var(--light-blue) 0px 2px 8px 0px;
+    box-shadow: var(--light2-jungle-green) 0px 2px 8px 0px;
 }
 
 .companyLogo{
@@ -22,7 +22,7 @@
     font-size: 1.1em;
     font-weight: 400;
     letter-spacing: 0.025em;
-    color: var(--dark-blue);
+    color: var(--jungle-green);
     width: 264px;
     white-space: nowrap;
     overflow: hidden;
@@ -33,21 +33,20 @@
     text-decoration: underline;
 }
 
-.openingCardTitle:hover{
+/* .openingCardTitle:hover{
     color: var(--blue);
-}
+} */
 
 .leftOpeningCardIcon{
     display: flex;
     align-items: center;
     gap: 20px;
     margin-top: 1%;
-    
     font-weight: 500;
 }
 
 .leftOpeningCardIcon span svg{
-    color: var(--blue) !important;
+    color: var(--jungle-green) !important;
 }
 
 .openingCardCompany p, .leftOpeningCardTitle p, .leftOpeningCardSalary p, .leftOpeningCardLocation p{
@@ -55,13 +54,13 @@
     width: 100%;
     font-weight: 300;
     font-size: 0.9em;
-    color: var(--blue);
+    color: black;
 }
 
 .jobDuration button{
     background-color: white;
-    color: var(--dark-blue);
-    border: 1px solid var(--dark-blue);
+    color: var(--jungle-green);
+    border: 1px solid var(--jungle-green);
     outline: none;
     border-radius: 6px;
     font-weight: 300;

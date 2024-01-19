@@ -6,7 +6,8 @@
 .jobResultsTopNavTitle{
     font-weight: 400;
     font-size: 28px;
-    color: var(--dark-blue);
+    color: white;
+    font-family: 'Trirong', serif;
 }
 
 .jobResultsTopNav p, .jobResultsTopNav a{
@@ -14,13 +15,13 @@
     font-size: 0.8em;
     font-weight: lighter;
     text-decoration: none;
-    color: var(--blue) !important;
+    color: white !important;
     text-transform: capitalize;
     font-weight: 400;
 }
 
 .jobResultsTopNav p{
-    color: var(--dark-blue) !important;
+    color: var(--jungle-green) !important;
 }
 
 .jobResultsTopNavHome{
@@ -36,8 +37,12 @@
     color: var(--blue);
 }
 
+.jobResultsTopNav svg{
+    color: white !important;;
+}
+
 .jobResultsTop{
-    background-color: var(--light-blue);
+    background-color: var(--light-jungle-green);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +78,7 @@
     margin-bottom: 10px;
     font-size: 19px;
     font-weight: 500;
-    color: var(--dark-blue);
+    color: var(--jungle-green);
 }
 
 .jobResultsBottomInputContainer input, .jobResultsBottomInputContainer select{
@@ -95,7 +100,7 @@
 
 .jobResultsIcon{
     width: 10%;
-    color: var(--dark-blue);
+    color: var(--jungle-green);
 }
 
 
@@ -195,7 +200,7 @@
 .jobRangeDropdown .dropdown-menu li{
    font-weight: 300;
    font-size: 0.9em;
-   color: var(--dark-blue);
+   color: var(--jungle-green);
    cursor: pointer;
    transition: color 0.3s ease-in-out;
  }

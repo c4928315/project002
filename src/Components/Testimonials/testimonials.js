@@ -1,5 +1,6 @@
 import React from "react";
 import "./testimonials.css";
+import customIcons from "../../Icons/customIcons";
 
 function Testimonials() {
   const style = {
@@ -9,8 +10,10 @@ function Testimonials() {
 
   return (
     <div
-      id="carouselExampleIndicators"
-      className="carousel slide testimonaialCarousel"
+    id="carouselExampleIndicators"
+    className="carousel slide testimonaialCarousel"
+    data-bs-ride="carousel"
+    data-bs-interval="2000"
     >
       <div className="carousel-indicators testimonyActive">
         <button
@@ -39,30 +42,25 @@ function Testimonials() {
           aria-label="Slide 3"
         ></button>
       </div>
+      <div className="testimonyDiv1">
+        <div className="testimonyDivInner"></div>
+      </div>
       <div className="carousel-inner">
         <div className="carousel-item active testimonyItem">
           <div className="testimonyContent">
             <div className="profilePicPosition">
               <div className="topDecor">
-                <p>Testimonials</p>
+               <customIcons.quote size={32}/>
               </div>
             </div>
             <p className="userTestimony">
-              Good morning Lorraine, i hope you well. Following you numerous posts on the remote jobs i have luckily been shortlisted by clipboard health on the workforce manager position.
+              Good morning Lorraine, i hope you well. Following you numerous posts on the remote jobs i have luckily been shortlisted by clipboard health on the...
             </p>
             <div className="newUserTestimonyFlex">
-              <div className="">
-                <div className="testimonialImage">
-                    <img
-                  src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1703980800&semt=ais"
-                  alt="user"
-                  className="testimonialImage"
-                />
-                </div>
-              </div>
               <div className="nameAndPosition">
+                <customIcons.waves size={22}/>
                 <p className="userName">Annonymous</p>
-                <p className="occupation">N/A</p>
+                <customIcons.waves size={22}/>
               </div>
             </div>
           </div>
@@ -71,25 +69,17 @@ function Testimonials() {
           <div className="testimonyContent">
             <div className="profilePicPosition">
               <div className="topDecor">
-              <p>Testimonials</p>
+               <customIcons.quote size={32}/>
               </div>
             </div>
             <p className="userTestimony">
               Good morning girl, it went well, it was more of a discussion of the wbd document i wrote am waiting for feedback. 👏🏾 😌
             </p>
             <div className="newUserTestimonyFlex">
-              <div className="">
-                <div className="testimonialImage">
-                    <img
-                  src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1703980800&semt=ais"
-                  alt="user"
-                  className="testimonialImage"
-                />
-                </div>
-              </div>
               <div className="nameAndPosition">
+                <customIcons.waves size={22}/>
                 <p className="userName">Annonymous</p>
-                <p className="occupation">N/A</p>
+                <customIcons.waves size={22}/>
               </div>
             </div>
           </div>
@@ -98,29 +88,24 @@ function Testimonials() {
           <div className="testimonyContent">
             <div className="profilePicPosition">
               <div className="topDecor">
-              <p>Testimonials</p>
+               <customIcons.quote size={32}/>
               </div>
             </div>
             <p className="userTestimony">
               Hey there Lorraine, Sooo... I've gotten an invitation to my first interview at Superside.  (Good news, yea?)
             </p>
             <div className="newUserTestimonyFlex">
-              <div className="">
-                <div className="testimonialImage">
-                    <img
-                  src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg?size=338&ext=jpg&ga=GA1.1.1546980028.1703980800&semt=ais"
-                  alt="user"
-                  className="testimonialImage"
-                />
-                </div>
-              </div>
               <div className="nameAndPosition">
+                <customIcons.waves size={22}/>
                 <p className="userName">Annonymous</p>
-                <p className="occupation">N/A</p>
+                <customIcons.waves size={22}/>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="testimonyDiv2">
+        <div className="testimonyDivInner"></div>
       </div>
       <button
         className="carousel-control-prev btnDiasabled"

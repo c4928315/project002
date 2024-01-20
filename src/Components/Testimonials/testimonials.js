@@ -50,7 +50,7 @@ function Testimonials() {
           <div className="testimonyContent">
             <div className="profilePicPosition">
               <div className="topDecor">
-               <customIcons.quote size={32}/>
+               <customIcons.quote className="quote" size={32}/>
               </div>
             </div>
             <p className="userTestimony">

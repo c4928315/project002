@@ -89,3 +89,66 @@
   font-weight: 400;
   letter-spacing: 0.05em;
 }
+
+@media screen and (min-width: 320px) and (max-width: 736px) {
+    .aboutImageBox, .aboutImageBox2{
+        height: 35vh;
+    }
+
+    .aboutRight h1, .aboutLeft h1{
+        font-size: 1em;
+        margin-bottom: 0.3em;
+        text-decoration: underline;
+    }
+
+    .aboutImageBox{
+        margin-bottom: 1em;
+    }
+
+    .aboutContainer{
+        gap: 1.1em;
+        padding: 3em 3%;
+        padding-bottom: 0;
+        justify-content: normal;
+    }
+
+    .aboutRight h4{
+        font-size: 0.55em;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    .aboutRight p{
+        font-size: 0.6em;
+        font-family: sans-serif;
+    }
+
+    .aboutLeft p{
+        font-size: 0.6em;
+        font-family: sans-serif;
+        margin-top: 1em;
+    }
+
+    .aboutBtnContainer{
+        width: 55% !important;
+       
+    }
+
+    .aboutMainBtn{
+        padding: 4em 0.7em;
+    }
+
+    .aboutMain{
+        height: fit-content;
+    }
+
+    .aboutMainBtn{
+        height: 0.9em;
+        margin-bottom: 0em;
+    }
+
+    .aboutMainBtn a{
+        font-size: .7em;
+        font-weight: 600;
+    }
+}

@@ -253,7 +253,7 @@ function JobDetail() {
               <Link to="https://www.tiktok.com/@beyond.the.savannah" target="_blank">
                 <button className="btnTwitter">
                   <span>
-                    <customIcons.tiktok />
+                    <customIcons.tiktok size={20} />
                   </span>
                   <span>tiktok</span>
                 </button>
@@ -261,7 +261,7 @@ function JobDetail() {
               <Link to="https://www.linkedin.com/in/otienolorraine/?originalSubdomain=ke" target="_blank">
                 <button className="btnLinkIn">
                   <span>
-                    <customIcons.linkedin />
+                    <customIcons.linkedin size={20} />
                   </span>
                   <span>linkedin</span>
                 </button>
@@ -269,7 +269,7 @@ function JobDetail() {
               <Link to="https://www.youtube.com/@beyondthesavannah" target="_blank">
                 <button className="btnPin">
                   <span>
-                    <customIcons.youtube />
+                    <customIcons.youtube size={20} />
                   </span>
                   <span>youtube</span>
                 </button>

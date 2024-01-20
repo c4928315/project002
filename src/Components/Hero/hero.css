@@ -334,13 +334,13 @@
   .heroMainSecBtn{
     width: 100%;
     background-color: #f5d5c2;
-    border: 2px solid var(--blue);
   }
 
   .heroTalkBtnContainer a{
-    background-color: transparent;
-    border: 1px solid var(--blue);
-    color: var(--dark-blue);
+    background-color: #b48e41;
+    border-radius: 6px;
+    border: none;
+    color: white;
   }
 
   .heroMainH, .heroMainP{

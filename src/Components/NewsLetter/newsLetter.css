@@ -124,3 +124,17 @@
     margin: 0 auto;
     z-index: 4;
 }
+
+@media screen and (min-width: 320px) and (max-width: 736px) {
+    .subscribeNewsLetter{
+        width: 75% !important;
+        margin: 0 auto !important;
+    }
+
+    .newsLetterHeader{
+        width: 80%;
+        width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    }
+}

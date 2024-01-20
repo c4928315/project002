@@ -10,21 +10,17 @@ function About() {
         <div className="aboutLeft">
           <div className="aboutImageBox"></div>
           <h1>
-            Be true to your values and personal vision to get more out of life
+          Your unique experience is your Career accessory to landing a remote job.
           </h1>
           <p>
-            Platea proin eu ligula ac vestibulum primis duis mi, inceptos libero
-            justo vulputate fusce risus tristique quis, rutrum non lacus semper
-            cursus laoreet felis placerat proin ultrices ullamcorper lobortis.
+          Explore a world of remote opportunities and level up your career with Beyond the Savannah!
           </p>
         </div>
         <div className="aboutRight">
           <h1>Hi, I’m Lorraine</h1>
-          <h4>Accredited Professional Coach</h4>
+          <h4>A certified Coach and a Seasoned HR Professional</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit mattis etiam
-            curabitur ornare ante interdum natoque eu, varius malesuada
-            imperdiet congue per eleifend lectus vivamus
+          I am a certified coach and seasoned HR professional with a passion for remote work, blending expertise in both local and global markets. With a keen understanding of human resources dynamics, I bring valuable insights to foster effective collaboration and employee development in the evolving landscape of remote work.
           </p>
           <div className="aboutImageBox2"></div>
         </div>

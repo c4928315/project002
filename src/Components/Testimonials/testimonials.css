@@ -187,7 +187,7 @@
     }
 
     .testimonaialCarousel{
-        height: 35vh;
+        height: 42vh;
     }
     
     .testimonialImage{
@@ -237,5 +237,27 @@
         height: 2em !important;
     }
 
+    .testimonyDivInner{
+        height: 2.5em;
+    }
 
+    .testimonyDiv1{
+        margin-bottom: 0;
+    }
+
+    .testimonyDiv2{
+        margin-top: 0;
+    }
+
+    .testimonaialCarousel{
+        margin-top: 1em;
+    }
+
+    .quote{
+        font-size: 0.5em;
+    }
+
+    .testimonaialCarousel .carousel-indicators{
+        left: -70%;
+    }
   }

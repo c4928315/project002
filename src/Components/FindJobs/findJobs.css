@@ -207,6 +207,37 @@ section {
   color: var(--jungle-green);
 }
 
+@media screen and (min-width: 320px) and (max-width: 736px) {
+
+  .topH1Innder h1{
+    font-size: 1em;
+  }
+
+  .topH1Innder p{
+    font-size: 0.6em;
+    margin-bottom: 0.7em;
+  }
+
+  section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .row>*{
+    padding-left: 0 !important;
+    width: 100%;
+  }
+
+  .findJobsContainer{
+    padding-top: 2em;
+  }
+
+  section{
+    margin-top: 0em !important;
+  }
+}
+
 /* .findJobsHeader h1 {
   color: white;
   font-size: 29px;

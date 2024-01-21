@@ -117,6 +117,11 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 736px) {
+
+    .innerVideo{
+        height: 100vh;
+    }
+
     .aboutImageBox, .aboutImageBox2{
         height: 35vh;
     }

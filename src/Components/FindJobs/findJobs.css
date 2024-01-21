@@ -49,7 +49,6 @@ section {
 
 .row {
   align-items: center;
-  height: fit-content;
 }
 
 .card {
@@ -209,6 +208,10 @@ section {
 
 @media screen and (min-width: 320px) and (max-width: 736px) {
 
+  .card{
+    height: 15em;
+  }
+
   .topH1Innder h1{
     font-size: 1em;
   }
@@ -238,172 +241,3 @@ section {
   }
 }
 
-/* .findJobsHeader h1 {
-  color: white;
-  font-size: 29px;
-  font-weight: 500;
-  margin: 0;
-}
-
-.findJobsSubHeader {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.findJobsSearch {
-  width: 100%;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border-radius: 12px;
-  display: flex;
-  padding-right: 10px;
-  height: 3.5em !important;
-}
-
-.findJobsSearchIcon {
-  width: 10%;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blue);
-  border: none;
-}
-.findJobsSearchBtn {
-  width: 20%;
-  margin: 0px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.findJobsSearchBtn button {
-  width: 8em;
-  border: 1px solid var(--blue);
-  padding-left: 0.4em;
-  padding-right: 0.4em;
-  height: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 400;
-  background-color: transparent;
-  color: var(--blue);
-  transition: all 0.3s ease-in-out;
-}
-
-.findJobsSearchBtn button:hover {
-  background-color: var(--dark-blue);
-  color: white;
-}
-
-.findJobsSearchArea {
-  width: 70%;
-  margin: 0px;
-  border: none;
-}
-
-.findJobsSearchArea input {
-  width: 100%;
-  border: none;
-  height: 100%;
-  color: var(--blue);
-}
-
-.findJobsSearchArea input::placeholder{
-  color: var(--blue) !important;
-  font-weight: 300;
-  font-style: italic;
-  font-size: 0.95em;
-}
-
-.findJobsSearchArea input:focus {
-  outline: none;
-  border: none;
-  margin-right: 10px;
-}
-
-.findJobsSubHeader p {
-  color: white;
-  letter-spacing: 0.025em;
-  font-weight: 300;
-  text-align: center;
-  line-height: 1.8em;
-}
-
-.findJobsInner {
-  line-height: 50px;
-}
-
-@media screen and (min-width: 320px) and (max-width: 736px) {
-  .findJobsHeader h1 {
-    font-size: 1.3em;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 99%;
-    text-align: center;
-    margin: 0 auto;
-    justify-content: center;
-  }
-
-  .findJobsHeader {
-    margin-bottom: 1.5em;
-  }
-
-  .findJobsContainer {
-    height: fit-content;
-    padding: 2em;
-  }
-
-  .findJobsSubHeader {
-    width: 100%;
-    width: 100%;
-  display: flex;
-  align-items: center;
-  }
-
-  .findJobsSubHeader p {
-    font-size: 0.8em;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center;
-    line-height: 1.5em;
-  }
-
-  .findJobsSearch {
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 3em auto;
-    padding-left: 3%;
-  }
-
-  .findJobsSearchArea {
-    background-color: white;
-  }
-
-  .findJobsSearchArea::placeholder {
-    font-size: 0.6em;
-  }
-
-  .findJobsSearchBtn button {
-    height: 3em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8em;
-  }
-
-  .findJobsSearchBtn {
-    width: 5em;
-  }
-} */

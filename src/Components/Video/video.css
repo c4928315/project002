@@ -1,0 +1,13 @@
+.mainVideo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+video{
+    width: 40%;
+    height: 100vh;
+
+}

@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./about.css";
 import customIcons from "../../Icons/customIcons";
+import VideoPlayer from "../Video/video";
 
 function About() {
+
+  const [seeVideo, setSeeVideo] = useState(false);
+
+  const handleVideo = ( ) => {
+    setSeeVideo(!seeVideo)
+  }
+
   return (
     <div className="aboutMain">
       <div className="aboutContainer">
@@ -25,12 +33,22 @@ function About() {
           <div className="aboutImageBox2"></div>
         </div>
       </div>
-      <div className="aboutMainBtn">
+      <div className="aboutMainBtn" onClick={handleVideo}>
        <div className="aboutBtnContainer">
        <Link to="">read lorraine's story</Link>
         <customIcons.rightArrow/>
        </div>
       </div>
+
+      {
+        seeVideo &&
+         <div className="video">
+          <div className="innerVideo">
+          <Link onClick={handleVideo}>Back</Link>
+            <VideoPlayer/>
+          </div>
+        </div> 
+      }
     </div>
   );
 }

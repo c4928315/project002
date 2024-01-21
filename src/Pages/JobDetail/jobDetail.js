@@ -242,7 +242,7 @@ function JobDetail() {
           <div className="jobDetailsLinks">
             <p>share this link</p>
             <div className="jobDetailsLinksBtns">
-              <Link to="https://www.instagram.com/lorraineotieno/?hl=en" target="_blank">
+              <Link to="https://www.instagram.com" target="_blank">
                 <button className="btnFB">
                   <span>
                     <customIcons.instagram size={20} />
@@ -250,7 +250,7 @@ function JobDetail() {
                   <span>instagram</span>
                 </button>
               </Link>
-              <Link to="https://www.tiktok.com/@beyond.the.savannah" target="_blank">
+              <Link to="https://www.tiktok.com" target="_blank">
                 <button className="btnTwitter">
                   <span>
                     <customIcons.tiktok size={20} />
@@ -258,7 +258,7 @@ function JobDetail() {
                   <span>tiktok</span>
                 </button>
               </Link>
-              <Link to="https://www.linkedin.com/in/otienolorraine/?originalSubdomain=ke" target="_blank">
+              <Link to="https://www.linkedin.com/login" target="_blank">
                 <button className="btnLinkIn">
                   <span>
                     <customIcons.linkedin size={20} />
@@ -266,7 +266,7 @@ function JobDetail() {
                   <span>linkedin</span>
                 </button>
               </Link>
-              <Link to="https://www.youtube.com/@beyondthesavannah" target="_blank">
+              <Link to="https://www.youtube.com" target="_blank">
                 <button className="btnPin">
                   <span>
                     <customIcons.youtube size={20} />

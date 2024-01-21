@@ -41,13 +41,11 @@ function Footer() {
         <div className="innerFooterItems">
           <div className={open1 ? "footerItemOpen" : "footerItem"}>
             <div className="footerGoDown" onClick={handleOpen1}>
-              <h3 className="footerHeader">Company Name</h3>
+              <h3 className="footerHeader">Beyond The Savannah</h3>
               <customIcons.dropDown className="footerGoDownIcon" />
             </div>
             <p className="companyText">
-              We use cookies to enhance your browsing experience, analyze
-              trafic, serve ads and personalized content. click "Accept" to
-              consent to our use of cookies.
+            Seamless connections, soaring careers. elevate yours with Beyond The Savannah!
             </p>
           </div>
           <div className={open2 ? "footerItemOpen" : "footerItem"}>
@@ -114,7 +112,7 @@ function Footer() {
         <hr />
         <div className="innerFooterBottom">
           <div className="innerFooterBottomLeft">
-            <p>&copy; 2023 Your Company. All rights reserved.</p>
+            <p>&copy; 2023 Beyond The Savannah. All rights reserved.</p>
           </div>
           <div className="innerFooterBottomRight">
             <Link to="https://www.tiktok.com/@beyond.the.savannah" target="blank" className="footerSocialIcons">

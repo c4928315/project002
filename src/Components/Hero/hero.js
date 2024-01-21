@@ -34,8 +34,7 @@ function Hero({ data }) {
         <div className="heroLeft">
           <div className="heroMainP">
             <p>
-              Seamless connections, soaring careers. Elevate yours with comapany
-              name!
+              Seamless connections, soaring careers. Elevate yours with Beyond The Savannah!
             </p>
           </div>
           <div className="heroMainH">
@@ -72,7 +71,7 @@ function Hero({ data }) {
               </p>
               <h6>
                 Seamless connections, soaring careers. Elevate yours with
-                comapany name!
+                Beyond The Savannah!
               </h6>
             </div>
 

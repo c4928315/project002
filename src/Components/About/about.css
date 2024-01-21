@@ -90,6 +90,32 @@
   letter-spacing: 0.05em;
 }
 
+.video{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000;
+    background: linear-gradient(rgb(0, 0, 0, 0.89), rgb(0, 0, 0, 0.89));
+}
+
+.innerVideo{
+    height: 90vh;
+    position: relative;
+}
+
+.innerVideo a{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    text-decoration: underline;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
 @media screen and (min-width: 320px) and (max-width: 736px) {
     .aboutImageBox, .aboutImageBox2{
         height: 35vh;

@@ -17,6 +17,11 @@ import AddCompany from "../../Components/Admin/Forms/AddCompany/addCompany";
 import EditCompany from "../../Components/Admin/Forms/EditCompany/editCompany";
 import AllJobResults from "../../Components/allJobs";
 import OpenJobs from "../../Components/OpenJobs/openJobs";
+import ViewService from "../../Components/ViewService/viewService";
+import ViewLinkedIn from "../../Components/ViewService/viewLinkedIn";
+import ViewInterview from "../../Components/ViewService/viewInterview";
+import ViewStudentPack from "../../Components/ViewService/viewStudentPack";
+import ViewCoachingSesh from "../../Components/ViewService/viewCoachingSession";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -65,6 +70,11 @@ function App() {
           <Route path="/addCompany" element={<AddCompany />} />
           <Route path="/editCompany/:id" element={<EditCompany />} />
           <Route path="/openJobs" element={<OpenJobs data={filteredData}/>} />
+          <Route path="/viewService" element={<ViewService/>} />
+          <Route path="/viewLinkedIn" element={<ViewLinkedIn/>} />
+          <Route path="/viewInterview" element={<ViewInterview/>} />
+          <Route path="/viewLStudentPack" element={<ViewStudentPack/>} />
+          <Route path="/viewCoachingSesh" element={<ViewCoachingSesh/>} />
 
         </Route>
       </Routes>

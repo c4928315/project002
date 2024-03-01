@@ -1,0 +1,201 @@
+.viewScontainer{
+    width: 100vw;
+    height: fit-content;
+    
+    
+}
+
+.viewSTop{
+    height: 60vh;
+    display: flex;
+    width: 100%;
+    gap: 3em;
+    padding: 2.5em 5em;
+    background-color: var(--light-blue);
+}
+
+.viewStopImg{
+    background-image: url("https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 87%;
+    height: 100%;
+    border-radius: 8%;
+}
+
+.viewStopText{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.viewStopText h1{
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 2em;
+    color: var(--jungle-green);
+}
+
+.viewSBottom h1, .viewServiceMedia h1{
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: 1.7em;
+    color: var(--jungle-green);
+}
+
+.viewServiceMedia h1{
+    text-align: center;
+}
+
+.viewStopText p{
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    color: var(--secondary-text);
+}
+
+.viewSBottom{
+    padding: 3.5em 5em;
+    width: 100%;
+}
+
+.viewSBottomPs{
+    width: 60%;
+    color: var(--secondary-text);
+}
+
+.viewSBottomBtns{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.viewSBottomBtns button{
+    border: 1px solid var(--jungle-green);
+    width: 35%;
+    background-color: white;
+    color: var(--jungle-green);
+    height: 3em;
+    border-radius: 0.7em;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.viewSBottomBtns .viewSBottomBtnsPurchase{
+    color: white;
+    background-color: var(--jungle-green) ;
+    transition: all 0.5s ease-in-out;
+}
+
+.viewSBottomBtns .viewSBottomBtnsPurchase:hover{
+    color: var(--jungle-green);
+    background-color: white;
+}
+
+.viewSBottomBtns button:hover{
+    background-color: var(--jungle-green);
+    color: white;
+}
+
+.viewSBottomFlex{
+    display: flex;
+    width: 100%;
+    gap: 4em;
+}
+
+.viewSBottomSpans{
+    display: flex;
+    gap: 1em;
+}
+
+.viewSBottomNB{
+    width: 60%;
+    margin: 2em 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--jungle-green);
+}
+
+.containerzz {
+    position : relative;
+    width : 100%;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-wrap : wrap;
+    padding : 30px;  
+  }
+  
+  .containerzz .cardzz {
+    position: relative;
+    max-width : 300px;
+    height : 180px;  
+    background-color : var(--light2-light-blue);
+    border: 1px solid var(--secondary-text-thin);
+    margin : 30px 10px;
+    padding : 20px 15px;
+    
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(28, 54, 58, 0.2);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+    cursor: pointer;
+  }
+  .containerzz .cardzz:hover {
+    height : 220px;    
+  }
+  
+  
+  .containerzz .cardzz .image {
+    position : relative;
+    width : 260px;
+    height : 260px;
+    border: 1px solid var(--secondary-text-thin);
+    top : -40%;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+    border-radius : 15px;
+  }
+  
+  .containerzz .cardzz .image img {
+    max-width : 100%;
+    border-radius : 15px;
+  }
+  
+  .containerzz .cardzz .contentzz {
+    position : relative;
+    top : -140px;
+    padding : 10px 15px;
+    color : #111;
+    text-align : center;
+    
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+      
+  }
+  
+  .containerzz .cardzz:hover .contentzz {
+     margin-top : 60px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s;
+    
+  }
+
+  .contentzzIcon1{
+    color: red;
+  }
+
+  .contentzzIcon2{
+    margin-top: 0.9em;
+  }
+
+  .contentzzIconInsta{
+    color: rgb(157, 134, 1);
+  }

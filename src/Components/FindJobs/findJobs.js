@@ -49,7 +49,7 @@ function FindJobs({ data }) {
                   </h1>
                   <span class="price">$79</span>
                   <div class="card-back">
-                    <Link to="">View</Link>
+                    <Link to="/viewService">View</Link>
                     <Link to="">services</Link>
                   </div>
                 </div>
@@ -65,7 +65,7 @@ function FindJobs({ data }) {
                   </h1>
                   <span class="price">$35</span>
                   <div class="card-back">
-                    <Link to="">View</Link>
+                    <Link to="/viewLStudentPack">View</Link>
                     <Link to="">services</Link>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ function FindJobs({ data }) {
                   </h1>
                   <span class="price">$155</span>
                   <div class="card-back">
-                    <Link to="">View</Link>
+                    <Link to="/viewLinkedIn">View</Link>
                     <Link to="">services</Link>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ function FindJobs({ data }) {
                   </h1>
                   <span class="price">$155</span>
                   <div class="card-back">
-                    <Link to="">View</Link>
+                    <Link to="/viewCoachingSesh">View</Link>
                     <Link to="">services</Link>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ function FindJobs({ data }) {
                   </h1>
                   <span class="price">$155</span>
                   <div class="card-back">
-                    <Link to="">View</Link>
+                    <Link to="/viewInterview">View</Link>
                     <Link to="">services</Link>
                   </div>
                 </div>

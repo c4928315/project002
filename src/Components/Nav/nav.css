@@ -129,7 +129,7 @@
     border-top: 3px solid var(--jungle-green);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     height: 0px;
-    overflow: hidden;
+    overflow: auto;
     border-radius: 6px;
     opacity: 0;
     transition: opacity 0.3s ease, height 0.3s ease;
@@ -144,6 +144,12 @@
     list-style: none;
     padding: 20px 0;
     line-height: 30px;
+    position: relative;
+}
+
+.comOb{
+    position: absolute;
+    right: 0;
 }
 
 .nav-item-dropdown ul li a{
@@ -175,6 +181,53 @@
 .findJobContainer:hover .pointer {
     opacity: 1;
   }
+
+/* .serviceLink{
+    
+} */
+
+
+.subDropDown{
+    position: absolute;
+    top: 250%;
+    left: 212.5%;
+    background-color: white;
+    border-radius: 6px;
+    width: 200px;
+    overflow: hidden;
+    padding: 0 !important;
+    display: none;
+    border-left: 5px solid rgb(225, 198, 191);
+}
+
+.subDropDown.visible {
+    display: block;
+  }
+
+.subDropDownInner{
+    width: 200px;
+    margin: 0;
+    padding: 1em
+}
+
+.subDropDownInner li{
+    list-style: none;
+    margin: 0;
+}
+
+.subDropDownInner li a{
+    color: var(--jungle-green);
+    font-size: 0.9em;
+    text-transform: capitalize;
+    font-weight: 300;
+    transition: background-color 0.3s ease-in-out;
+    padding: 0.3em;
+    cursor: pointer;
+}
+
+.subDropDownInner ul li:hover{
+    background-color: rgba(3, 75, 174, 0.15);
+}
 
 
   @media screen and (min-width: 320px) and (max-width: 736px) {

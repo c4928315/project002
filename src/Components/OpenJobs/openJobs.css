@@ -94,7 +94,48 @@
     transition: color 0.3s ease-in-out;
 }
 
+.nojobsPhrase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--loginLeft-bg);
+}
 
+.nojobsPhraseInner{
+    text-align: center;
+    
+}
+
+.nojobsPhraseIconHolder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nojobsPhraseIcon{
+    background-color: rgba(44, 85, 92, 0.1);
+    border-radius: 50%;
+    padding: 18%;
+    width: 50%;
+    height: fit-content;
+}
+
+.nojobsPhraseHeader{
+    font-size: 1.29em;
+    color: rgba(27, 27, 27, 0.8);
+    font-weight: 300;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.nojobsPhraseP{
+    font-size: 0.9em;
+    color: var(--light-jungle-green);
+    font-weight: 100;
+}
 
 
 @media screen and (min-width: 320px) and (max-width: 736px) {

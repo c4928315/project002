@@ -1,0 +1,18 @@
+.companies{
+    width: 90%;
+    margin: 2em auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+}
+
+.mainComapnyDiv{
+    height: 90vh;
+}
+
+.companyPagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 4em 0;
+}

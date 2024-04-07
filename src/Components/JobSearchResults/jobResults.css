@@ -8,6 +8,7 @@
     font-size: 28px;
     color: white;
     font-family: 'Trirong', serif;
+    text-transform: capitalize;
 }
 
 .jobResultsTopNav p, .jobResultsTopNav a{
@@ -19,6 +20,8 @@
     text-transform: capitalize;
     font-weight: 400;
 }
+
+
 
 .jobResultsTopNav p{
     color: var(--jungle-green) !important;
@@ -53,10 +56,17 @@
 .jobResultsBottom{
     display: flex;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     gap: 50px;
     padding: 50px 30px;
     position: relative;
+}
+
+.nojobsPhrase{
+    position: absolute !important;
+    width: 65%;
+    top: 0;
+    right: 0;
 }
 
 .jobResultsBottomLeft{
@@ -158,9 +168,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: none;
-    color: white;
-    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background-color: transparent;
+}
+
+.pageBtnPrevNext{
+    padding: 5px;
+    height: 35px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background-color: transparent;
+}
+.pageBtnNext{
+    border-top-right-radius: 0.5em;
+   border-bottom-right-radius: 0.5em;
+}
+.pageBtnPrev{
+   border-top-left-radius: 0.5em;
+   border-bottom-left-radius: 0.5em;
 }
 
 .jobRangeContainer{
@@ -222,6 +252,11 @@
     right: 5%;
     bottom: 2.5%;
     z-index: 100;
+  }
+
+  .activePage{
+    background-color: var(--blue);
+    color: white;
   }
   
 

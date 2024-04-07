@@ -46,6 +46,33 @@
     cursor: pointer;
 }
 
+.paginationBTN{
+    color: var(--jungle-green);
+    border: 1px solid var(--jungle-green);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.paginationBTN:hover{
+    color: var(--jungle-green);
+}
+
+.pagination .active .page-link{
+    border-radius: 50% !important;
+    background-color: var(--jungle-green) !important;
+    border: none !important;
+}
+
+
+.paginationBTN2{
+    color: var(--jungle-green);
+    border: 1px solid var(--jungle-green);
+    transition: all 0.3s;
+}
+
+.paginationBTN2:hover{
+    color: var(--jungle-green);
+}
 @media screen and (min-width: 320px) and (max-width: 736px) {
     .App{
         overflow: hidden;

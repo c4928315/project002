@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import useFetch from '../../../../Hooks/useFetch';
 import "./addCompany.css"
 
@@ -23,6 +23,10 @@ function AddCompany({close}) {
         [name]: value,
       }));
     };
+
+    useEffect(() => {
+      window.scrollTo(0, 0); 
+    }, []);
 
     const handleImageChange = (e) => {
       const selectedFile = e.target.files[0]; // Only consider the first selected file

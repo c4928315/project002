@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
@@ -9,6 +9,10 @@ import DisplayJobs from "../../Admin/Jobs/jobs";
 import "./postJob.css";
 
 function PostJob() {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
   return (
     <div className="postJob">
       <input type="checkbox" name="MenuToggle" id="MenuToggle" />

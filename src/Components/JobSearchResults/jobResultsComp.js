@@ -8,12 +8,11 @@ import OpeningsCard from "../OpenJobs/openingsCard/openingsCard";
 import ScrollToTopButton from "../scrollToTop";
 import "./jobResults.css";
 
-function JobResults() {
-  const storedCategoryId = localStorage.getItem("jobCategoryId");
+function JobResultsComp() {
+  const storedCategoryId = localStorage.getItem("jobCategoryCompany");
   const [filteredJobs, setFilteredJobs] = useState([]);
+  const [jobCategoryId, setJobCategoryId] = useState(storedCategoryId);
   const [currentPage, setCurrentPage] = useState(1);
-  const [newCategoryId, setNewCategoryId] = useState(storedCategoryId);
-  const [jobCategoryId, setJobCategoryId] = useState(0);
   const [jobsPerPage, setJobsPerPage] = useState(5);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchQueryStatus, setSearchQueryStatus] = useState(false);
@@ -22,20 +21,36 @@ function JobResults() {
   const {filteredData, category } =
     useContext(LocalContext);
 
+//   const { data, isLoading, error } = useFetch(
+//     `https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCompany?name=${searchQuery}&companyId=${companyId}&jobCategoryId=${jobCategoryId}`
+//   );
+
+
+const companyId = localStorage.getItem( 'companyId' );
+
+const companyObjString = localStorage.getItem("selectedCompany");
+console.log("companyObjString", companyObjString);
+
+// Parse the string back to an object
+const companyObj = JSON.parse(companyObjString);
+console.log("companyObj", companyObj);
+
+
   // const { data, isLoading, error } = useFetch(
-  //   `https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCompany?name=${searchQuery}&jobCategoryId=${jobCategoryId}`
+  //   `https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCompany?name=${searchQuery}&companyId=${companyId}&jobCategoryId=${storedCategoryId}`
   // );
 
   useEffect(() => {
     setIsLoading(true)
     const fetchData = async () => {
-        const url = `https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCompany?name=${searchQuery}&jobCategoryId=${jobCategoryId}`;
+        const url = `https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCompany?name=${searchQuery}&companyId=${companyId}&jobCategoryId=${jobCategoryId}`;
         try {
             const response = await fetch(url);
             if (!response.ok) {
 
                 throw new Error('Failed to fetch data');
             }
+            window.scrollTo(0, 0);
             setIsLoading(false)
             const data = await response.json();
             setFilteredJobs(data);
@@ -47,6 +62,10 @@ function JobResults() {
     fetchData();
 }, [jobCategoryId, searchQuery]);
 
+  // useEffect(() => {
+  //   setFilteredJobs(data);
+  //   window.scrollTo(0, 0);
+  // }, [data]);
 
   // Get current jobs
   const indexOfLastJob = currentPage * jobsPerPage;
@@ -99,7 +118,7 @@ function JobResults() {
       <div className="jobResults">
         <div className="jobResultsTop">
           <div className="jobResultsTopContainer">
-            <h2 className="jobResultsTopNavTitle">Job Openings</h2>
+            <h2 className="jobResultsTopNavTitle">{`${companyObj.name} Job Openings`}</h2>
             <div className="jobResultsTopNav">
               <Link to="/" className="jobResultsTopNavHome">
                 Home
@@ -156,10 +175,9 @@ function JobResults() {
                   style={{ width: "90%", border: "none" }}
                   onChange={(e) => {
                     const categoryId = parseInt(e.target.value, 10);
-                    localStorage.setItem("jobCategoryId", categoryId);
+                    localStorage.setItem("jobCategoryCompany", categoryId)
                     setJobCategoryId(categoryId);
                 }}
-                
                 >
                   <option selected>Select</option>
                   {category?.map((c) => {
@@ -303,4 +321,4 @@ function JobResults() {
   );
 }
 
-export default JobResults;
+export default JobResultsComp;

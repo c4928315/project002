@@ -1,0 +1,54 @@
+.companyCardHolder{
+    width: 21em;
+    height: 13em;
+    border: 1px solid var(--light-blue);
+    box-shadow: var(--light2-jungle-green) 0px 2px 8px 0px;
+    border-radius: 0.7em;
+    padding: 0.7em;
+    background-color: rgba(226, 219, 211, 0.2);
+}
+
+.companyCardBtn{
+    display: flex;
+    gap: 1em;
+}
+
+.companyCardBtn button{
+    font-size: 0.7em;
+    padding: 0.2em 0.4em;
+    border: none;
+    outline: none;
+    border-radius: 0.7em;
+}
+
+.btnHy{
+    background-color: rgb(28, 54, 58);
+    color: white;
+}
+.btnOn{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black !important;
+}
+.btnRm{
+    background-color: rgba(28, 54, 58, 0.6);
+    color: white;
+}
+
+.companyCardLogo{
+    height: 55px;
+    width: 55px;
+    border-radius: 6px;
+}
+
+.companyCardContent{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0.5em;
+}
+
+
+.companyCardLeft{
+    padding-top: 1.5em;
+}
+

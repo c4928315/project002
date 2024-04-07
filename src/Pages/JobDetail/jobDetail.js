@@ -34,6 +34,10 @@ function JobDetail() {
       });
   }, [id, jobTitle]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
   function formatDateString(inputDateString) {
     const inputDate = new Date(inputDateString);
 

@@ -1,6 +1,6 @@
 // App.js
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "../../Components/Footer/footer";
 import Layout from "../../Components/Layout/layout";
@@ -22,17 +22,11 @@ import ViewLinkedIn from "../../Components/ViewService/viewLinkedIn";
 import ViewInterview from "../../Components/ViewService/viewInterview";
 import ViewStudentPack from "../../Components/ViewService/viewStudentPack";
 import ViewCoachingSesh from "../../Components/ViewService/viewCoachingSession";
+import Companies from "../../Components/Companies/companies";
+import JobResultsComp from "../../Components/JobSearchResults/jobResultsComp";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  const { data: recent } = useFetch(
-    "https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCategory?jobCategoryId=0"
-  );
-
-  const idsToExclude = [ 30, 31, 32, 33, 34, 35, 36, 38 ];
-
-  const filteredData = recent.filter(item => !idsToExclude.includes(item.jobsId));
 
 
   const handleLogin = () => {
@@ -54,22 +48,24 @@ function App() {
 
   return (
     <div className="App">
-      {!isExcludeNav && <Nav />}
+      {!isExcludeNav && <Nav/>}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route element={<RequireAuth/>}>
           <Route path="/AdminArea" element={<PostJob />} />
           </Route>
-          <Route path="/" element={<Home data={filteredData}/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/jobs/:id/:jobTitle" element={<JobDetail />} />
           
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
           
           <Route path="/jobs/results" element={<JobResults />} />
-          <Route path="/allJobs/results" element={<AllJobResults data={filteredData}/>} />
+          <Route path="/company/jobs/results" element={<JobResultsComp />} />
+          <Route path="/allJobs/results" element={<AllJobResults/>} />
+          <Route path="/companies" element={<Companies/>} />
           <Route path="/addCompany" element={<AddCompany />} />
           <Route path="/editCompany/:id" element={<EditCompany />} />
-          <Route path="/openJobs" element={<OpenJobs data={filteredData}/>} />
+          <Route path="/openJobs" element={<OpenJobs/>} />
           <Route path="/viewService" element={<ViewService/>} />
           <Route path="/viewLinkedIn" element={<ViewLinkedIn/>} />
           <Route path="/viewInterview" element={<ViewInterview/>} />

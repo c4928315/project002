@@ -12,6 +12,7 @@ function EditCompany({ companyData, close }) {
     location: companyData.location,
     createdBy: companyData.createdBy,
     modifiedBy: companyData.modifiedBy,
+    attachment: ""
   });
   
 
@@ -24,6 +25,10 @@ function EditCompany({ companyData, close }) {
       [name]: value,
     }));
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 
   const handleUpdateCompany = async () => {
     if (

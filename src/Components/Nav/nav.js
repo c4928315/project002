@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import LocalContext from "../../Context/contextProvider";
 import customIcons from "../../Icons/customIcons";
 import "./nav.css";
 
 function Nav() {
+  const { jobCategoryId, setJobCategoryId, companies } = useContext(LocalContext);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const [isDropdownVisible2, setIsDropdownVisible2] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDropdownVisible(false);
+  };
+
+  const handleDropdownMouseEnter = () => {
+    setIsDropdownVisible(true);
+  };
+
+  const handleDropdownMouseLeave = () => {
+    setIsDropdownVisible(false);
+  };
+
+  const handleCategory = () => {
+    setJobCategoryId()
+  }
+
+
   return (
     <div className="navContainer">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -36,28 +62,16 @@ function Nav() {
                 <Link
                   className="nav-link active findJobLink"
                   aria-current="page"
+                  to="jobs/results"
+                  onClick={() => setJobCategoryId(0)}
                 >
                   Find Jobs
                 </Link>
-                <div className="pointerDropdown">
-                  <div className="pointer"></div>
-                  <div className="nav-item-dropdown">
-                    <ul>
-                      <li>
-                        <Link to="/openJobs">All Jobs</Link>
-                      </li>
-                      <li>
-                        <Link to="">Job Category</Link>
-                      </li>
-                      <li>
-                        <Link to="">Job Type</Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </li>
               <li className="nav-item mainNavItem">
-                <Link className="nav-link">Remote Companies</Link>
+                <Link to="/companies" className="nav-link">
+                  Companies
+                </Link>
               </li>
               <li className="nav-item mainNavItem findJobContainer">
                 <Link className="nav-link">Resources</Link>
@@ -71,11 +85,43 @@ function Nav() {
                       <li>
                         <Link to="">Blog / Newsletter</Link>
                       </li>
-                      <li>
-                        <Link to="">Our Services</Link>
+                      <li
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                      >
+                        <Link to="" className="serviceLink">
+                          Our Services
+                        </Link>
                       </li>
                     </ul>
                   </div>
+                  <>
+                    <ul
+                      className={`subDropDown ${
+                        isDropdownVisible ? "visible" : ""
+                      }`}
+                      onMouseEnter={handleDropdownMouseEnter}
+                      onMouseLeave={handleDropdownMouseLeave}
+                    >
+                      <div class="subDropDownInner">
+                        <li>
+                          <Link to="/viewService" class="dropdown-item active">CV Revamp</Link>
+                        </li>
+                        <li>
+                          <Link to="/viewLStudentPack" class="dropdown-item"> Student's Package </Link>
+                        </li>
+                        <li>
+                          <Link to="/viewLinkedIn" class="dropdown-item"> Linkedin Optimisation</Link>
+                        </li>
+                        <li>
+                          <Link to="/viewCoachingSesh" class="dropdown-item">Coaching Session</Link>
+                        </li>
+                        <li>
+                          <Link to="/viewInterview" class="dropdown-item"> Interview Prep</Link>
+                        </li>
+                      </div>
+                    </ul>
+                  </>
                 </div>
               </li>
               <li className="nav-item mainNavItem">

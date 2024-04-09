@@ -47,10 +47,11 @@ const handleClick = (item, id) => {
                     Hybrid
                   </Link>
                 </button>
-                <button className="btnOn">
+                <button className="btnOn" >
                   <Link
                     to="/company/jobs/results"
                     onClick={() => handleClick(item, 4)}
+                    style={{color: "black"}}
                   >
                     On Site
                   </Link>{" "}

@@ -25,6 +25,9 @@
 
 .footerLinks{
     line-height: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .links{

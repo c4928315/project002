@@ -60,6 +60,7 @@
     gap: 50px;
     padding: 50px 30px;
     position: relative;
+    padding-bottom: 50px;
 }
 
 .nojobsPhrase{
@@ -158,6 +159,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    padding-bottom: 2em;
 }
 
 .pageBtn{

@@ -69,10 +69,18 @@ function Footer() {
             </div>
 
             <div className="footerLinks">
-              <p className="links">Link One</p>
-              <p className="links">Link Two</p>
-              <p className="links">Link Three</p>
-              <p className="links">Link Four</p>
+            <Link to="https://www.tiktok.com/@beyond.the.savannah" target="blank" className="links">
+              TikTok
+            </Link>
+             <Link to="https://www.linkedin.com/in/otienolorraine/?originalSubdomain=ke" target="blank" className="links">
+             LinkedIn
+            </Link>
+             <Link to="https://www.instagram.com/lorraineotieno/?hl=en" target="blank" className="links">
+             Instagram
+            </Link>
+             <Link to="https://www.youtube.com/@beyondthesavannah" target="blank" className="links">
+             Youtube
+            </Link>
             </div>
           </div>
           <div className={open4 ? "footerItemOpen" : "footerItem"}>
@@ -92,20 +100,20 @@ function Footer() {
                 <span>
                   <customIcons.email size={14} />
                 </span>
-                <p className="links">info@gmail.com</p>
+                <p className="links">beyondthesavannah@gmail.com</p>
               </span>
               <span className="iconLinkFooter">
                 <span>
                   <customIcons.phone size={14} />
                 </span>
-                <p className="links">+25712345678</p>
+                <p className="links">0737120764</p>
               </span>
-              <span className="iconLinkFooter">
+              {/* <span className="iconLinkFooter">
                 <span>
                   <customIcons.print />
                 </span>
                 <p className="links">+25787654321</p>
-              </span>
+              </span> */}
             </div>
           </div>
         </div>

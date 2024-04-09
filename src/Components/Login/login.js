@@ -4,12 +4,15 @@ import customIcons from "../../Icons/customIcons";
 import axios from "axios";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useLocalContext from "../../Hooks/useLocalContext";
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
 
 function Login({ onLogin }) {
   const { auth, setAuth } = useLocalContext();
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
@@ -36,7 +39,7 @@ function Login({ onLogin }) {
       }
 
       const response = await axios.post(
-        "https://efmsapi-staging.azurewebsites.net/api/Login",
+        "https://efmsapi-staging.azurewebsites.net/api/Login/jobLogin",
         {
           email: userName,
           password,
@@ -46,6 +49,7 @@ function Login({ onLogin }) {
       const bearerToken = response?.data?.bearerToken;
       const user = response?.status === 200;
       const claims = response?.data?.claims;
+      setData(response)
 
       setAuth({ email: userName, user, password, bearerToken, claims });
 
@@ -68,7 +72,7 @@ function Login({ onLogin }) {
     }
   };
 
-  console.log(auth);
+  console.log("data", data);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -128,6 +132,10 @@ function Login({ onLogin }) {
     }
   };
 
+  function handlecallbackresponse(response) {
+    console.log("Encoded JWT ID token" + response);
+  }
+
   return (
     <>
       {formStatus ? (
@@ -183,12 +191,47 @@ function Login({ onLogin }) {
                         <p>or</p>
                         <div className="loginLine"></div>
                       </div>
-                      <button className="loginBtn loginBtn2">
-                        <span>
-                          <customIcons.googleC />
-                        </span>
-                        <span>Login with Google</span>
-                      </button>
+                      <GoogleLogin
+                        style={{ width: "500px" }}
+                        onSuccess={async (credentialResponse) => {
+                          try {
+                            setLoading(true);
+                            setError(null);
+
+                            const credentialResponseDecode = jwtDecode(
+                              credentialResponse.credential
+                            );
+
+                            setAuth({
+                              email: credentialResponseDecode.email,
+                              user: true,
+                              bearerToken: credentialResponse.credential,
+                              claims: {},
+                            });
+
+                            localStorage.setItem(
+                              "auth",
+                              JSON.stringify({
+                                email: credentialResponseDecode.email,
+                                user: true,
+                                bearerToken: credentialResponse.credential,
+                                claims: {},
+                              })
+                            );
+
+                            navigate(from, { replace: true });
+                          } catch (error) {
+                            setError(
+                              "Failed to authenticate via Google. Please try again."
+                            );
+                          } finally {
+                            setLoading(false);
+                          }
+                        }}
+                        onError={() => {
+                          console.log("Login Failed");
+                        }}
+                      />
 
                       <div className="inquiry">
                         <p>
@@ -247,79 +290,91 @@ function Login({ onLogin }) {
               <h1>Create your account. No credit card needed.</h1>
               <div className="loginP loginP2">
                 <p>
-                Send your first emails in a few minutes. Already have an
-                account? 
-                <Link
-                  style={{
-                    color: "rgb(44, 85, 92)",
-                    textDecoration: "underline",
-                    textTransform: "capitalize",
-                  }}
-                  onClick={() => setFormStatus(true)}
-                >
-                  Login
-                </Link>
-              </p>
+                  Send your first emails in a few minutes. Already have an
+                  account?
+                  <Link
+                    style={{
+                      color: "rgb(44, 85, 92)",
+                      textDecoration: "underline",
+                      textTransform: "capitalize",
+                    }}
+                    onClick={() => setFormStatus(true)}
+                  >
+                    Login
+                  </Link>
+                </p>
               </div>
-              
             </div>
             <form>
-              <input
-              className="signUpInput signUpInputReal"
-                type="email"
-                placeholder="Email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <br />
-              <input
-              className="signUpInput signUpInputReal"
-                type="password"
-                placeholder="Password"
-                onChange={(e) => setKey(e.target.value)}
-              />
-              <br />
-              <input
-              className="signUpInput signUpInputReal"
-                type="text"
-                placeholder="First Name"
-                onChange={(e) => setFirstName(e.target.value)}
-              />
-              <br />
-              <input
-              className="signUpInput signUpInputReal"
-                type="text"
-                placeholder="Last Name"
-                onChange={(e) => setLastName(e.target.value)}
-              />
-              <br />
-              <input
-              className="signUpInput signUpInputReal"
-                type="text"
-                placeholder="Phone Number"
-                onChange={(e) => setNumber(e.target.value)}
-              />
-              <br />
+              <div className="mainSignUpFormDiv">
+                <input
+                  className="signUpInput signUpInputReal"
+                  type="email"
+                  placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="mainSignUpFormDiv">
+                <input
+                  className="signUpInput signUpInputReal"
+                  type="password"
+                  placeholder="Password"
+                  onChange={(e) => setKey(e.target.value)}
+                />
+              </div>
+              <div className="mainSignUpFormDiv">
+                <input
+                  className="signUpInput signUpInputReal"
+                  type="text"
+                  placeholder="First Name"
+                  onChange={(e) => setFirstName(e.target.value)}
+                />
+              </div>
+              <div className="mainSignUpFormDiv">
+                <input
+                  className="signUpInput signUpInputReal"
+                  type="text"
+                  placeholder="Last Name"
+                  onChange={(e) => setLastName(e.target.value)}
+                />
+              </div>
+              <div className="mainSignUpFormDiv">
+                <input
+                  className="signUpInput signUpInputReal"
+                  type="text"
+                  placeholder="Phone Number"
+                  onChange={(e) => setNumber(e.target.value)}
+                />
+              </div>
 
               <div className="loginFormBtnContainer">
-              <div className="loginOr">
-                <p className="signUpPLine">OR</p>
-                <div className="loginLine signUpLine"></div>
+                <div className="loginOr loginOr2">
+                  <p className="signUpPLine">OR</p>
+                </div>
+                <div className="mainSignUpFormDiv">
+                  <button
+                    className="loginBtn loginBtn2"
+                    style={{ width: "90%", borderRadius: "12px" }}
+                  >
+                    <span>
+                      <customIcons.googleC />
+                    </span>
+                    <span>Sign Up with Google</span>
+                  </button>
+                </div>
+
+                <br />
+                <br />
+                <div className="mainSignUpFormDiv">
+                  <button
+                    type="submit"
+                    className="signUpInput signUpInputBtn"
+                    onClick={handleRegister}
+                  >
+                    submit
+                  </button>
+                </div>
               </div>
-              <br/>
-              <button className="loginBtn loginBtn2">
-                <span>
-                  <customIcons.googleC />
-                </span>
-                <span>Sign Up with Google</span>
-              </button>
-
-              <br/>
-              <br/>
-
-              <button type="submit" className="signUpInput signUpInputBtn" onClick={handleRegister}>
-                submit
-              </button>
-            </div>
             </form>
           </div>
           <div className="signUpRight"></div>

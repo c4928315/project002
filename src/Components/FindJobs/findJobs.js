@@ -47,7 +47,7 @@ function FindJobs({ data }) {
                     <br />
                     Revamp
                   </h1>
-                  <span class="price">$79</span>
+                  <span class="price"> Ksh 8000</span>
                   <div class="card-back">
                     <Link to="/viewService">View</Link>
                     <Link to="">services</Link>
@@ -63,7 +63,7 @@ function FindJobs({ data }) {
                     <br />
                     CV Revamp
                   </h1>
-                  <span class="price">$35</span>
+                  <span class="price">Ksh 5000</span>
                   <div class="card-back">
                     <Link to="/viewLStudentPack">View</Link>
                     <Link to="">services</Link>
@@ -79,7 +79,7 @@ function FindJobs({ data }) {
                     <br />
                     Optimisation
                   </h1>
-                  <span class="price">$155</span>
+                  <span class="price">Ksh 15000</span>
                   <div class="card-back">
                     <Link to="/viewLinkedIn">View</Link>
                     <Link to="">services</Link>
@@ -95,7 +95,7 @@ function FindJobs({ data }) {
                     <br />
                     Session
                   </h1>
-                  <span class="price">$155</span>
+                  <span class="price">Ksh 7000</span>
                   <div class="card-back">
                     <Link to="/viewCoachingSesh">View</Link>
                     <Link to="">services</Link>
@@ -111,7 +111,7 @@ function FindJobs({ data }) {
                     <br />
                     Prep
                   </h1>
-                  <span class="price">$155</span>
+                  <span class="price">Ksh 12000</span>
                   <div class="card-back">
                     <Link to="/viewInterview">View</Link>
                     <Link to="">services</Link>

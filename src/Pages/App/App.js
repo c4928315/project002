@@ -24,6 +24,7 @@ import ViewStudentPack from "../../Components/ViewService/viewStudentPack";
 import ViewCoachingSesh from "../../Components/ViewService/viewCoachingSession";
 import Companies from "../../Components/Companies/companies";
 import JobResultsComp from "../../Components/JobSearchResults/jobResultsComp";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -41,13 +42,14 @@ function App() {
   const location = useLocation();
 
   const excludeNav = ["/login", "/AdminArea"]
-  const excludeFooter = ["/login", "/jobs/results", "/AdminArea"]
+  const excludeFooter = ["/login", "/jobs/results", "/AdminArea", "/company/jobs/results"]
 
   const isExcludeNav = excludeNav.includes(location.pathname)
   const isExcludeFooter = excludeFooter.includes(location.pathname)
 
   return (
-    <div className="App">
+    <GoogleOAuthProvider clientId="549965724912-cjruqmhsblb5tet09cqf301m0aj7s3nl.apps.googleusercontent.com">
+      <div className="App">
       {!isExcludeNav && <Nav/>}
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -76,6 +78,8 @@ function App() {
       </Routes>
       {!isExcludeFooter && <Footer />}
     </div>
+    </GoogleOAuthProvider>
+    
   );
 }
 

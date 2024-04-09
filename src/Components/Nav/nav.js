@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import LocalContext from "../../Context/contextProvider";
 import customIcons from "../../Icons/customIcons";
+import VideoPlayer from "../Video/video";
 import "./nav.css";
 
 function Nav() {
@@ -27,6 +28,12 @@ function Nav() {
 
   const handleCategory = () => {
     setJobCategoryId()
+  }
+
+  const [seeVideo, setSeeVideo] = useState(false);
+
+  const handleVideo = ( ) => {
+    setSeeVideo(!seeVideo)
   }
 
 
@@ -125,11 +132,11 @@ function Nav() {
                 </div>
               </li>
               <li className="nav-item mainNavItem">
-                <Link className="nav-link">About</Link>
+                <Link className="nav-link" onClick={handleVideo}>About</Link>
               </li>
-              <li className="nav-item mainNavItem">
+              {/* <li className="nav-item mainNavItem">
                 <Link className="nav-link">Remote Worker’s Spotlight</Link>
-              </li>
+              </li> */}
               <li className="nav-item mainNavItem newJobSignContainer">
                 <Link to="" className="nav-link">
                   Post Job
@@ -146,6 +153,16 @@ function Nav() {
           </div>
         </div>
       </nav>
+
+      {
+        seeVideo &&
+         <div className="video">
+          <div className="innerVideo">
+          <Link onClick={handleVideo}>Back</Link>
+            <VideoPlayer/>
+          </div>
+        </div> 
+      }
     </div>
   );
 }

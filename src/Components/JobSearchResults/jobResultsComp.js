@@ -222,7 +222,7 @@ console.log("companyObj", companyObj);
                   </div>
 
                   <div className="jobRangeDropdown">
-                    <div class="dropdown">
+                    <div class="dropdown" id="byDefault">
                       <button
                         class="btn btn-secondary dropdown-toggle"
                         type="button"

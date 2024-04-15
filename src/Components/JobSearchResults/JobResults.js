@@ -204,9 +204,9 @@ function JobResults() {
                   </div>
 
                   <div className="jobRangeDropdown">
-                    <div class="dropdown">
+                    <div class="dropdown" id="byDefault">
                       <button
-                        class="btn btn-secondary dropdown-toggle"
+                        class="btn btn-secondary dropdown-toggle "
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"

@@ -267,10 +267,13 @@
   @media screen and (min-width: 320px) and (max-width: 736px) {
     .jobResultsBottom{
         flex-direction: column;
+        padding: 50px 19px;
         width: 100vw;
         padding-top: 1em;
         height: fit-content;
         display: inline-block;
+        padding-top: 0em;
+
     }
 
     .jobResultsBottomLeft{
@@ -300,9 +303,10 @@
         justify-content: space-between;
         position: sticky;
         top: 0%;
-        background-color: white;
+        background-color: rgba(226, 219, 211, 0.5);
         z-index: 2;
-        padding: 3% 0;
+        padding: 3%;
+        border-radius: 6px;
     }
 
     .jobRangeDropdown .dropdown button{
@@ -356,5 +360,13 @@
         width: 100%;
         border-radius: 1.5em;
         height: 90vh;
+    }
+
+    #byDefault{
+        display: none !important;
+    }
+
+    .pagination{
+        margin-top: 3.3em;
     }
   }

@@ -160,6 +160,8 @@
     align-items: center;
     gap: 20px;
     padding-bottom: 2em;
+    width: 100%;
+    justify-content: center;
 }
 
 .pageBtn{
@@ -265,15 +267,16 @@
   @media screen and (min-width: 320px) and (max-width: 736px) {
     .jobResultsBottom{
         flex-direction: column;
-        width: fit-content;
+        width: 100vw;
         padding-top: 1em;
         height: fit-content;
+        display: inline-block;
     }
 
     .jobResultsBottomLeft{
         width: 100%;
         background-color: white;
-        padding-top: 5%;
+        padding-top: 0%;
         z-index: 1;
     }
 
@@ -284,8 +287,8 @@
     .jobResultsBottomRight{
         width: 100%;
         position: relative;
-        height: 100vh;
-        overflow: auto;
+        height: fit-content;
+        margin-top: 8em;
     }
 
     .jobDuration button{

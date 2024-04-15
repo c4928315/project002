@@ -52,3 +52,8 @@
     padding-top: 1.5em;
 }
 
+@media screen and (min-width: 320px) and (max-width: 736px) {
+    .companyCardHolder{
+        width: 100%;
+    }
+}

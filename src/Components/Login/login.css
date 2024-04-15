@@ -450,5 +450,14 @@
    .loginP p{
     font-size: 0.8em;
    }
+   
+   .signUpRight{
+    display: none;
+   }
+
+   .signUpLeft{
+    width: 100%;
+    padding-top: 2.6em;
+   }
 }
 /* LOGIN QUEARY */

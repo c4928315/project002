@@ -11,8 +11,24 @@
 }
 
 .companyPagination{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
-    margin: 4em 0;
+    margin: 4em auto;
+    align-items: center;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 736px) {
+    .companies{
+        width: 100%;
+        flex-direction: column;
+        gap: 1em;
+        padding: 2em;
+    }
+
+    .leftOpeningCardIcon span p{
+        font-size: 0.8em;
+        text-transform: capitalize;
+    }
 }

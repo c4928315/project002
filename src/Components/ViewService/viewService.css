@@ -199,3 +199,88 @@
   .contentzzIconInsta{
     color: rgb(157, 134, 1);
   }
+
+  @media screen and (min-width: 320px) and (max-width: 736px) {
+
+    .viewScontainer{
+        margin: 0;
+        padding: 0;
+    }
+
+    .viewSTop{
+        display: inline-block;
+        padding: 0;
+        gap: 0.8em;
+        background-color: transparent;
+    }
+    .viewStopImg{
+        width: 100%;
+        border-radius: 0;
+        border-bottom-left-radius: 1.5em;
+        border-bottom-right-radius: 1.5em;
+    }
+
+    .viewStopText{
+       display: inline-block;
+       padding: 1.5em;
+    }
+
+    .viewSBottomPs{
+        width: 100%;
+    }
+
+    .viewSBottomBtns{
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start ;
+    }
+
+    .viewSBottomBtns button{
+        width: 100%;
+    }
+
+    .viewSBottomNB{
+        width: 100%;
+    }
+
+    .viewSBottom{
+        padding: 1.5em 2.2em;
+        background-color: var(--light-blue);
+        border-radius: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .viewSBottomFlex{
+        display: inline-block;
+    }
+
+    .productContents{
+        
+    }
+
+    .containerzz{}
+
+    .viewSBottomNB p{
+        font-style: italic;
+    }
+
+    .viewSBottom h1, .viewServiceMedia h1{
+        font-size: 1.2em;
+    }
+
+    .viewStopText h1{
+        font-size: 1.7em;
+        color: var(--bold);
+    }
+
+    .viewStopText p b{
+        color: var(--jungle-green);
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    .viewSBottom hr{
+        display: none;
+    }
+  }

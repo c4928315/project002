@@ -13,7 +13,7 @@ function ViewService() {
       <div className="viewSTop">
         <div className="viewStopImg"></div>
         <div className="viewStopText">
-          <div>
+          <div className="productContents">
             <h1>ATS CV Revamp</h1>
             <p>
               Navigating the Applicant Tracking System (ATS) is crucial in

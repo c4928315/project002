@@ -51,11 +51,13 @@ section {
   align-items: center;
 }
 
+
 .card {
   position: relative;
   overflow: hidden;
+  padding: 0;
   height: 350px;
-  width: 90%;
+  width: 100%;
   margin: 10px 0;
   transition: ease all 2.3s;
   perspective: 1200px;
@@ -230,6 +232,7 @@ section {
   .row>*{
     padding-left: 0 !important;
     width: 100%;
+    padding-right: 0 !important;
   }
 
   .findJobsContainer{
@@ -237,7 +240,9 @@ section {
   }
 
   section{
+    width: 88%;
     margin-top: 0em !important;
+    margin: 0 auto !important;
   }
 }
 

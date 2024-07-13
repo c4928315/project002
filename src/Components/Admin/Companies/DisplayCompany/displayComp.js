@@ -58,6 +58,8 @@ function DisplayComp() {
     setShowEditCompany(true); 
   };
 
+  
+
   return (
     <div className="companiesContainer">
       <div className="companiesInner">
@@ -66,7 +68,7 @@ function DisplayComp() {
           <h1>Companies</h1>
         </div>
 
-        <div class="tbl-header">
+        <div className="tbl-header">
           <table cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
@@ -80,7 +82,7 @@ function DisplayComp() {
             </thead>
           </table>
         </div>
-        <div class="tbl-content">
+        <div className="tbl-content">
           <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
               {allCompanies.map((item, i) => {
@@ -100,11 +102,11 @@ function DisplayComp() {
                         <customIcons.kebab size={18} />
                       </span>
 
-                      <div class="dropdown">
-                        <ul class="dropdown-menu">
+                      <div className="dropdown">
+                        <ul className="dropdown-menu">
                           <li>
                             <Link
-                              class="dropdown-item"
+                              className="dropdown-item"
                               onClick={() => handleEdit(item)}
                             >
                               <customIcons.edit />
@@ -113,7 +115,7 @@ function DisplayComp() {
                           </li>
                           <li>
                             <Link
-                              class="dropdown-item"
+                              className="dropdown-item"
                               onClick={() => handleDelete(item.id)}
                             >
                               <customIcons.delete />

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LocalContext from "../../Context/contextProvider";
-import useFetch from "../../Hooks/useFetch";
 import customIcons from "../../Icons/customIcons";
 import Loader from "../Loader/loader";
 import OpeningsCard from "../OpenJobs/openingsCard/openingsCard";
@@ -9,9 +8,17 @@ import ScrollToTopButton from "../scrollToTop";
 import "./jobResults.css";
 
 function JobResults() {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const initialPage = localStorage.getItem("currentPage") 
+    ? parseInt(localStorage.getItem("currentPage"), 10)
+    : searchParams.get('page')
+    ? parseInt(searchParams.get('page'), 10)
+    : 1;
+
   const storedCategoryId = localStorage.getItem("jobCategoryId");
   const [filteredJobs, setFilteredJobs] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(initialPage);
   const [newCategoryId, setNewCategoryId] = useState(storedCategoryId);
   const [jobCategoryId, setJobCategoryId] = useState(0);
   const [jobsPerPage, setJobsPerPage] = useState(5);
@@ -19,34 +26,26 @@ function JobResults() {
   const [searchQueryStatus, setSearchQueryStatus] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [searchQueryMain, setSearchQueryMain] = useState("");
-  const {filteredData, category } =
-    useContext(LocalContext);
-
-  // const { data, isLoading, error } = useFetch(
-  //   `https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCompany?name=${searchQuery}&jobCategoryId=${jobCategoryId}`
-  // );
+  const { filteredData, category } = useContext(LocalContext);
 
   useEffect(() => {
-    setIsLoading(true)
+    setIsLoading(true);
     const fetchData = async () => {
-        const url = `https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCompany?name=${searchQuery}&jobCategoryId=${jobCategoryId}`;
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-
-                throw new Error('Failed to fetch data');
-            }
-            setIsLoading(false)
-            const data = await response.json();
-            setFilteredJobs(data);
-        } catch (error) {
-            // Handle error
+      const url = `https://efmsapi-staging.azurewebsites.net/api/Jobs/getAllJobsByCompany?name=${searchQuery}&jobCategoryId=${jobCategoryId}`;
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
         }
+        setIsLoading(false);
+        const data = await response.json();
+        setFilteredJobs(data);
+      } catch (error) {
+        // Handle error
+      }
     };
-
     fetchData();
-}, [jobCategoryId, searchQuery]);
-
+  }, [jobCategoryId, searchQuery]);
 
   // Get current jobs
   const indexOfLastJob = currentPage * jobsPerPage;
@@ -76,8 +75,7 @@ function JobResults() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    // alert(searchQuery);
-    setSearchQueryMain(setSearchQuery);
+    setSearchQueryMain(searchQuery);
   };
 
   const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
@@ -151,24 +149,21 @@ function JobResults() {
               >
                 <customIcons.category size={22} className="jobResultsIcon" />
                 <select
-                  class="form-select"
+                  className="form-select"
                   aria-label="Default select example"
                   style={{ width: "90%", border: "none" }}
                   onChange={(e) => {
                     const categoryId = parseInt(e.target.value, 10);
                     localStorage.setItem("jobCategoryId", categoryId);
                     setJobCategoryId(categoryId);
-                }}
-                
+                  }}
                 >
                   <option selected>Select</option>
-                  {category?.map((c) => {
-                    return (
-                      <option key={c.value} value={c.value}>
-                        {c.label}
-                      </option>
-                    );
-                  })}
+                  {category?.map((c) => (
+                    <option key={c.value} value={c.value}>
+                      {c.label}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
@@ -190,8 +185,7 @@ function JobResults() {
                   <div>
                     <h3 className="nojobsPhraseHeader">No jobs found</h3>
                     <p className="nojobsPhraseP">
-                      Try adjusting your search and or filter to find what you
-                      are loking for.
+                      Try adjusting your search and or filter to find what you are looking for.
                     </p>
                   </div>
                 </div>
@@ -204,31 +198,31 @@ function JobResults() {
                   </div>
 
                   <div className="jobRangeDropdown">
-                    <div class="dropdown" id="byDefault">
+                    <div className="dropdown" id="byDefault">
                       <button
-                        class="btn btn-secondary dropdown-toggle "
+                        className="btn btn-secondary dropdown-toggle"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
                         Sort By (Default)
                       </button>
-                      <ul class="dropdown-menu">
+                      <ul className="dropdown-menu">
                         <li>New</li>
                         <li>Old</li>
                         <li>Default</li>
                       </ul>
                     </div>
-                    <div class="dropdown">
+                    <div className="dropdown">
                       <button
-                        class="btn btn-secondary dropdown-toggle"
+                        className="btn btn-secondary dropdown-toggle"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
                         {`${jobsPerPage} Per Page`}
                       </button>
-                      <ul class="dropdown-menu">
+                      <ul className="dropdown-menu">
                         <li onClick={() => setJobsPerPage(5)}>5 Per Page</li>
                         <li onClick={() => setJobsPerPage(10)}>10 Per Page</li>
                         <li onClick={() => setJobsPerPage(15)}>15 Per Page</li>
@@ -242,9 +236,9 @@ function JobResults() {
                     </div>
                   </div>
                 </div>
-                {filteredJobsByName.map((item, i) => {
-                  return <OpeningsCard data={item} key={i} className="" />;
-                })}
+                {filteredJobsByName.map((item, i) => (
+                  <OpeningsCard data={item} key={i} currentPage={currentPage} />
+                ))}
 
                 <div className="pagination">
                   {/* Previous Button */}
@@ -268,9 +262,7 @@ function JobResults() {
                     ) {
                       return (
                         <button
-                          className={`pageBtn ${
-                            currentPage === i + 1 ? "activePage" : ""
-                          }`}
+                          className={`pageBtn ${currentPage === i + 1 ? "activePage" : ""}`}
                           key={i}
                           onClick={() => setCurrentPage(i + 1)}
                         >

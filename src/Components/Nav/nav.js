@@ -110,21 +110,21 @@ function Nav() {
                       onMouseEnter={handleDropdownMouseEnter}
                       onMouseLeave={handleDropdownMouseLeave}
                     >
-                      <div class="subDropDownInner">
+                      <div className="subDropDownInner">
                         <li>
-                          <Link to="/viewService" class="dropdown-item active">CV Revamp</Link>
+                          <Link to="/viewService" className="dropdown-item active">CV Revamp</Link>
                         </li>
                         <li>
-                          <Link to="/viewLStudentPack" class="dropdown-item"> Student's Package </Link>
+                          <Link to="/viewLStudentPack" className="dropdown-item"> Student's Package </Link>
                         </li>
                         <li>
-                          <Link to="/viewLinkedIn" class="dropdown-item"> Linkedin Optimisation</Link>
+                          <Link to="/viewLinkedIn" className="dropdown-item"> Linkedin Optimisation</Link>
                         </li>
                         <li>
-                          <Link to="/viewCoachingSesh" class="dropdown-item">Coaching Session</Link>
+                          <Link to="/viewCoachingSesh" className="dropdown-item">Coaching Session</Link>
                         </li>
                         <li>
-                          <Link to="/viewInterview" class="dropdown-item"> Interview Prep</Link>
+                          <Link to="/viewInterview" className="dropdown-item"> Interview Prep</Link>
                         </li>
                       </div>
                     </ul>

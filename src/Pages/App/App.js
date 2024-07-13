@@ -42,6 +42,8 @@ function App() {
   const location = useLocation();
 
   const excludeNav = ["/login", "/AdminArea"]
+
+
   const excludeFooter = ["/login", "/jobs/results", "/AdminArea", "/company/jobs/results", "/companies"]
 
   const isExcludeNav = excludeNav.includes(location.pathname)

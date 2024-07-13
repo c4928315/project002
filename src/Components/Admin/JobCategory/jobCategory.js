@@ -69,7 +69,7 @@ function JobCategory() {
           <h1>Job Categories</h1>
         </div>
 
-        <div class="tbl-header">
+        <div className="tbl-header">
           <table cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
@@ -81,7 +81,7 @@ function JobCategory() {
             </thead>
           </table>
         </div>
-        <div class="tbl-content">
+        <div className="tbl-content">
           <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
               {jobCategory.map((item, i) => {
@@ -99,11 +99,11 @@ function JobCategory() {
                         <customIcons.kebab size={18} />
                       </span>
 
-                      <div class="dropdown">
-                        <ul class="dropdown-menu">
+                      <div className="dropdown">
+                        <ul className="dropdown-menu">
                           <li>
                             <Link
-                              class="dropdown-item"
+                              className="dropdown-item"
                               onClick={() => handleEdit(item)}
                             >
                               <customIcons.edit />
@@ -112,7 +112,7 @@ function JobCategory() {
                           </li>
                           <li>
                             <Link
-                              class="dropdown-item"
+                              className="dropdown-item"
                               onClick={() => handleDelete(item.id)}
                             >
                               <customIcons.delete />

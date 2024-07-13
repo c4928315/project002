@@ -55,11 +55,11 @@ function Footer() {
             </div>
 
             <div className="footerLinks">
-              <p className="links">CV Revamp</p>
-              <p className="links">Student's Package CV Revamp</p>
-              <p className="links">Linkedin Optimisation</p>
-              <p className="links">Coaching Session</p>
-              <p className="links">Interview Prep</p>
+              <Link to="/viewService"><p className="links">CV Revamp</p></Link>
+              <Link to="/viewLStudentPack"><p className="links">Student's Package CV Revamp</p></Link>
+              <Link to="/viewLinkedIn"><p className="links">Linkedin Optimisation</p></Link>
+              <Link to="/viewCoachingSesh"><p className="links">Coaching Session</p></Link>
+              <Link to="/viewInterview"><p className="links">Interview Prep</p></Link>
             </div>
           </div>
           <div className={open3 ? "footerItemOpen" : "footerItem"}>

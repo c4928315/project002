@@ -1,19 +1,17 @@
 import React from "react";
 import "./openingsCard.css";
 import customIcons from "../../../Icons/customIcons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-function OpeningsCard({ data }) {
+function OpeningsCard({ data, currentPage }) {
   const navigate = useNavigate();
 
   console.log(data);
 
   const handleTitleClick = () => {
-    // Store the clicked data in local storage
-    localStorage.setItem("clickedJob", JSON.stringify(data));
-
-    // Navigate to the job details page
-    navigate(`/jobs/${data.jobsId}/${encodeURIComponent(data.jobTitle)}`);
+    localStorage.setItem("clickedJob", safeStringify(data));
+    localStorage.setItem("currentPage", safeStringify(currentPage));
+    navigate(`/jobs/${data.jobsId}/${encodeURIComponent(data.jobTitle)}?page=${currentPage}`);
   };
 
   const duration = () => {
@@ -30,7 +28,6 @@ function OpeningsCard({ data }) {
 
   return (
     <div className="openingCardContainer">
-      {/* <img src={data.imageUrl} alt="" className="companyLogo" /> */}
       <div
         className="companyLogo"
         style={{
@@ -60,21 +57,11 @@ function OpeningsCard({ data }) {
             <p>{data.jobCategory}</p>
           </span>
         </div>
-        {/* <div className="leftOpeningCardIcon openingCardCompany">
-          <span>
-            <customIcons.location size={17} style={{ color: "#767676" }} />
-          </span>
-          <span className="leftOpeningCardLocation">
-            <p>{data.location}</p>
-          </span>
-        </div> */}
         <div className="leftOpeningCardIcon">
           <span>
             <customIcons.money size={17} style={{ color: "#767676" }} />
           </span>
           <span className="leftOpeningCardSalary">
-            {/* <p>Ksh {data.salaryRangeStart} - Ksh {data.salaryRangeEnd} / {duration()}</p> */}
-            {/* <p>Ksh {data.salary}</p> */}
             <p>See Job Detail</p>
           </span>
         </div>
@@ -84,6 +71,21 @@ function OpeningsCard({ data }) {
       </div>
     </div>
   );
+}
+
+function safeStringify(obj, replacer = null, spaces = 2) {
+  const cache = new Set();
+  const result = JSON.stringify(obj, (key, value) => {
+    if (typeof value === "object" && value !== null) {
+      if (cache.has(value)) {
+        return;
+      }
+      cache.add(value);
+    }
+    return replacer ? replacer(key, value) : value;
+  }, spaces);
+  cache.clear();
+  return result;
 }
 
 export default OpeningsCard;

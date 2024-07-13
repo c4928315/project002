@@ -38,81 +38,81 @@ function FindJobs({ data }) {
           </div>
         </div>
         <section>
-          <div class="row">
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="cover item-a">
+          <div className="row">
+            <div className="col-md-4 col-sm-6 col-xs-12">
+              <div className="card">
+                <div className="cover item-a">
                   <h1>
                   CV 
                     <br />
                     Revamp
                   </h1>
-                  <span class="price"> Ksh 8000</span>
-                  <div class="card-back">
+                  <span className="price"> Ksh 8000</span>
+                  <div className="card-back">
                     <Link to="/viewService">View</Link>
                     <Link to="">services</Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="cover item-b">
+            <div className="col-md-4 col-sm-6 col-xs-12">
+              <div className="card">
+                <div className="cover item-b">
                   <h1>
                   Student's Package 
                     <br />
                     CV Revamp
                   </h1>
-                  <span class="price">Ksh 5000</span>
-                  <div class="card-back">
+                  <span className="price">Ksh 5000</span>
+                  <div className="card-back">
                     <Link to="/viewLStudentPack">View</Link>
                     <Link to="">services</Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="cover item-c">
+            <div className="col-md-4 col-sm-6 col-xs-12">
+              <div className="card">
+                <div className="cover item-c">
                   <h1>
                   Linkedin
                     <br />
                     Optimisation
                   </h1>
-                  <span class="price">Ksh 15000</span>
-                  <div class="card-back">
+                  <span className="price">Ksh 15000</span>
+                  <div className="card-back">
                     <Link to="/viewLinkedIn">View</Link>
                     <Link to="">services</Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="cover item-d">
+            <div className="col-md-4 col-sm-6 col-xs-12">
+              <div className="card">
+                <div className="cover item-d">
                   <h1>
                   Coaching 
                     <br />
                     Session
                   </h1>
-                  <span class="price">Ksh 7000</span>
-                  <div class="card-back">
+                  <span className="price">Ksh 7000</span>
+                  <div className="card-back">
                     <Link to="/viewCoachingSesh">View</Link>
                     <Link to="">services</Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="card">
-                <div class="cover item-e">
+            <div className="col-md-4 col-sm-6 col-xs-12">
+              <div className="card">
+                <div className="cover item-e">
                   <h1>
                   Interview 
                     <br />
                     Prep
                   </h1>
-                  <span class="price">Ksh 12000</span>
-                  <div class="card-back">
+                  <span className="price">Ksh 12000</span>
+                  <div className="card-back">
                     <Link to="/viewInterview">View</Link>
                     <Link to="">services</Link>
                   </div>

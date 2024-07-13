@@ -170,7 +170,7 @@ console.log("companyObj", companyObj);
               >
                 <customIcons.category size={22} className="jobResultsIcon" />
                 <select
-                  class="form-select"
+                  className="form-select"
                   aria-label="Default select example"
                   style={{ width: "90%", border: "none" }}
                   onChange={(e) => {
@@ -222,31 +222,31 @@ console.log("companyObj", companyObj);
                   </div>
 
                   <div className="jobRangeDropdown">
-                    <div class="dropdown" id="byDefault">
+                    <div className="dropdown" id="byDefault">
                       <button
-                        class="btn btn-secondary dropdown-toggle"
+                        className="btn btn-secondary dropdown-toggle"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
                         Sort By (Default)
                       </button>
-                      <ul class="dropdown-menu">
+                      <ul className="dropdown-menu">
                         <li>New</li>
                         <li>Old</li>
                         <li>Default</li>
                       </ul>
                     </div>
-                    <div class="dropdown">
+                    <div className="dropdown">
                       <button
-                        class="btn btn-secondary dropdown-toggle"
+                        className="btn btn-secondary dropdown-toggle"
                         type="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                       >
                         {`${jobsPerPage} Per Page`}
                       </button>
-                      <ul class="dropdown-menu">
+                      <ul className="dropdown-menu">
                         <li onClick={() => setJobsPerPage(5)}>5 Per Page</li>
                         <li onClick={() => setJobsPerPage(10)}>10 Per Page</li>
                         <li onClick={() => setJobsPerPage(15)}>15 Per Page</li>

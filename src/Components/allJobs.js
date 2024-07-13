@@ -66,7 +66,7 @@ function AllJobResults({data}) {
             <label>Category</label>
             <div className="formInputResultsContainer" style={{display:"flex", width: "100%", alignItems: "center", border: "1px solid rgb(226, 219, 211)", borderRadius: "1.3vh",  paddingLeft: "1em"}}>
                 <customIcons.category size={22} className="jobResultsIcon"/>
-                <select class="form-select" aria-label="Default select example" style={{ width: "90%", border: "none"}}>
+                <select className="form-select" aria-label="Default select example" style={{ width: "90%", border: "none"}}>
                   <option selected>Select</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
@@ -85,24 +85,24 @@ function AllJobResults({data}) {
             </div>
 
             <div className="jobRangeDropdown">
-              <div class="dropdown">
+              <div className="dropdown">
                 <button
-                  class="btn btn-secondary dropdown-toggle"
+                  className="btn btn-secondary dropdown-toggle"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Sort By (Default)
                 </button>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>New</li>
                   <li>Old</li>
                   <li>Default</li>
                 </ul>
               </div>
-              <div class="dropdown">
+              <div className="dropdown">
                 <button
-                  class="btn btn-secondary dropdown-toggle"
+                  className="btn btn-secondary dropdown-toggle"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -111,7 +111,7 @@ function AllJobResults({data}) {
                     `${jobsPerPage} Per Page`
                   }
                 </button>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li onClick={() => setJobsPerPage(5)}>5 Per Page</li>
                   <li onClick={() => setJobsPerPage(10)}>10 Per Page</li>
                   <li onClick={() => setJobsPerPage(15)}>15 Per Page</li>

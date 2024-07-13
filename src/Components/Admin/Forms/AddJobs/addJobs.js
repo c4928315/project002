@@ -190,7 +190,7 @@ function AddJobs({ close }) {
           />
         </div>
       </div>
-      <div class="input-group-array">
+      <div className="input-group-array">
         <div className="postFormInputContainer50">
           <label className="allLabelsInForm">Job Category</label>
           <select

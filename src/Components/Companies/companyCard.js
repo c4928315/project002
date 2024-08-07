@@ -36,7 +36,7 @@ const handleClick = (item, id) => {
     <>
       {data.map((item) => {
         return (
-          <div className="companyCardHolder" key={item}>
+          <div className="companyCardHolder" key={item.id}>
             <div className="companyCardInner">
               <div className="companyCardBtn">
                 <button className="btnHy">

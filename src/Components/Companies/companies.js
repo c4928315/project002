@@ -45,6 +45,8 @@ function Companies() {
     window.scrollTo(0, 0); 
   }, []);
 
+  console.log("companies", currentItems)
+
   return (
     <div className="mainCompanyDiv">
       {loadingCompany ? (
@@ -52,7 +54,7 @@ function Companies() {
       ) : (
         <>
           <div className="companies">
-            <CompanyCard data={currentItems} />
+            <CompanyCard  data={currentItems} />
           </div>
           <div className="companyPagination">
             <Pagination

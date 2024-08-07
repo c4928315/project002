@@ -1,7 +1,7 @@
 import React from "react";
 import "./openingsCard.css";
 import customIcons from "../../../Icons/customIcons";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function OpeningsCard({ data, currentPage }) {
   const navigate = useNavigate();
@@ -15,15 +15,10 @@ function OpeningsCard({ data, currentPage }) {
   };
 
   const duration = () => {
-    if (data.perYear === true) {
-      return <>Year</>;
-    } else if (data.perMonth === true) {
-      return <>Month</>;
-    } else if (data.perDay) {
-      return <>Hour</>;
-    } else if (data.perHour === true) {
-      return <>Hour</>;
-    }
+    if (data.perYear) return <>Year</>;
+    if (data.perMonth) return <>Month</>;
+    if (data.perDay) return <>Day</>;
+    if (data.perHour) return <>Hour</>;
   };
 
   return (
@@ -34,7 +29,7 @@ function OpeningsCard({ data, currentPage }) {
           backgroundImage: `url(${data.imageUrl})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "cover",
+          backgroundPosition: "center",
         }}
       ></div>
       <div className="leftOpeningCard">
@@ -67,7 +62,7 @@ function OpeningsCard({ data, currentPage }) {
         </div>
       </div>
       <div className="jobDuration">
-        <button onClick={() => navigate("/login")}>more like this</button>
+        <button onClick={() => navigate("/login")}>More like this</button>
       </div>
     </div>
   );

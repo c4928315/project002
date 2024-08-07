@@ -92,6 +92,9 @@ function JobResults() {
     }
   };
 
+  console.log("filteredJobs", filteredJobs)
+  console.log("filteredJobsByName", filteredJobsByName)
+
   return (
     <>
       <div className="jobResults">
@@ -237,7 +240,7 @@ function JobResults() {
                   </div>
                 </div>
                 {filteredJobsByName.map((item, i) => (
-                  <OpeningsCard data={item} key={i} currentPage={currentPage} />
+                  <OpeningsCard data={item} key={item.jobsId} currentPage={currentPage} />
                 ))}
 
                 <div className="pagination">
